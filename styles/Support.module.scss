@@ -1,0 +1,23 @@
+@mixin column {
+	display: flex;
+	padding: 15px;
+}
+
+.container {
+	display: flex;
+	align-items: flex-end;
+	height: 100vh;
+}
+
+.leftColumn {
+	@include column;
+	flex-direction: column;
+	gap: 30px;
+	overflow-y: auto;
+	height: calc(100vh - 83px);
+}
+
+.rightColumn {
+	@include column;
+	width: 80%;
+}

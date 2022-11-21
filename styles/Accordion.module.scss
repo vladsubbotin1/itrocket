@@ -1,0 +1,45 @@
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.accordion {
+	background-color: transparent;
+	cursor: pointer;
+	padding: 30px 15px;
+	width: 100%;
+	text-align: left;
+	border: none;
+	outline: none;
+	transition: 0.4s;
+	border-bottom: 1px solid rgb(197, 197, 197);
+	display: flex;
+	color: inherit;
+	justify-content: space-between;
+
+	&__desc {
+		font-size: 14px;
+		width: 90%;
+		line-height: 1.5;
+	}
+}
+
+.panel {
+	background-color: transparent;
+	padding: 0 18px;
+	display: none;
+	overflow: hidden;
+
+	p {
+		padding: 20px 0;
+	}
+}
+
+.button {
+	&__heading {
+		font-size: 18px;
+		font-weight: 500;
+		color: inherit;
+	}
+}
