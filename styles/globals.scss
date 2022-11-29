@@ -2,8 +2,6 @@ html,
 body {
 	padding: 0;
 	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 	scroll-behavior: smooth;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -35,6 +33,29 @@ section {
 
 	&:last-of-type {
 		margin-bottom: 10px;
+	}
+}
+
+.center-flex {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.ant-menu-submenu-title {
+	border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.ant-menu-root {
+	height: calc(100vh - 82px);
+	overflow-y: auto;
+	overflow-x: hidden;
+
+	&::-webkit-scrollbar {
+		opacity: 0;
+		width: 0px;
 	}
 }
 

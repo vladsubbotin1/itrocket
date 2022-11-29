@@ -102,7 +102,7 @@ const Card = () => {
 		<div className={styles.card__root}>
 			{data.map(item => {
 				return (
-					<div className={styles.card}>
+					<div className={styles.card} key={item.id}>
 						<h5 className={styles.card__heading}>{item.name}</h5>
 						<div className={styles.card__img}>
 							<Image

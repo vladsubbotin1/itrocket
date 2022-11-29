@@ -5,19 +5,16 @@
 
 .container {
 	display: flex;
-	align-items: flex-end;
-	height: 100vh;
 }
 
-.leftColumn {
+.SideColumn {
 	@include column;
 	flex-direction: column;
 	gap: 30px;
-	overflow-y: auto;
-	height: calc(100vh - 83px);
 }
 
-.rightColumn {
+.MainColumn {
 	@include column;
+	padding: 50px 60px;
 	width: 80%;
 }

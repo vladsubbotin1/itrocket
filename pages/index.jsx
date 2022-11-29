@@ -1,13 +1,14 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 import { motion } from 'framer-motion'
-import CardMain from '../comps/CardMain'
-import CardTest from '../comps/CardTest'
-import Footer from '../comps/Footer'
-import Accordion from '../comps/Accordion'
-import Header from '../comps/Header'
+import CardMain from '../comps/CardMain.jsx'
+import CardTest from '../comps/CardTest.jsx'
+import Footer from '../comps/Footer.jsx'
+import Accordion from '../comps/Accordion.jsx'
+import Header from '../comps/Header.jsx'
 import { useState, useEffect } from 'react'
-import CardFinished from '../comps/CardFinished'
+import Finished from '../comps/Finished.jsx'
+import { FloatButton } from 'antd'
 
 export default function Home() {
 	const [showing, setShowing] = useState(false)
@@ -30,13 +31,6 @@ export default function Home() {
 					<meta
 						name='description'
 						content='ITRocket 🚀|The #1 Crypto Validator in the game'
-					/>
-					<link rel='icon' href='/whiteLogoCrop.ico' />
-					<link rel='preconnect' href='https://fonts.googleapis.com' />
-					<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
-					<link
-						href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap'
-						rel='stylesheet'
 					/>
 				</Head>
 
@@ -175,7 +169,7 @@ export default function Home() {
 									</span>
 								</p>
 
-								<CardFinished />
+								<Finished />
 							</motion.div>
 						</div>
 					</section>
@@ -190,6 +184,7 @@ export default function Home() {
 							</div>
 						</div>
 					</section>
+					<FloatButton.BackTop />
 				</main>
 				<Footer />
 			</>

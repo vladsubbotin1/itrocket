@@ -5,6 +5,7 @@ import Link from 'next/link'
 
 const Header = () => {
 	const [isOn, setIsOn] = useState(false)
+
 	const toggleSwitch = () => {
 		setIsOn(!isOn)
 		if (isOn) {
@@ -22,7 +23,7 @@ const Header = () => {
 				<img
 					src={!isOn ? '/logocropped.svg' : 'darkLogo.svg'}
 					alt='logo'
-					width='210px'
+					width='190px'
 					className={styles.logo}
 				/>
 			</Link>
@@ -36,7 +37,10 @@ const Header = () => {
 						<li>
 							<Link href='/#testnet'>Testnets</Link>
 						</li>
-						<li>Services</li>
+						<li>
+							<Link href='/support'>Services</Link>
+						</li>
+
 						<li>
 							<Link href='/#faq'>FAQ</Link>
 						</li>
