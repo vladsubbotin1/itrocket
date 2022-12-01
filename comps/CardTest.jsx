@@ -34,18 +34,18 @@ const Card = () => {
 			link: 'https://celestia.org/',
 			imgUrl: 'celestia.png',
 		},
-		{
-			id: 6,
-			name: 'DeWeb',
-			link: 'https://deweb.services/',
-			imgUrl: 'deweb.png',
-		},
-		{
-			id: 7,
-			name: 'Empower',
-			link: 'https://www.empowerchain.io/',
-			imgUrl: 'empower.png',
-		},
+		// {
+		// 	id: 6,
+		// 	name: 'DeWeb',
+		// 	link: 'https://deweb.services/',
+		// 	imgUrl: 'deweb.png',
+		// },
+		// {
+		// 	id: 7,
+		// 	name: 'Empower',
+		// 	link: 'https://www.empowerchain.io/',
+		// 	imgUrl: 'empower.png',
+		// },
 		{
 			id: 8,
 			name: 'Gear',
@@ -92,13 +92,13 @@ const Card = () => {
 			id: 15,
 			name: 'Oasys',
 			link: 'https://www.oasys.games/',
-			imgUrl: 'oasys.png',
+			imgUrl: 'oasys.webp',
 		},
 		{
 			id: 16,
 			name: 'Penumbra',
 			link: 'https://penumbra.zone/',
-			imgUrl: 'penumbra.jpg',
+			imgUrl: 'penumbra.webp',
 		},
 		{
 			id: 17,
@@ -142,12 +142,12 @@ const Card = () => {
 			link: 'https://islamiccoin.net/',
 			imgUrl: 'haqq.png',
 		},
-		{
-			id: 24,
-			name: 'OKP4',
-			link: 'https://okp4.network/',
-			imgUrl: 'okp4.jpg',
-		},
+		// {
+		// 	id: 24,
+		// 	name: 'OKP4',
+		// 	link: 'https://okp4.network/',
+		// 	imgUrl: 'okp4.jpg',
+		// },
 	]
 
 	return (

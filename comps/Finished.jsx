@@ -1,4 +1,4 @@
-import styles from '../styles/Finished.module.scss'
+import styles from '../styles/CardMain.module.scss'
 import Image from 'next/image'
 
 const Finished = () => {
@@ -21,21 +21,40 @@ const Finished = () => {
 			link: 'https://quicksilver.zone/',
 			imgUrl: 'quicksilver.jpg',
 		},
+		{
+			id: 7,
+			name: 'Empower',
+			link: 'https://www.empowerchain.io/',
+			imgUrl: 'empower.png',
+		},
+		{
+			id: 6,
+			name: 'DeWeb',
+			link: 'https://deweb.services/',
+			imgUrl: 'deweb.png',
+		},
 	]
 
 	return (
-		<div className={styles.root}>
-			{data.map(item => (
-				<div className={styles.wrapper} key={item.id}>
-					<div className={styles.img}>
-						<Image
-							src={require('../public/finished/'.concat(item.imgUrl))}
-							alt='item'
-							layout='responsive'
-						/>
+		<div className={styles.card__root}>
+			{data.map(item => {
+				return (
+					<div className={styles.card} key={item.id}>
+						<h5 className={styles.card__heading}>{item.name}</h5>
+						<div className={styles.card__img}>
+							<Image
+								src={require('../public/finished/'.concat(item.imgUrl))}
+								alt='item'
+								layout='responsive'
+								width='150'
+								height='150'
+								sizes='(max-width: 768px) 80vw,
+              (max-width: 1200px) 20vw'
+							/>
+						</div>
 					</div>
-				</div>
-			))}
+				)
+			})}
 		</div>
 	)
 }

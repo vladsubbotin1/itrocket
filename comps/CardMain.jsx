@@ -109,6 +109,10 @@ const Card = () => {
 								src={require('../public/mainnet/'.concat(item.imgUrl))}
 								alt='item'
 								layout='responsive'
+								width='150'
+								height='150'
+								sizes='(max-width: 768px) 80vw,
+              (max-width: 1200px) 20vw'
 							/>
 						</div>
 						{/* <div className={styles.card__text}>

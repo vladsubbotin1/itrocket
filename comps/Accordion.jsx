@@ -20,7 +20,7 @@ const Accordion = () => {
 				style={isActive1 ? { display: 'block' } : { display: 'none' }}
 			>
 				<p className={styles.accordion__desc}>
-					We are team of DevOps engineers from Armenia. We are crypto
+					We are team of DevOps engineers from Armenia 🇦🇲. We are crypto
 					enthusiasts & node operators in various crypto ecosystems. Our goal is
 					to help millions of people effectively manage their crypto assets!
 				</p>

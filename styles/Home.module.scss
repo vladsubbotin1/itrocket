@@ -1,5 +1,5 @@
 @mixin container {
-	padding: 0 7rem;
+	padding: 0 5rem;
 
 	@media only screen and (max-width: 1024px) {
 		padding: 0 2rem;
@@ -110,24 +110,47 @@
 }
 
 .hero {
-	height: calc(100vh - 82px);
+	height: calc(200vh - 77px);
 	justify-content: flex-start;
 
 	&__wrapper {
 		width: 100%;
-		height: calc(100vh - 82px);
+		height: fit-content;
 		display: flex;
 		align-content: center;
 		flex-wrap: wrap;
 	}
 
-	&__column {
-		width: 50%;
-		padding: 30px;
+	&__columnWide {
+		width: 58%;
+		height: calc(200vh - 77px);
+
+		padding: 40px;
+		padding-top: 205px;
+		display: flex;
+		gap: 45vh;
+		flex-direction: column;
 
 		@media (max-width: 768px) {
 			width: 100%;
 			padding: 10px;
+		}
+	}
+	&__columnNarrow {
+		width: 40%;
+		padding: 30px;
+		position: sticky;
+		top: 70px;
+
+		@media (max-width: 768px) {
+			width: 100%;
+			padding: 10px;
+		}
+		@media (max-width: 1649px) {
+			height: 110vh;
+		}
+		@media (min-width: 1650px) {
+			height: 130vh;
 		}
 	}
 
@@ -163,4 +186,36 @@
 	align-content: center;
 	justify-content: space-around;
 	flex-direction: column;
+}
+
+.text {
+	position: absolute;
+	top: 50px;
+	bottom: 0;
+	animation: rotate 25s linear infinite;
+	animation-delay: 1s;
+
+	@keyframes rotate {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+}
+
+.rocket {
+	position: absolute;
+
+	top: 40px;
+	bottom: 0;
+}
+
+.rocketWrapper {
+	width: 450px;
+	height: 450px;
+	display: flex;
+	align-items: center;
+	position: relative;
 }

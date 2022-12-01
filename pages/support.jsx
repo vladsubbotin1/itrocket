@@ -3,7 +3,13 @@ import Head from 'next/head'
 import Footer from '../comps/Footer.jsx'
 import Header from '../comps/Header.jsx'
 import styles from '../styles/Support.module.scss'
-import { Menu, Tour } from 'antd'
+import { Menu } from 'antd'
+import {
+	InfoCircleOutlined,
+	BookOutlined,
+	SettingOutlined,
+	ReloadOutlined,
+} from '@ant-design/icons'
 import Link from 'next/link.js'
 
 function getItem(label, key, icon, children, type) {
@@ -42,14 +48,8 @@ const rootSubmenuKeys = [
 	'sub23',
 	'sub24',
 ]
+
 const Support = () => {
-	const [current, setCurrent] = useState('1')
-
-	const onClick = e => {
-		console.log('click ', e)
-		setCurrent(e.key)
-	}
-
 	const [openKeys, setOpenKeys] = useState(['sub1'])
 	const onOpenChange = keys => {
 		const latestOpenKey = keys.find(key => openKeys.indexOf(key) === -1)
@@ -60,14 +60,20 @@ const Support = () => {
 		}
 	}
 
-	const [open, setOpen] = useState(false)
-
 	const items = [
 		getItem('Axelar', 'sub1', null, [
-			getItem(<Link href='/support/axelar/about'>About</Link>, 'axelar/about'),
-			getItem(<Link href='/support/axelar/about'>Guide</Link>, 'axelar/guide'),
-			getItem('RPC, API, gRPC', 'axelar/rpc'),
-			getItem('State sync, Snap', 'axelar/state'),
+			getItem(
+				<Link href='/support/axelar/about'>About</Link>,
+				'axelar/about',
+				<InfoCircleOutlined />
+			),
+			getItem(
+				<Link href='/support/axelar/about'>Guide</Link>,
+				'axelar/guide',
+				<BookOutlined />
+			),
+			getItem('RPC, API, gRPC', 'axelar/rpc', <SettingOutlined />),
+			getItem('State sync, Snap', 'axelar/state', <ReloadOutlined />),
 		]),
 		getItem('Bifrost', 'sub2', null, [
 			getItem('About', 'bifrost/about'),
@@ -224,9 +230,8 @@ const Support = () => {
 			<div className={styles.container}>
 				<aside className={styles.SideColumn}>
 					<Menu
-						onClick={onClick}
 						style={{
-							width: 280,
+							width: 285,
 						}}
 						openKeys={openKeys}
 						onOpenChange={onOpenChange}

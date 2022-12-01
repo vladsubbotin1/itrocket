@@ -30,6 +30,7 @@ section {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
+	margin-bottom: 10vh;
 
 	&:last-of-type {
 		margin-bottom: 10px;
@@ -44,8 +45,33 @@ section {
 	flex-direction: column;
 }
 
+.ant-menu-submenu {
+	margin-right: 8px;
+	margin-bottom: 10px;
+}
+
+.ant-menu-item {
+	border: 1px solid rgba(131, 131, 131, 0.2);
+}
+
+.ant-menu-light {
+	.ant-menu-submenu-title[aria-expanded='true'] {
+		background-color: #dbeafe !important;
+		color: black;
+	}
+}
+.ant-menu-dark {
+	.ant-menu-submenu-title[aria-expanded='true'] {
+		background-color: #093666 !important;
+		color: white;
+	}
+}
+
 .ant-menu-submenu-title {
 	border: 1px solid rgba(0, 0, 0, 0.03);
+	background-color: rgb(245, 245, 245);
+	user-select: none;
+	box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
 }
 
 .ant-menu-root {
@@ -54,7 +80,25 @@ section {
 	overflow-x: hidden;
 
 	&::-webkit-scrollbar {
-		opacity: 0;
+		width: 8px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background-color: transparent;
+		border-radius: 10px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		background-color: #999;
+	}
+
+	&::-webkit-scrollbar-button:single-button:vertical:decrement {
+		height: 0px;
+		width: 0px;
+	}
+	&::-webkit-scrollbar-button:single-button:vertical:increment {
+		height: 0px;
 		width: 0px;
 	}
 }

@@ -8,7 +8,9 @@ import Accordion from '../comps/Accordion.jsx'
 import Header from '../comps/Header.jsx'
 import { useState, useEffect } from 'react'
 import Finished from '../comps/Finished.jsx'
-import { FloatButton } from 'antd'
+import Rocket from '../public/justRocket.svg'
+import Text from '../public/justText.svg'
+import Image from 'next/image'
 
 export default function Home() {
 	const [showing, setShowing] = useState(false)
@@ -38,10 +40,10 @@ export default function Home() {
 
 				<main>
 					<section className={styles.hero}>
-						<div className={styles.container}>
+						<div className={styles.container} style={{ paddingRight: '0px' }}>
 							<div className={styles.hero__wrapper}>
 								<motion.div
-									className={styles.hero__column}
+									className={styles.hero__columnWide}
 									initial='hidden'
 									whileInView='visible'
 									viewport={{ once: true }}
@@ -51,20 +53,45 @@ export default function Home() {
 										hidden: { opacity: 0, x: -50 },
 									}}
 								>
-									<h3 className={styles.hero__heading}>
-										Trusted staking provider
-									</h3>
-									<span className={styles.hero__desc}>
-										Hi there, we are ITRocket team! Hope you all are having a
-										great day and welcome aboard! With few simple steps you can
-										delegate funds to our trusted validators. Your support will
-										help us to develop WEB3 and together we can create the great
-										future of decentralized services!
-									</span>
+									<div>
+										<h3 className={styles.hero__heading}>
+											Trusted staking provider
+										</h3>
+										<span className={styles.hero__desc}>
+											Hi there, we are ITRocket team! Hope you all are having a
+											great day and welcome aboard! With few simple steps you
+											can delegate funds to our trusted validators. Your support
+											will help us to develop WEB3 and together we can create
+											the great future of decentralized services!
+										</span>
+									</div>
+
+									<motion.div
+										initial='hidden'
+										whileInView='visible'
+										viewport={{ once: true }}
+										transition={{ duration: 1 }}
+										variants={{
+											visible: { opacity: 1 },
+											hidden: { opacity: 0 },
+										}}
+									>
+										<h3 className={styles.hero__heading}>
+											Community and project support
+										</h3>
+										<span className={styles.hero__desc}>
+											On support page you can find guides that will be useful
+											for node operators. We develop tools to help community and
+											projects including: API, RPC, GRPC, State Sync Services,
+											IBC Relayers. Our team believes in WEB3 and we are glad to
+											be together with you among those who creates future for
+											everyone!
+										</span>
+									</motion.div>
 								</motion.div>
 
 								<motion.div
-									className={styles.hero__column}
+									className={styles.hero__columnNarrow}
 									initial='hidden'
 									whileInView='visible'
 									viewport={{ once: true }}
@@ -74,17 +101,20 @@ export default function Home() {
 										hidden: { opacity: 0, x: 50 },
 									}}
 								>
-									<h3 className={styles.hero__heading}>
-										Community and project support
-									</h3>
-									<span className={styles.hero__desc}>
-										On support page you can find guides that will be useful for
-										node operators. We develop tools to help community and
-										projects including: API, RPC, GRPC, State Sync Services, IBC
-										Relayers. Our team believes in WEB3 and we are glad to be
-										together with you among those who creates future for
-										everyone!
-									</span>
+									<div className={styles.rocketWrapper}>
+										<Image
+											className={styles.rocket}
+											src={Rocket}
+											alt='Rocket'
+											width='450'
+										/>
+										<Image
+											className={styles.text}
+											src={Text}
+											alt='Text'
+											width='450'
+										/>
+									</div>
 								</motion.div>
 							</div>
 						</div>
@@ -184,7 +214,6 @@ export default function Home() {
 							</div>
 						</div>
 					</section>
-					<FloatButton.BackTop />
 				</main>
 				<Footer />
 			</>
