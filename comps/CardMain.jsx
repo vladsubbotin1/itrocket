@@ -1,10 +1,13 @@
 import Image from 'next/image'
 import styles from '../styles/CardMain.module.scss'
 import { AnimatePresence, motion } from 'framer-motion'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import Modal from './Modal'
+import { ThemeContext } from '../pages/_app'
 
 const Card = () => {
+	const { theme, toggleTheme } = useContext(ThemeContext)
+
 	const [modalOpen, setModalOpen] = useState(false)
 	const close = () => setModalOpen(false)
 	const open = () => setModalOpen(true)
@@ -109,29 +112,20 @@ const Card = () => {
 								src={require('../public/mainnet/'.concat(item.imgUrl))}
 								alt='item'
 								layout='responsive'
-								width='150'
-								height='150'
+								width='100'
+								height='100'
 								sizes='(max-width: 768px) 80vw,
               (max-width: 1200px) 20vw'
 							/>
 						</div>
-						{/* <div className={styles.card__text}>
-							{item?.address && (
-								<>
-									<h6>Address</h6>
-									<span className={styles.card__desc}>{item.address}</span>
-								</>
-							)}
-						</div>
-						{item?.link && (
-							<>
-								<a href={item.link}>{item.link}</a>
-							</>
-						)} */}
 						<div className={styles.button__wrapper}>
 							<motion.button
 								whileTap={{ scale: 0.95 }}
-								className={styles.buttonDelegate}
+								className={
+									theme === 'light'
+										? styles.buttonDelegate
+										: styles.buttonDelegate_dark
+								}
 								role='button'
 								onClick={() => {
 									modalOpen ? close() : open()
@@ -144,7 +138,11 @@ const Card = () => {
 							<a href={item.link} target='_blank' rel='noopener noreferrer'>
 								<motion.button
 									whileTap={{ scale: 0.95 }}
-									class={styles.buttonExplorer}
+									className={
+										theme === 'light'
+											? styles.buttonExplorer
+											: styles.buttonExplorer_dark
+									}
 									role='button'
 								>
 									<span>Explorer</span>

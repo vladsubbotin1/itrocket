@@ -33,6 +33,12 @@ const Finished = () => {
 			link: 'https://deweb.services/',
 			imgUrl: 'deweb.png',
 		},
+		{
+			id: 8,
+			name: 'Bifrost',
+			link: 'https://thebifrost.io/',
+			imgUrl: 'bifrost.png',
+		},
 	]
 
 	return (

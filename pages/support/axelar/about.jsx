@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
 import styles from '../../../styles/Support.module.scss'
-import { Menu, Space, Tooltip, Button, Typography } from 'antd'
+import { Menu, Space, Typography } from 'antd'
 import Link from 'next/link.js'
 import Footer from '../../../comps/Footer'
 import Header from '../../../comps/Header'

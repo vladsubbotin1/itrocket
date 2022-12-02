@@ -1,8 +1,12 @@
 import Image from 'next/image'
 import styles from '../styles/CardTest.module.scss'
 import Link from 'next/link'
+import { ThemeContext } from '../pages/_app'
+import { useContext } from 'react'
 
 const Card = () => {
+	const { theme, toggleTheme } = useContext(ThemeContext)
+
 	let data = [
 		{
 			id: 1,
@@ -10,12 +14,12 @@ const Card = () => {
 			link: 'https://axelar.network/',
 			imgUrl: 'axelar.jpg',
 		},
-		{
-			id: 2,
-			name: 'Bifrost',
-			link: 'https://thebifrost.io/',
-			imgUrl: 'bifrost.png',
-		},
+		// {
+		// 	id: 2,
+		// 	name: 'Bifrost',
+		// 	link: 'https://thebifrost.io/',
+		// 	imgUrl: 'bifrost.png',
+		// },
 		{
 			id: 3,
 			name: 'BlastAPI',
@@ -163,28 +167,29 @@ const Card = () => {
 								layout='responsive'
 							/>
 						</div>
-						{/* <div className={styles.card__text}>
-							{item?.address &&  (
-								<>
-									<h6>Address</h6>
-									<span className={styles.card__desc}>{item.address}</span>
-								</>
-							)}
-						</div>
-						{item?.link && (
-							<>
-								<a href={item.link}>{item.link}</a>
-							</>
-						)} */}
 
 						<div className={styles.button__container}>
 							<a href={item.link} target='_blank' rel='noopener noreferrer'>
-								<button class={styles.buttonExplore} role='button'>
+								<button
+									className={
+										theme === 'light'
+											? styles.buttonExplore
+											: styles.buttonExplore_dark
+									}
+									role='button'
+								>
 									<span>Explorer</span>
 								</button>
 							</a>
 							<a href={item.link} target='_blank' rel='noopener noreferrer'>
-								<button class={styles.buttonSupport} role='button'>
+								<button
+									className={
+										theme === 'light'
+											? styles.buttonSupport
+											: styles.buttonSupport_dark
+									}
+									role='button'
+								>
 									<Link href='/support' data={data}>
 										Support
 									</Link>
