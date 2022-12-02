@@ -218,7 +218,7 @@ const Support = () => {
 	return (
 		<>
 			<Head>
-				<title>ITRocket - Support Provider 🚀</title>
+				<title>ITRocket - Support Provider </title>
 				<meta
 					name='description'
 					content='ITRocket 🚀|The #1 Crypto Validator in the game'

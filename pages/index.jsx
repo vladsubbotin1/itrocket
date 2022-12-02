@@ -27,9 +27,9 @@ export default function Home() {
 		return <></>
 	} else {
 		return (
-			<>
+			<div>
 				<Head>
-					<title>ITRocket - Staking Provider 🚀</title>
+					<title>ITRocket - Staking Provider</title>
 					<meta
 						name='description'
 						content='ITRocket 🚀|The #1 Crypto Validator in the game'
@@ -53,7 +53,7 @@ export default function Home() {
 										hidden: { opacity: 0, x: -50 },
 									}}
 								>
-									<div>
+									<div className={styles.reveal__wrapper}>
 										<h3 className={styles.hero__heading}>
 											Trusted staking provider
 										</h3>
@@ -216,7 +216,7 @@ export default function Home() {
 					</section>
 				</main>
 				<Footer />
-			</>
+			</div>
 		)
 	}
 }
