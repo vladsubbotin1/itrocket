@@ -108,6 +108,10 @@
 
 	&__desc {
 		word-break: break-all;
+
+		@media (max-width: 768px) {
+			font-size: 14px;
+		}
 	}
 }
 
@@ -135,4 +139,8 @@
 .button__wrapper {
 	display: flex;
 	gap: 10px;
+
+	@media (max-width: 768px) {
+		gap: 7px;
+	}
 }

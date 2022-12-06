@@ -22,22 +22,28 @@ const Finished = () => {
 			imgUrl: 'quicksilver.jpg',
 		},
 		{
-			id: 7,
+			id: 4,
 			name: 'Empower',
 			link: 'https://www.empowerchain.io/',
 			imgUrl: 'empower.png',
 		},
 		{
-			id: 6,
+			id: 5,
 			name: 'DeWeb',
 			link: 'https://deweb.services/',
 			imgUrl: 'deweb.png',
 		},
 		{
-			id: 8,
+			id: 6,
 			name: 'Bifrost',
 			link: 'https://thebifrost.io/',
 			imgUrl: 'bifrost.png',
+		},
+		{
+			id: 7,
+			name: 'Subspace',
+			link: 'https://subspace.network/',
+			imgUrl: 'subspace.jpg',
 		},
 	]
 

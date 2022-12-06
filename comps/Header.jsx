@@ -1,11 +1,12 @@
 import styles from '../styles/Header.module.scss'
 import { motion } from 'framer-motion'
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { ThemeContext } from '../pages/_app'
 
 const Header = () => {
 	const { theme, toggleTheme } = useContext(ThemeContext)
+	const [isOpen, setIsOpen] = useState(false)
 
 	useEffect(() => {
 		if (theme === 'dark') {
@@ -37,7 +38,7 @@ const Header = () => {
 		<header className={styles.header}>
 			<Link href='/'>
 				<img
-					src={theme === 'light' ? 'logoCropped.svg' : 'darkLogo.svg'}
+					src={theme === 'light' ? '/logoCropped.svg' : '/darkLogo.svg'}
 					alt='logo'
 					width='210px'
 					className={styles.logo}
@@ -75,6 +76,19 @@ const Header = () => {
 						style={{ backgroundColor: theme === 'dark' ? 'white' : 'black' }}
 					/>
 				</div>
+				<button
+					className={
+						isOpen === true
+							? 'hamburger hamburger--squeeze is-active'
+							: 'hamburger hamburger--squeeze'
+					}
+					type='button'
+					onClick={() => setIsOpen(!isOpen)}
+				>
+					<span className='hamburger-box'>
+						<span className='hamburger-inner'></span>
+					</span>
+				</button>
 			</div>
 		</header>
 	)

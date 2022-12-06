@@ -61,7 +61,7 @@ export default function Home() {
 											<path
 												d='M2 8.5 6.2 4l7.8 6 6.6-5.55L27.5 10l4.65-5.1L39.2 10'
 												stroke='#5AD3AF'
-												stroke-width='3'
+												strokeWidth='3'
 											/>
 										</svg>
 									</div>
@@ -107,7 +107,7 @@ export default function Home() {
 										node operators. We develop tools to help community and
 										projects including: API, RPC, GRPC, State Sync Services, IBC
 										Relayers. Our team believes in WEB3 and we are glad to be
-										together with you among those who creates future for
+										together with you among those who create future for
 										everyone!
 									</span>
 								</motion.div>

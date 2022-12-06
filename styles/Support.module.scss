@@ -11,10 +11,64 @@
 	@include column;
 	flex-direction: column;
 	gap: 30px;
+	height: calc(100vh - 82px);
+
+	@media (max-width: 768px) {
+		padding: 15px 5px;
+	}
 }
 
 .MainColumn {
 	@include column;
-	padding: 50px 60px;
-	width: 80%;
+	flex-direction: column;
+	gap: 8px;
+	padding: 0 60px 50px 60px;
+	width: 76%;
+
+	@media (max-width: 1024px) {
+		width: 100%;
+	}
+
+	p {
+		font-size: 15px;
+	}
+
+	h1 {
+		min-height: 15px;
+	}
+
+	h2 {
+		font-size: 28px;
+		border-bottom: 1px solid #e1e4e8;
+		padding-bottom: 5px;
+		margin-top: 50px;
+		margin-bottom: 10px;
+		width: 90%;
+
+		&:first-of-type {
+			margin-top: 30px;
+		}
+	}
+
+	h3 {
+		padding: 20px 0 5px;
+	}
+
+	a {
+		color: #0366d6;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	li {
+		list-style: disc;
+		margin-top: 0.3em;
+	}
+
+	ul {
+		padding-left: 1.5em;
+	}
 }

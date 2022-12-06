@@ -1,7 +1,6 @@
 import '../styles/Footer.module.scss'
 import styles from '../styles/Footer.module.scss'
 import Image from 'next/image'
-import { SocialIcon } from 'react-social-icons'
 
 const Footer = () => {
 	return (
@@ -20,11 +19,22 @@ const Footer = () => {
 					<span>© 2022 ITRocket Team.</span>
 				</div>
 				<div className={styles.socials}>
-					<SocialIcon url='https://t.me/@SEM3gs' fgColor='white' />
-					<SocialIcon
-						url='https://discordapp.com/users/SEM#4095'
-						fgColor='white'
-					/>
+					<a
+						href='https://t.me/SEM3gs'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
+						{' '}
+						<Image src='/icons/tg.svg' alt='telegram' width={40} height={40} />
+					</a>
+
+					<a
+						href='https://discord.com/users/SEM#4095'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
+						<Image src='/icons/disc.svg' alt='discord' width={40} height={40} />
+					</a>
 				</div>
 			</div>
 		</footer>

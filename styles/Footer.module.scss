@@ -7,10 +7,14 @@
 	color: #fff;
 
 	&__logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		width: 200px;
 
 		@media (max-width: 768px) {
-			width: 100px;
+			width: 150px;
+			height: 60px;
 		}
 
 		img {
@@ -24,10 +28,17 @@
 	align-content: center;
 	align-items: center;
 	justify-content: space-between;
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+	}
 }
 
 .socials {
 	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
 	gap: 20px;
 
 	@media (max-width: 768px) {
@@ -37,6 +48,7 @@
 
 .copyright {
 	font-size: 14px;
+	margin: 20px 0;
 
 	@media (max-width: 768px) {
 		font-size: 11px;

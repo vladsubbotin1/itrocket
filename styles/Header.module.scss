@@ -64,9 +64,10 @@
 .logo {
 	padding: 15px;
 	cursor: pointer;
+
 	@media (max-width: 768px) {
-		width: 100px !important;
-		padding: 15px 7px;
+		width: 150px !important;
+		padding: 10px 7px;
 	}
 }
 
@@ -82,8 +83,8 @@
 	cursor: pointer;
 
 	@media (max-width: 768px) {
-		width: 27px;
-		height: 14px;
+		width: 41px;
+		height: 20px;
 	}
 }
 
@@ -97,7 +98,7 @@
 	border-radius: 40px;
 
 	@media (max-width: 768px) {
-		width: 8px;
-		height: 8px;
+		width: 12px;
+		height: 12px;
 	}
 }

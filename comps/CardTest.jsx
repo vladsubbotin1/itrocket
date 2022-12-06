@@ -56,12 +56,12 @@ const Card = () => {
 			link: 'https://www.gear-tech.io/',
 			imgUrl: 'gear.jpg',
 		},
-		{
-			id: 9,
-			name: 'IronFish',
-			link: 'https://ironfish.network/',
-			imgUrl: 'ironfish.png',
-		},
+		// {
+		// 	id: 9,
+		// 	name: 'IronFish',
+		// 	link: 'https://ironfish.network/',
+		// 	imgUrl: 'ironfish.png',
+		// },
 		{
 			id: 10,
 			name: 'Kira',
@@ -116,12 +116,12 @@ const Card = () => {
 			link: 'https://sui.io/',
 			imgUrl: 'sui.svg',
 		},
-		{
-			id: 19,
-			name: 'Subspace',
-			link: 'https://subspace.network/',
-			imgUrl: 'subspace.jpg',
-		},
+		// {
+		// 	id: 19,
+		// 	name: 'Subspace',
+		// 	link: 'https://subspace.network/',
+		// 	imgUrl: 'subspace.jpg',
+		// },
 		{
 			id: 20,
 			name: 'Starknet',
