@@ -48,18 +48,21 @@ const Finished = () => {
 	]
 
 	return (
-		<div className={styles.card__root}>
+		<div className={`${styles.card__root} ${styles.finishedRoot}`}>
 			{data.map(item => {
 				return (
-					<div className={styles.card} key={item.id}>
+					<div
+						className={`${styles.card} ${styles.finishedCard}`}
+						key={item.id}
+					>
 						<h5 className={styles.card__heading}>{item.name}</h5>
-						<div className={styles.card__img}>
+						<div className={styles.card__img} style={{ width: '40%' }}>
 							<Image
 								src={require('../public/finished/'.concat(item.imgUrl))}
 								alt='item'
 								layout='responsive'
-								width='150'
-								height='150'
+								width='120'
+								height='120'
 								sizes='(max-width: 768px) 80vw,
               (max-width: 1200px) 20vw'
 							/>

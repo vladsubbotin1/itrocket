@@ -2,15 +2,15 @@ import React, { useContext, useEffect, useState } from 'react'
 import Head from 'next/head'
 import styles from '../../../styles/Support.module.scss'
 import Header from '../../../comps/Header'
-import Footer from '../../../comps/Footer'
 import SideMenu from '../../../comps/SideMenu'
-import { ThemeContext } from '../../../pages/_app.jsx'
+import { ThemeContext } from '../../_app.jsx'
 import ReactMarkdown from 'react-markdown'
 import rehypeHighlight from 'rehype-highlight'
+import rehypeRaw from 'rehype-raw'
 import remarkGfm from 'remark-gfm'
 import 'highlight.js/styles/github.css'
 
-const about = () => {
+const axelar = () => {
 	const { theme, toggleTheme } = useContext(ThemeContext)
 	const [current, setCurrent] = useState('1')
 
@@ -23,68 +23,51 @@ const about = () => {
 		}
 	}, [theme])
 
-	const markdown = `## About
+	const markdown = `<h2 id="about">About</h2>
 
-Uptick Network
+### Uptick Network
+
 The Business Grade Multi-Chain NFT Infrastructure for Web 3.0
+<br/><br/>
 
-* Website: https://uptick.network/ 
-
-* Telegram: https://t.me/uptickproject
-
-* Twitter: https://twitter.com/uptickproject
-
-* Medium: https://medium.com/@uptickproject
-
+* Website: https://uptick.network/  
+* Telegram: https://t.me/uptickproject  
+* Twitter: https://twitter.com/uptickproject  
+* Medium: https://medium.com/@uptickproject  
 * Reddit: https://www.reddit.com/r/UptickNetwork/
 
-## Guide 
-You can check the installation guide and useful commands here:
+<h2 id="guide">Guide</h2> 
+Installation guide: 
+
 https://github.com/marutyan/testnet_guides/tree/main/uptick
 
-### RPC, API, gRPC
+<h2 id="rpc">RPC, API, gRPC</h2> 
 
+Public RPC - http://65.109.92.79:10657  
 
-Public RPC - http://65.109.92.79:10657 
+Public API - http://65.109.92.79:10317  
 
+Public gRPC - http://65.109.92.79:10090
 
-Public API - http://65.109.92.79:10317 
+### peers 
 
-
-Public gRPC - http://65.109.92.79:10090 
-
-
-
-### addrbook, peers
-
-peers:
 ~~~bash
-86f50af23369997882ca3988eabeba998b4f07cc@65.109.92.79:10656
+peers: 86f50af23369997882ca3988eabeba998b4f07cc@65.109.92.79:10656
 ~~~
 
-addrbook:
+### addrbook: 
+
 ~~~bash
 wget -O $HOME/.uptickd/addrbook.json https://raw.githubusercontent.com/marutyan/testnet_guides/main/uptick/addrbook.json
 ~~~
 
+<h2 id="snap">Snapshot</h2> 
 
+Sorry, not supported yet
 
-## Snapshot
+<h2 id="sync">State Sync</h2> 
 
-Updated daily at 12:00 UTC
-
-~~~bash
-sudo systemctl stop uptickd
-cp $HOME/.uptickd/data/priv_validator_state.json $HOME/.uptickd/priv_validator_state.json.backup
-cd $HOME/.uptickd/
-wget - <URL>...
-lz4 -c -d axelar_5054758.tar.lz4  | tar -x -C $HOME/.uptickd
-rm ...
-mv $HOME/.uptickd/priv_validator_state.json.backup $HOME/.uptickd/data/priv_validator_state.json
-sudo systemctl restart uptickd && jpurnalctl -u uptickd -f
-~~~
-
-## StateSync 
+### State Sync: 
 
 Stop the service 
 
@@ -113,10 +96,10 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 
 Configure the state sync
 ~~~bash
-sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\\1true| ; 
-s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\\1\"$SNAP_RPC,$SNAP_RPC\"| ; 
-s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\\1$BLOCK_HEIGHT| ; 
-s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\\1\"$TRUST_HASH\"| ; 
+sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\\1true| ; \
+s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
+s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\\1$BLOCK_HEIGHT| ; \
+s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\\1\"\"|" $config
 ~~~
 
@@ -136,7 +119,7 @@ sudo systemctl restart uptickd && sudo journalctl -u uptickd -f
 	return (
 		<>
 			<Head>
-				<title>ITRocket - Support Provider 🚀</title>
+				<title>ITRocket - Support Provider </title>
 				<meta
 					name='description'
 					content='ITRocket 🚀|The #1 Crypto Validator in the game'
@@ -149,16 +132,14 @@ sudo systemctl restart uptickd && sudo journalctl -u uptickd -f
 				<SideMenu />
 				<main className={styles.MainColumn}>
 					<ReactMarkdown
-						rehypePlugins={[rehypeHighlight]}
+						rehypePlugins={[rehypeHighlight, rehypeRaw]}
 						remarkPlugins={[remarkGfm]}
 					>
 						{markdown}
 					</ReactMarkdown>
 				</main>
 			</div>
-
-			<Footer />
 		</>
 	)
 }
-export default about
+export default axelar

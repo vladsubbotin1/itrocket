@@ -16,13 +16,13 @@ const Card = () => {
 		{
 			id: 1,
 			name: 'NYM',
-			link: 'https://nymtech.net/',
+			link: 'https://mixnet.explorers.guru/',
 			imgUrl: 'nym.png',
 		},
 		{
 			id: 2,
 			name: 'Forta',
-			link: 'https://forta.org/',
+			link: 'https://explorer.forta.network/',
 			imgUrl: 'forta.jpg',
 		},
 	]
@@ -41,15 +41,15 @@ const Card = () => {
 			🚀 Tech support for delegators
 			<br />
 			<br /> If you have any questions, feel free to contact us on{' '}
-			<a href='https://t.me/SEM3gs' style={{ color: '#f0f' }}>
+			<a href='https://t.me/SEM3gs' style={{ color: '#44b5dd' }}>
 				Telegram!
 			</a>
 			<br />
 			<br />
 			<b>Identity Key:</b> 6L1geN6S9n7SMvgajjptj6p96sCSMfxWmbR8dJ3G3f5
 			<br />
+			<br />
 			<span>
-				{' '}
 				<b>Our Mixnode Details </b> -{' '}
 			</span>
 			<a
@@ -66,7 +66,6 @@ const Card = () => {
 			<b>ITRocket team invites you to delegate to our node. Welcome aboard!</b>
 			<br />
 			<br />
-			<br /> <b>Only 3% fees</b> - guaranteed to never go up <br /> <br />
 			We offer you: <br />
 			🚀 High quality hardware <br />
 			🚀 Only one node on the server <br />
@@ -74,11 +73,10 @@ const Card = () => {
 			🚀 Tech support for delegators
 			<br />
 			<br /> If you have any questions, feel free to contact us on{' '}
-			<a href='https://t.me/SEM3gs' style={{ color: '#f0f' }}>
+			<a href='https://t.me/SEM3gs' style={{ color: '#44b5dd' }}>
 				Telegram!
 			</a>
-			<br />
-			<br />
+			<br /> <br />
 			<b>Forta Ethereum scan node: </b>{' '}
 			<a
 				href='https://explorer.forta.network/scan-node/0x7c224eB61cF0Dd6aD66F04fb7211dc842EA130e3'
@@ -86,7 +84,7 @@ const Card = () => {
 			>
 				here
 			</a>
-			<br />
+			<br /> <br />
 			<b>Forta Optymism scan node: </b>{' '}
 			<a
 				href='https://explorer.forta.network/scan-node/0x716dBd07d5613b96617a2454231f408A8598D8CE'
@@ -161,7 +159,7 @@ const Card = () => {
 									handleClose={close}
 								/>
 							)}
-						</AnimatePresence>{' '}
+						</AnimatePresence>
 					</div>
 				)
 			})}

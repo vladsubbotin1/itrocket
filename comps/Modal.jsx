@@ -9,7 +9,7 @@ const dropIn = {
 	visible: {
 		y: '0',
 		opacity: 1,
-		transition: { duration: 0.4 },
+		transition: { duration: 0.5 },
 	},
 	exit: {
 		y: '100vh',
@@ -27,7 +27,7 @@ const Modal = ({ handleClose, text }) => {
 				animate='visible'
 				exit='exit'
 			>
-				<p>{text}</p>
+				<div>{text}</div>
 				<button onClick={handleClose} className={styles.exit}>
 					x
 				</button>

@@ -24,7 +24,6 @@ const Footer = () => {
 						target='_blank'
 						rel='noopener noreferrer'
 					>
-						{' '}
 						<Image src='/icons/tg.svg' alt='telegram' width={40} height={40} />
 					</a>
 
@@ -34,6 +33,18 @@ const Footer = () => {
 						rel='noopener noreferrer'
 					>
 						<Image src='/icons/disc.svg' alt='discord' width={40} height={40} />
+					</a>
+					<a
+						href='https://twitter.com/SEM23404846'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
+						<Image
+							src='/icons/twitter.svg'
+							alt='twitter'
+							width={40}
+							height={40}
+						/>
 					</a>
 				</div>
 			</div>

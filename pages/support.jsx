@@ -3,11 +3,11 @@ import Head from 'next/head'
 import styles from '../styles/Support.module.scss'
 import Header from '../comps/Header'
 import SideMenu from '../comps/SideMenu'
+import Notification from '../comps/Notification'
 import { ThemeContext } from '../pages/_app.jsx'
-import ReactMarkdown from 'react-markdown'
-import rehypeHighlight from 'rehype-highlight'
-import remarkGfm from 'remark-gfm'
 import 'highlight.js/styles/github.css'
+import { Alert } from 'antd'
+import Link from 'next/link'
 
 const about = () => {
 	const { theme, toggleTheme } = useContext(ThemeContext)
@@ -22,35 +22,107 @@ const about = () => {
 		}
 	}, [theme])
 
-	const markdown = `## Support
-
-Here are the tools for every network supported by ITRocket Team:
-
-* [Axelar](/support/axelar/about)
-* [Uptick](/support/axelar/about)
-`
-
 	return (
 		<>
 			<Head>
-				<title>ITRocket - Support Provider 🚀</title>
+				<title>ITRocket - Support Provider</title>
 				<meta
 					name='description'
 					content='ITRocket 🚀|The #1 Crypto Validator in the game'
 				/>
 			</Head>
 
+			<Notification />
+
 			<Header />
 
 			<div className={styles.container}>
 				<SideMenu />
 				<main className={styles.MainColumn}>
-					<ReactMarkdown
-						rehypePlugins={[rehypeHighlight]}
-						remarkPlugins={[remarkGfm]}
-					>
-						{markdown}
-					</ReactMarkdown>
+					<Alert
+						message='Please pay attention that networks have Mainnet and Testnet separate guides.'
+						style={{ marginTop: '15px' }}
+						type='info'
+						closable
+					/>
+
+					<h2>Support 🌟</h2>
+					<span>Here is the list of networks supported by ITRocket team:</span>
+					<h3>Mainnets</h3>
+					<ul>
+						<li>
+							<Link href='/support/mainnet/nym/'>NYM</Link>
+						</li>
+						<li>
+							<Link href='/support/mainnet/forta/'>Forta</Link>
+						</li>
+					</ul>
+
+					<h3>Testnets</h3>
+					<div style={{ display: 'flex', flexWrap: 'wrap', gap: '70px' }}>
+						<div className='flex-center'>
+							<ul>
+								<li>
+									<Link href='/support/testnet/axelar'>Axelar</Link>
+								</li>
+								<li>
+									<Link href='/support/testnet/blastapi'>Blast API</Link>
+								</li>
+								<li>
+									<Link href='/support/testnet/bundlr'>Bundlr</Link>
+								</li>
+								<li>
+									<Link href='/support/testnet/celestia'>Celestia</Link>
+								</li>
+								<li>
+									<Link href='/support/testnet/gear'>Gear</Link>
+								</li>
+								<li>
+									<Link href='/support/testnet/kira'>Kira</Link>
+								</li>
+								<li>
+									<Link href='/support/testnet/masa'>Masa</Link>
+								</li>
+								<li>
+									<Link href='/support/testnet/massa'>Massa</Link>
+								</li>
+								<li>
+									<Link href='/support/testnet/nois'>Nois</Link>
+								</li>
+							</ul>
+						</div>
+						<div className='flex-center'>
+							<ul>
+								<li>
+									<Link href='/support/testnet/nibiru'>Nibiru</Link>
+								</li>
+								<li>
+									<Link href='/support/testnet/oasys'>Oasys</Link>
+								</li>
+								<li>
+									<Link href='/support/testnet/penumbra'>Penumbra</Link>
+								</li>
+								<li>
+									<Link href='/support/testnet/sei'>Sei</Link>
+								</li>
+								<li>
+									<Link href='/support/testnet/sui'>Sui</Link>
+								</li>
+								<li>
+									<Link href='/support/testnet/starknet'>Starknet</Link>
+								</li>
+								<li>
+									<Link href='/support/testnet/terp'>Terp</Link>
+								</li>
+								<li>
+									<Link href='/support/testnet/uptick'>Uptick</Link>
+								</li>
+								<li>
+									<Link href='/support/testnet/haqq'>HAQQ </Link>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</main>
 			</div>
 		</>

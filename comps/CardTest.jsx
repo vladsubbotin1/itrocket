@@ -11,7 +11,7 @@ const Card = () => {
 		{
 			id: 1,
 			name: 'Axelar',
-			link: 'https://axelar.network/',
+			link: 'https://testnet.axelarscan.io/',
 			imgUrl: 'axelar.jpg',
 		},
 		// {
@@ -23,19 +23,19 @@ const Card = () => {
 		{
 			id: 3,
 			name: 'BlastAPI',
-			link: 'https://blastapi.io/',
+			link: 'https://houston.blastapi.io/',
 			imgUrl: 'blastapi.jpg',
 		},
 		{
 			id: 4,
 			name: 'Bundlr',
-			link: 'https://bundlr.network/',
+			link: 'https://bundlr.network/explorer',
 			imgUrl: 'bundlr.jpg',
 		},
 		{
 			id: 5,
 			name: 'Celestia',
-			link: 'https://celestia.org/',
+			link: 'https://celestia.explorers.guru/validators',
 			imgUrl: 'celestia.png',
 		},
 		// {
@@ -53,7 +53,7 @@ const Card = () => {
 		{
 			id: 8,
 			name: 'Gear',
-			link: 'https://www.gear-tech.io/',
+			link: 'https://telemetry.gear-tech.io/',
 			imgUrl: 'gear.jpg',
 		},
 		// {
@@ -65,7 +65,7 @@ const Card = () => {
 		{
 			id: 10,
 			name: 'Kira',
-			link: 'https://kira.network/',
+			link: 'https://kirastats.dragonstake.io/',
 			imgUrl: 'kira.svg',
 		},
 		{
@@ -83,37 +83,37 @@ const Card = () => {
 		{
 			id: 13,
 			name: 'Nois',
-			link: 'https://nois.network/',
+			link: 'https://explorer.kjnodes.com/nois',
 			imgUrl: 'nois.png',
 		},
 		{
 			id: 14,
 			name: 'Nibiru',
-			link: 'https://nibiru.fi/',
+			link: 'https://nibiru.explorers.guru/validators',
 			imgUrl: 'nibiru.jpg',
 		},
 		{
 			id: 15,
 			name: 'Oasys',
-			link: 'https://www.oasys.games/',
+			link: 'https://explorer.oasys.games/',
 			imgUrl: 'oasys.webp',
 		},
 		{
 			id: 16,
 			name: 'Penumbra',
-			link: 'https://penumbra.zone/',
+			link: 'https://guide.penumbra.zone/main/pd/join-testnet.html',
 			imgUrl: 'penumbra.webp',
 		},
 		{
 			id: 17,
 			name: 'Sei',
-			link: 'https://www.seinetwork.io/',
+			link: 'https://sei.explorers.guru/',
 			imgUrl: 'sei.svg',
 		},
 		{
 			id: 18,
 			name: 'Sui',
-			link: 'https://sui.io/',
+			link: 'https://explorer.sui.io/',
 			imgUrl: 'sui.svg',
 		},
 		// {
@@ -125,25 +125,25 @@ const Card = () => {
 		{
 			id: 20,
 			name: 'Starknet',
-			link: 'https://starknet.io/',
+			link: 'https://starkscan.co/',
 			imgUrl: 'starknet.png',
 		},
 		{
 			id: 21,
 			name: 'Terp',
-			link: 'https://terp.network/',
+			link: 'https://explorer.kjnodes.com/terp/staking',
 			imgUrl: 'terp.svg',
 		},
 		{
 			id: 22,
 			name: 'Uptick',
-			link: 'https://www.uptick.network/',
+			link: 'https://uptick.explorers.guru/validators',
 			imgUrl: 'uptick.jpg',
 		},
 		{
 			id: 23,
 			name: 'HAQQ',
-			link: 'https://islamiccoin.net/',
+			link: 'https://testnet.manticore.team/haqq/staking',
 			imgUrl: 'haqq.png',
 		},
 		// {
@@ -190,7 +190,10 @@ const Card = () => {
 									}
 									role='button'
 								>
-									<Link href='/support' data={data}>
+									<Link
+										href={'/support/testnet/' + item.name.toLowerCase()}
+										data={data}
+									>
 										Support
 									</Link>
 								</button>

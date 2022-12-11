@@ -46,8 +46,11 @@ export default function Home() {
 									viewport={{ once: true }}
 									transition={{ duration: 1 }}
 									variants={{
-										visible: { opacity: 1, x: 0 },
-										hidden: { opacity: 0, x: -40 },
+										visible: {
+											opacity: 1,
+											y: 0,
+										},
+										hidden: { opacity: 0, y: 30 },
 									}}
 								>
 									<h3 className={styles.hero__heading}>Staking provider</h3>
@@ -77,12 +80,15 @@ export default function Home() {
 								<motion.div
 									className={styles.hero__column}
 									initial='hidden'
-									whileInView='visible'
 									viewport={{ once: true }}
+									whileInView='visible'
 									transition={{ duration: 1 }}
 									variants={{
-										visible: { opacity: 1, x: 0 },
-										hidden: { opacity: 0, x: 40 },
+										visible: {
+											opacity: 1,
+											y: 0,
+										},
+										hidden: { opacity: 0, y: 30 },
 									}}
 								>
 									<h3 className={styles.hero__heading}>Project support</h3>
@@ -124,21 +130,22 @@ export default function Home() {
 								viewport={{ once: true }}
 								transition={{ duration: 1 }}
 								variants={{
-									visible: { opacity: 1 },
-									hidden: { opacity: 0 },
+									visible: {
+										opacity: 1,
+										y: 0,
+									},
+									hidden: { opacity: 0, y: 30 },
 								}}
 							>
 								<h3 className={styles.title} id='mainnet'>
 									Mainnets
 								</h3>
-
 								<p className={styles.description}>
 									<span>Low commission and </span>
 									<span>24/7 node monitoring.</span>
 									<br />
 									<span>Delegate your tokens to our trusted validator!</span>
 								</p>
-
 								<CardMain />
 							</motion.div>
 						</div>
@@ -153,8 +160,11 @@ export default function Home() {
 								viewport={{ once: true }}
 								transition={{ duration: 1 }}
 								variants={{
-									visible: { opacity: 1 },
-									hidden: { opacity: 0 },
+									visible: {
+										opacity: 1,
+										y: 0,
+									},
+									hidden: { opacity: 0, y: 30 },
 								}}
 							>
 								<h3 className={styles.title} id='testnet'>
