@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion'
 import Backdrop from './Backdrop'
 import styles from '../styles/Modal.module.scss'
+import { ThemeContext } from '../pages/_app'
+import { useContext } from 'react'
 
 const dropIn = {
 	hidden: {
@@ -17,11 +19,20 @@ const dropIn = {
 }
 
 const Modal = ({ handleClose, text }) => {
+	const { theme, toggleTheme } = useContext(ThemeContext)
+
 	return (
 		<Backdrop onClick={handleClose}>
 			<motion.div
 				onClick={e => e.stopPropagation()}
 				className={styles.modal}
+				style={{
+					backgroundColor:
+						theme === 'light'
+							? 'rgba(255, 255, 255, 0.9)'
+							: 'rgba(255, 255, 255, 0.01)',
+					color: theme === 'light' ? '#000' : '#fff',
+				}}
 				variants={dropIn}
 				initial='hidden'
 				animate='visible'
