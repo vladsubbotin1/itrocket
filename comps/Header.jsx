@@ -119,7 +119,7 @@ const Header = () => {
 			{
 				<Link href='/'>
 					<Image
-						src='/logoCropped.svg'
+						src='/logo.svg'
 						alt='logo'
 						width={200}
 						height={60}
@@ -132,7 +132,7 @@ const Header = () => {
 						alt='logo'
 						width={200}
 						height={60}
-						style={{ display: theme === 'light' ? 'block' : 'none' }}
+						style={{ display: theme === 'dark' ? 'block' : 'none' }}
 					/>
 				</Link>
 			}
