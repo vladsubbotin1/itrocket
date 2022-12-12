@@ -20,7 +20,7 @@ const Accordion = () => {
 				style={isActive1 ? { display: 'block' } : { display: 'none' }}
 			>
 				<p className={styles.accordion__desc}>
-					We are a team of DevOps engineers from Armenia 🇦🇲. We are crypto
+					ITRocket is a team of DevOps engineers from Armenia 🇦🇲. We are crypto
 					enthusiasts & node operators in various crypto ecosystems. Our main
 					goal is to help millions of people effectively manage their crypto
 					assets!
@@ -39,9 +39,9 @@ const Accordion = () => {
 				style={isActive2 ? { display: 'block' } : { display: 'none' }}
 			>
 				<p className={styles.accordion__desc}>
-					We run nodes on dedicated servers in Europe, USA and Canada. We use
-					monitoring tools 24/7 with Prometheus metrics, Grafana dashboard and
-					telegram bots alerting system.
+					We run nodes on dedicated servers in Europe, USA and Canada. Our team
+					uses monitoring tools 24/7 with Prometheus metrics, Grafana dashboard
+					and telegram bots alerting system.
 				</p>
 			</div>
 
