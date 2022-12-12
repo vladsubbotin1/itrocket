@@ -116,8 +116,9 @@ const Header = () => {
 
 	return (
 		<header className={styles.header}>
-			<Link href='/'>
-				{theme === 'light' && (
+			{
+				<Link href='/'>
+					theme === 'light' && (
 					<Image
 						src='/logoCropped.svg'
 						alt='logo'
@@ -125,8 +126,12 @@ const Header = () => {
 						height={60}
 						className={styles.logo}
 					/>
-				)}
-				{theme !== 'light' && (
+					)
+				</Link>
+			}
+			{
+				<Link href='/'>
+					theme !== 'light' && (
 					<Image
 						src='/darkLogo.svg'
 						alt='logo'
@@ -134,8 +139,9 @@ const Header = () => {
 						height={60}
 						className={styles.logo}
 					/>
-				)}
-			</Link>
+					)
+				</Link>
+			}
 
 			<div className={styles.headerNav__wrapper}>
 				<nav className={styles.headerNav}>
