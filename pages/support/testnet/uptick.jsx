@@ -122,7 +122,7 @@ sudo systemctl restart uptickd && sudo journalctl -u uptickd -f
 				<title>ITRocket - Support Provider </title>
 				<meta
 					name='description'
-					content='ITRocket 🚀|The #1 Crypto Validator in the game'
+					content='ITRocket 🚀 | Crypto Multipurpose Project'
 				/>
 			</Head>
 

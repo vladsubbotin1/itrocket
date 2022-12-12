@@ -28,7 +28,7 @@ const about = () => {
 				<title>ITRocket - Support Provider</title>
 				<meta
 					name='description'
-					content='ITRocket 🚀|The #1 Crypto Validator in the game'
+					content='ITRocket 🚀 | Crypto Multipurpose Project'
 				/>
 			</Head>
 
