@@ -132,6 +132,7 @@ const Header = () => {
 						alt='logo'
 						width={200}
 						height={60}
+						className={styles.logo}
 						style={{ display: theme === 'dark' ? 'block' : 'none' }}
 					/>
 				</Link>
