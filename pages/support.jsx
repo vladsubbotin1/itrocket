@@ -3,7 +3,6 @@ import Head from 'next/head'
 import styles from '../styles/Support.module.scss'
 import Header from '../comps/Header'
 import SideMenu from '../comps/SideMenu'
-import Notification from '../comps/Notification'
 import { ThemeContext } from '../pages/_app.jsx'
 import 'highlight.js/styles/github.css'
 import { Alert } from 'antd'
@@ -31,8 +30,6 @@ const about = () => {
 					content='ITRocket 🚀 | Crypto Multipurpose Project'
 				/>
 			</Head>
-
-			<Notification />
 
 			<Header />
 

@@ -34,18 +34,6 @@
 	}
 }
 
-.socials {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 200px;
-	gap: 20px;
-
-	@media (max-width: 768px) {
-		gap: 10px;
-	}
-}
-
 .copyright {
 	font-size: 14px;
 	font-weight: 500;

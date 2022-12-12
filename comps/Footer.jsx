@@ -18,7 +18,7 @@ const Footer = () => {
 				<div className={styles.copyright}>
 					<span>© 2022 ITRocket Team.</span>
 				</div>
-				<div className={styles.socials}>
+				<div className='socials'>
 					<a
 						href='https://t.me/SEM3gs'
 						target='_blank'
