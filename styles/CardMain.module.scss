@@ -59,6 +59,10 @@
 	transition: 0.3s;
 	height: fit-content;
 
+	@media (max-width: 1480px) {
+		width: 30%;
+	}
+
 	@media (max-width: 1024px) {
 		width: 35%;
 	}
@@ -181,6 +185,10 @@
 		#23a5d500,
 		#23d5ab00
 	);
+
+	@media (max-width: 1200px) {
+		width: 25%;
+	}
 
 	@media (max-width: 768px) {
 		width: calc(50% - 10px);
