@@ -1,5 +1,5 @@
 import styles from '../styles/Header.module.scss'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { useContext, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { ThemeContext } from '../pages/_app'
@@ -126,67 +126,83 @@ const Header = () => {
 				</div>
 			</header>
 
-			<div
-				className={styles.burgerMenu}
-				style={{
-					backgroundColor: theme === 'dark' ? '#000' : '#fff',
-					opacity: isOpen ? '1' : '0',
-					height: isOpen ? '100%' : '0',
-					padding: isOpen ? '10px 30px 20px' : '0',
-				}}
+			<AnimatePresence
+				initial={false}
+				exitBeforeEnter={true}
+				onExitComplete={() => null}
 			>
-				<nav>
-					<ul
-						onClick={() => {
-							setIsOpen(!isOpen)
-						}}
-					>
-						<li>
-							<Link href='/#mainnet'>Mainnets</Link>
-						</li>
-						<li>
-							<Link href='/#testnet'>Testnets</Link>
-						</li>
-						<li>
-							<Link href='/support'>Services</Link>
-						</li>
+				<div
+					className={styles.burgerMenu}
+					style={{
+						backgroundColor: theme === 'dark' ? '#000' : '#fff',
+						opacity: isOpen ? '1' : '0',
+						display: isOpen ? 'flex' : 'none',
+						padding: isOpen ? '10px 30px 20px' : '0',
+					}}
+				>
+					<nav>
+						<ul
+							onClick={() => {
+								setIsOpen(!isOpen)
+							}}
+						>
+							<li>
+								<Link href='/#mainnet'>Mainnets</Link>
+							</li>
+							<li>
+								<Link href='/#testnet'>Testnets</Link>
+							</li>
+							<li>
+								<Link href='/support'>Services</Link>
+							</li>
 
-						<li>
-							<Link href='/#faq'>FAQ</Link>
-						</li>
-					</ul>
-				</nav>
+							<li>
+								<Link href='/#faq'>FAQ</Link>
+							</li>
+						</ul>
+					</nav>
 
-				<div className='socials'>
-					<a
-						href='https://t.me/SEM3gs'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						<Image src='/icons/tg.svg' alt='telegram' width={30} height={30} />
-					</a>
+					<div className='socials'>
+						<a
+							href='https://t.me/SEM3gs'
+							target='_blank'
+							rel='noopener noreferrer'
+						>
+							<Image
+								src='/icons/tg.svg'
+								alt='telegram'
+								width={30}
+								height={30}
+							/>
+						</a>
 
-					<a
-						href='https://discord.com/users/SEM#4095'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						<Image src='/icons/disc.svg' alt='discord' width={30} height={30} />
-					</a>
-					<a
-						href='https://twitter.com/SEM23404846'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						<Image
-							src='/icons/twitter.svg'
-							alt='twitter'
-							width={30}
-							height={30}
-						/>
-					</a>
+						<a
+							href='https://discord.com/users/SEM#4095'
+							target='_blank'
+							rel='noopener noreferrer'
+						>
+							<Image
+								src='/icons/disc.svg'
+								alt='discord'
+								width={30}
+								height={30}
+							/>
+						</a>
+						<a
+							href='https://twitter.com/SEM23404846'
+							target='_blank'
+							rel='noopener noreferrer'
+						>
+							<Image
+								src='/icons/twitter.svg'
+								alt='twitter'
+								width={30}
+								height={30}
+							/>
+						</a>
+					</div>
 				</div>
-			</div>
+			</AnimatePresence>
 		</>
 	)
 }
