@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from 'react'
 import Modal from './Modal'
 import Link from 'next/link'
 import { ThemeContext } from '../pages/_app'
+import Image from 'next/image'
 
 const Header = () => {
 	const { theme, toggleTheme } = useContext(ThemeContext)
@@ -116,7 +117,7 @@ const Header = () => {
 	return (
 		<header className={styles.header}>
 			<Link href='/'>
-				<img
+				<Image
 					src={
 						theme === 'light'
 							? '../public/logoCropped.svg'
