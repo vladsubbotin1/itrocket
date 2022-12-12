@@ -132,7 +132,7 @@ const Header = () => {
 					backgroundColor: theme === 'dark' ? '#000' : '#fff',
 					opacity: isOpen ? '1' : '0',
 					height: isOpen ? '100%' : '0',
-					padding: isOpen ? '10px 30px' : '0',
+					padding: isOpen ? '10px 30px 20px' : '0',
 				}}
 			>
 				<nav>

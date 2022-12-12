@@ -46,17 +46,6 @@
 	font-size: 3.15rem;
 	position: relative;
 
-	// &:before {
-	// 	background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3NSIgaGVpZ2h0PSI5OCIgdmlld0JveD0iMCAwIDc1IDk4Ij48ZWxsaXBzZSBjeD0iNDkuNjUiIGN5PSI1OC45ODIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIxLjUiIHJ4PSIxOS4yNSIgcnk9IjU3LjI1IiB0cmFuc2Zvcm09InJvdGF0ZSgzNSA1OS41MDggMzQuOTUzKSIvPjwvc3ZnPg==)
-	// 		no-repeat scroll 0 transparent;
-	// 	content: '';
-	// 	height: 118px;
-	// 	left: 300px;
-	// 	position: absolute;
-	// 	top: -30px;
-	// 	width: 100px;
-	// }
-
 	&:hover {
 		text-decoration: underline;
 	}
@@ -112,19 +101,6 @@
 	}
 }
 
-@media (prefers-color-scheme: dark) {
-	.card,
-	.footer {
-		border-color: #222;
-	}
-	.code {
-		background: #111;
-	}
-	.logo img {
-		filter: invert(1);
-	}
-}
-
 #mainnetSection {
 	justify-content: flex-start;
 }
@@ -132,6 +108,7 @@
 .hero {
 	justify-content: flex-start;
 	margin-bottom: 80px;
+	transition: 0.3s;
 
 	&__wrapper {
 		width: 100%;

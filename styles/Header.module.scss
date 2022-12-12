@@ -10,6 +10,7 @@
 	align-items: center;
 	@include container;
 	border-bottom: 1px solid rgba(165, 165, 165, 0.2);
+	transition: 0.3s;
 
 	@media (max-width: 768px) {
 		padding: 12px;
@@ -181,17 +182,23 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	transition: 0.5s;
+	transition: 0.5s ease;
 	border-bottom: solid 1px #eaeaea;
 	font-weight: 400;
 	opacity: 1;
 
 	ul {
-		padding: 15px 0px 40px;
+		padding: 10px 0px 40px;
 
 		li {
-			padding: 15px 0;
 			border-bottom: solid 1px rgba(151, 151, 151, 0.2);
+
+			a {
+				width: 100%;
+				height: 100%;
+				display: inline-block;
+				padding: 15px 0;
+			}
 		}
 	}
 }
