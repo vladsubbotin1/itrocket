@@ -120,7 +120,8 @@ const Header = () => {
 				<Image
 					src={theme === 'light' ? '/logoCropped.svg' : '/darkLogo.svg'}
 					alt='logo'
-					width='205px'
+					width={200}
+					height={170}
 					className={styles.logo}
 				/>
 			</Link>
