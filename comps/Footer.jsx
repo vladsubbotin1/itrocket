@@ -11,7 +11,7 @@ const Footer = () => {
 						src='/darkLogo.svg'
 						alt='ITRocket Logo'
 						width={200}
-						height={170}
+						height={150}
 					/>
 				</div>
 
