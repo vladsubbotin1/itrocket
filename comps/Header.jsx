@@ -117,17 +117,24 @@ const Header = () => {
 	return (
 		<header className={styles.header}>
 			<Link href='/'>
-				<Image
-					src={
-						theme === 'light'
-							? '../public/logoCropped.svg'
-							: '../public/darkLogo.svg'
-					}
-					alt='logo'
-					width={200}
-					height={170}
-					className={styles.logo}
-				/>
+				{theme === 'light' && (
+					<Image
+						src={'../public/logoCropped.svg'}
+						alt='logo'
+						width={200}
+						height={60}
+						className={styles.logo}
+					/>
+				)}
+				{theme !== 'light' && (
+					<Image
+						src={'../public/darkLogo.svg'}
+						alt='logo'
+						width={200}
+						height={60}
+						className={styles.logo}
+					/>
+				)}
 			</Link>
 
 			<div className={styles.headerNav__wrapper}>
