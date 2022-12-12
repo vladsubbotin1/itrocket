@@ -116,32 +116,29 @@ const Header = () => {
 
 	return (
 		<header className={styles.header}>
-			{
-				<Link href='/'>
-					theme === 'light' && (
-					<Image
-						src='/logoCropped.svg'
-						alt='logo'
-						width={200}
-						height={60}
-						className={styles.logo}
-					/>
-					)
-				</Link>
-			}
-			{
-				<Link href='/'>
-					theme !== 'light' && (
-					<Image
-						src='/darkLogo.svg'
-						alt='logo'
-						width={200}
-						height={60}
-						className={styles.logo}
-					/>
-					)
-				</Link>
-			}
+			<Link href='/'>
+				theme === 'light' && (
+				<Image
+					src='/logoCropped.svg'
+					alt='logo'
+					width={200}
+					height={60}
+					className={styles.logo}
+				/>
+				)
+			</Link>
+
+			<Link href='/'>
+				theme !== 'light' && (
+				<Image
+					src='/darkLogo.svg'
+					alt='logo'
+					width={200}
+					height={60}
+					className={styles.logo}
+				/>
+				)
+			</Link>
 
 			<div className={styles.headerNav__wrapper}>
 				<nav className={styles.headerNav}>
