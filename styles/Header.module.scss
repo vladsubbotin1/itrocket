@@ -35,6 +35,16 @@
 		}
 	}
 
+	a {
+		opacity: 0.8;
+		text-decoration: none;
+
+		&:hover {
+			opacity: 1;
+			text-decoration: none;
+		}
+	}
+
 	ul {
 		li {
 			display: block;
@@ -53,11 +63,6 @@
 				width: 0px;
 			}
 
-			&:hover {
-				opacity: 0.9;
-				text-decoration: underline;
-			}
-
 			@media (max-width: 768px) {
 				padding: 5px 10px;
 			}
@@ -66,10 +71,12 @@
 }
 
 .logo {
+	margin: 5px;
 	padding: 10px;
 	cursor: pointer;
 
 	@media (max-width: 768px) {
+		margin: 0;
 		width: 150px !important;
 		padding: 5px 7px;
 	}
