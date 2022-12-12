@@ -119,7 +119,7 @@ const Header = () => {
 			<Link href='/'>
 				{theme === 'light' && (
 					<Image
-						src='../public/logoCropped.svg'
+						src='/logoCropped.svg'
 						alt='logo'
 						width={200}
 						height={60}
@@ -128,7 +128,7 @@ const Header = () => {
 				)}
 				{theme !== 'light' && (
 					<Image
-						src='../public/darkLogo.svg'
+						src='/darkLogo.svg'
 						alt='logo'
 						width={200}
 						height={60}
