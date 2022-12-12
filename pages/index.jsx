@@ -172,7 +172,7 @@ export default function Home() {
 								</h3>
 
 								<p className={styles.description}>
-									<span>Here are some base tools for node operators.</span>
+									<span>Here are some basic tools for node operators.</span>
 								</p>
 
 								<CardTest />

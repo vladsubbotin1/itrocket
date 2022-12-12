@@ -118,7 +118,11 @@ const Header = () => {
 		<header className={styles.header}>
 			<Link href='/'>
 				<Image
-					src={theme === 'light' ? '/logoCropped.svg' : '/darkLogo.svg'}
+					src={
+						theme === 'light'
+							? '../public/logoCropped.svg'
+							: '../public/darkLogo.svg'
+					}
 					alt='logo'
 					width={200}
 					height={170}
