@@ -1,8 +1,8 @@
 .modal {
 	width: clamp(60%, 800px, 90%);
-	height: min(60%, 500px);
+	height: min(68%, 600px);
 	margin: auto;
-	padding: 3rem;
+	padding: 2.5rem;
 	border-radius: 12px;
 	display: flex;
 	flex-direction: column;
@@ -12,12 +12,10 @@
 	box-shadow: rgba(164, 165, 165, 0.25) 0px 2px 48px;
 
 	div {
-		margin-bottom: 20px;
 		line-height: 1.5;
 
 		@media (max-width: 768px) {
 			font-size: 11px;
-			margin-bottom: 10px;
 		}
 	}
 	position: relative;

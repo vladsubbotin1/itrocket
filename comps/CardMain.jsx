@@ -28,7 +28,7 @@ const Card = () => {
 	]
 
 	const NYMDesc = (
-		<span>
+		<>
 			<b>
 				ITRocket team invites you to delegate to our node hosted in the USA!{' '}
 			</b>
@@ -49,20 +49,22 @@ const Card = () => {
 			<b>Identity Key:</b> 6L1geN6S9n7SMvgajjptj6p96sCSMfxWmbR8dJ3G3f5
 			<br />
 			<br />
-			<span>
-				<b>Our Mixnode Details </b> -{' '}
-			</span>
-			<a
-				href='https://mixnet.explorers.guru/mixnode/6L1geN6S9n7SMvgajjptj6p96sCSMfxWmbR8dJ3G3f5'
-				style={{ color: '#f0f' }}
-			>
-				here
-			</a>
-		</span>
+			<div className='center-flex'>
+				<button className={styles.btnDelegate_blue}>
+					<a
+						href='https://mixnet.explorers.guru/mixnode/6L1geN6S9n7SMvgajjptj6p96sCSMfxWmbR8dJ3G3f5'
+						rel='noopener noreferrer'
+						target='_blank'
+					>
+						Delegate
+					</a>
+				</button>
+			</div>
+		</>
 	)
 
 	const FortaDesc = (
-		<span>
+		<>
 			<b>ITRocket team invites you to delegate to our node. Welcome aboard!</b>
 			<br />
 			<br />
@@ -77,22 +79,37 @@ const Card = () => {
 				Telegram!
 			</a>
 			<br /> <br />
-			<b>Forta Ethereum scan node: </b>{' '}
-			<a
-				href='https://explorer.forta.network/scan-node/0x7c224eB61cF0Dd6aD66F04fb7211dc842EA130e3'
-				style={{ color: '#f0f' }}
-			>
-				here
-			</a>
-			<br /> <br />
-			<b>Forta Optymism scan node: </b>{' '}
-			<a
-				href='https://explorer.forta.network/scan-node/0x716dBd07d5613b96617a2454231f408A8598D8CE'
-				style={{ color: '#f0f' }}
-			>
-				here
-			</a>
-		</span>
+			<div className={styles.delegateWrapper}>
+				<div>
+					<b>Forta Ethereum scan node: </b>
+					<div className='center-flex'>
+						<button className={styles.btnDelegate_blue}>
+							<a
+								href='https://explorer.forta.network/scan-node/0x7c224eB61cF0Dd6aD66F04fb7211dc842EA130e3'
+								rel='noopener noreferrer'
+								target='_blank'
+							>
+								Delegate
+							</a>
+						</button>
+					</div>
+				</div>
+				<div className={styles.delegateColumn}>
+					<b>Forta Optymism scan node: </b>
+					<div className='center-flex'>
+						<button className={styles.btnDelegate}>
+							<a
+								href='https://explorer.forta.network/scan-node/0x716dBd07d5613b96617a2454231f408A8598D8CE'
+								rel='noopener noreferrer'
+								target='_blank'
+							>
+								Delegate
+							</a>
+						</button>
+					</div>
+				</div>
+			</div>
+		</>
 	)
 
 	const [modalDesc, setModalDesc] = useState(false)

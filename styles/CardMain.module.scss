@@ -194,3 +194,52 @@
 		width: calc(50% - 10px);
 	}
 }
+
+.btnDelegate,
+.btnDelegate_blue {
+	font-size: 14px;
+	border-radius: 15px;
+	letter-spacing: -0.02em;
+	line-height: 16px;
+	padding: 12px 24px;
+	font-weight: 500;
+	font-family: 'JetBrains Mono';
+	background: #8f39c8d8;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	margin-top: 10px;
+	transition: 0.3s;
+
+	&:hover {
+		background: #8630bfd8;
+		color: #fff;
+	}
+
+	@media (max-width: 768px) {
+		font-size: 13px;
+		padding: 8px 16px;
+	}
+}
+
+.btnDelegate_blue {
+	background-color: #5f79e3e2;
+
+	&:hover {
+		background: #4f66c4e8;
+	}
+}
+
+.delegateWrapper {
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.delegateColumn {
+	width: 50%;
+}
