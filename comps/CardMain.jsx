@@ -177,7 +177,7 @@ const Card = () => {
 			<br /> <br />
 			<div className='center-flex'>
 				<button className={styles.btnDelegate}>
-					<Link href='/pages/delegate/quicksilver'>Delegate</Link>
+					<Link href='/delegate/quicksilver'>Delegate</Link>
 				</button>
 			</div>
 		</>
