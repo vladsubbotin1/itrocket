@@ -63,6 +63,12 @@ const SideMenu = () => {
 			link: 'https://forta.org/',
 			imgUrl: 'forta.jpg',
 		},
+		{
+			id: 3,
+			name: 'Quicksilver',
+			link: 'https://quicksilver.explorers.guru/',
+			imgUrl: 'quicksilver.jpg',
+		},
 	]
 
 	let testnetData = [

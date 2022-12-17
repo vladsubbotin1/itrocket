@@ -15,12 +15,12 @@ const Finished = () => {
 			link: 'https://pontem.network/',
 			imgUrl: 'pontem.svg',
 		},
-		{
-			id: 3,
-			name: 'Quicksilver',
-			link: 'https://quicksilver.zone/',
-			imgUrl: 'quicksilver.jpg',
-		},
+		// {
+		// 	id: 3,
+		// 	name: 'Quicksilver',
+		// 	link: 'https://quicksilver.zone/',
+		// 	imgUrl: 'quicksilver.jpg',
+		// },
 		{
 			id: 4,
 			name: 'Empower',

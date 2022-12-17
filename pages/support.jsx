@@ -53,6 +53,9 @@ const about = () => {
 						<li>
 							<Link href='/support/mainnet/forta/'>Forta</Link>
 						</li>
+						<li>
+							<Link href='/support/mainnet/quicksilver/'>Quicksilver</Link>
+						</li>
 					</ul>
 
 					<h3>Testnets</h3>

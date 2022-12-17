@@ -25,6 +25,12 @@ const Card = () => {
 			link: 'https://explorer.forta.network/',
 			imgUrl: 'forta.jpg',
 		},
+		{
+			id: 3,
+			name: 'Quicksilver',
+			link: 'https://quicksilver.explorers.guru/',
+			imgUrl: 'quicksilver.jpg',
+		},
 	]
 
 	const NYMDesc = (
@@ -46,19 +52,39 @@ const Card = () => {
 			</a>
 			<br />
 			<br />
-			<b>Identity Key:</b> 6L1geN6S9n7SMvgajjptj6p96sCSMfxWmbR8dJ3G3f5
-			<br />
-			<br />
-			<div className='center-flex'>
-				<button className={styles.btnDelegate_blue}>
-					<a
-						href='https://mixnet.explorers.guru/mixnode/6L1geN6S9n7SMvgajjptj6p96sCSMfxWmbR8dJ3G3f5'
-						rel='noopener noreferrer'
-						target='_blank'
-					>
-						Delegate
-					</a>
-				</button>
+			<div className={styles.delegeteWrapper}>
+				<div>
+					<b>USA Mix node Identity Key: </b>
+					6L1geN6S9n7SMvgajjptj6p96sCSMfxWmbR8dJ3G3f5
+					<br />
+					<div className='center-flex'>
+						<button className={styles.btnDelegate_blue}>
+							<a
+								href='https://mixnet.explorers.guru/mixnode/6L1geN6S9n7SMvgajjptj6p96sCSMfxWmbR8dJ3G3f5'
+								rel='noopener noreferrer'
+								target='_blank'
+							>
+								Delegate
+							</a>
+						</button>
+					</div>
+				</div>
+				<div>
+					<b>Canada Mix node Identity Key: </b>{' '}
+					46E69fLa7dD6VdrN4dGrYhfoJ3dJA7auouxeZCRJKAtL
+					<br />
+					<div className='center-flex'>
+						<button className={styles.btnDelegate}>
+							<a
+								href='https://mixnet.explorers.guru/mixnode/46E69fLa7dD6VdrN4dGrYhfoJ3dJA7auouxeZCRJKAtL'
+								rel='noopener noreferrer'
+								target='_blank'
+							>
+								Delegate
+							</a>
+						</button>
+					</div>
+				</div>
 			</div>
 		</>
 	)
@@ -112,9 +138,62 @@ const Card = () => {
 		</>
 	)
 
+	const QuicksilverDesc = (
+		<>
+			<b>ITRocket team invites you to delegate to our node. Welcome aboard!</b>
+			<br />
+			<br />
+			We offer you: <br />
+			🚀 High quality hardware <br />
+			🚀 Only one node on the server <br />
+			🚀 24/7 node monitoring <br />
+			🚀 Tech support for delegators
+			<br />
+			<br /> If you have any questions, feel free to contact us on{' '}
+			<a href='https://t.me/SEM3gs' style={{ color: '#44b5dd' }}>
+				Telegram!
+			</a>
+			<br /> <br />
+			<b>Coming soon...</b>
+			{/* <div className={styles.delegateWrapper}>
+				<div>
+					<b>Forta Ethereum scan node: </b>
+					<div className='center-flex'>
+						<button className={styles.btnDelegate_blue}>
+							<a
+								href='https://explorer.forta.network/scan-node/0x7c224eB61cF0Dd6aD66F04fb7211dc842EA130e3'
+								rel='noopener noreferrer'
+								target='_blank'
+							>
+								Delegate
+							</a>
+						</button>
+					</div>
+				</div>
+				<div className={styles.delegateColumn}>
+					<b>Forta Optymism scan node: </b>
+					<div className='center-flex'>
+						<button className={styles.btnDelegate}>
+							<a
+								href='https://explorer.forta.network/scan-node/0x716dBd07d5613b96617a2454231f408A8598D8CE'
+								rel='noopener noreferrer'
+								target='_blank'
+							>
+								Delegate
+							</a>
+						</button>
+					</div>
+				</div>
+			</div> */}
+		</>
+	)
+
 	const [modalDesc, setModalDesc] = useState(false)
-	const first = () => setModalDesc(NYMDesc)
-	const second = () => setModalDesc(FortaDesc)
+	let toggleModalDesc = id => {
+		if (id === 1) setModalDesc(NYMDesc)
+		else if (id === 2) setModalDesc(FortaDesc)
+		else setModalDesc(QuicksilverDesc)
+	}
 
 	return (
 		<div className={styles.card__root}>
@@ -144,7 +223,7 @@ const Card = () => {
 								role='button'
 								onClick={() => {
 									modalOpen ? close() : open()
-									item.id == 1 ? first() : second()
+									toggleModalDesc(item.id)
 								}}
 							>
 								<span>Delegate</span>

@@ -32,7 +32,7 @@ const axelar = () => {
 				<title>ITRocket - Support Provider 🚀</title>
 				<meta
 					name='description'
-					content='ITRocket 🚀| Crypto Multipurpose Project'
+					content='ITRocket 🚀 | Crypto Multipurpose Project'
 				/>
 			</Head>
 
