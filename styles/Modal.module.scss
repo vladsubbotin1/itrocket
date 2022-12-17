@@ -1,6 +1,6 @@
 .modal {
 	width: clamp(60%, 800px, 90%);
-	height: min(68%, 600px);
+	height: fit-content;
 	margin: auto;
 	padding: 2.5rem;
 	border-radius: 12px;
@@ -13,12 +13,22 @@
 
 	div {
 		line-height: 1.3;
+		position: relative;
+
+		a {
+			color: #8674e0;
+		}
 
 		@media (max-width: 768px) {
 			font-size: 11px;
 		}
+
+		button {
+			a {
+				color: #fff;
+			}
+		}
 	}
-	position: relative;
 
 	@media (max-width: 768px) {
 		width: calc(100% - 15px);

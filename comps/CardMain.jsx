@@ -69,6 +69,7 @@ const Card = () => {
 						</button>
 					</div>
 				</div>
+				<br />
 				<div>
 					<b>Canada Mix node Identity Key: </b>{' '}
 					46E69fLa7dD6VdrN4dGrYhfoJ3dJA7auouxeZCRJKAtL
@@ -163,6 +164,7 @@ const Card = () => {
 				<b>Validator address: </b> <br />
 				quickvaloper1jlh8cttv96kyxu0j0r2ppv4sga6ju4uzxa3c2x
 			</div>
+			<br />
 			<b>Link to the explorer: </b> <br />
 			<a
 				href='https://explorer.nodestake.top/quicksilver/staking/quickvaloper1jlh8cttv96kyxu0j0r2ppv4sga6ju4uzxa3c2x'
