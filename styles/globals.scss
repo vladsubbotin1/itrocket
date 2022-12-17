@@ -136,6 +136,17 @@ section {
 	}
 }
 
+div.ant-typography,
+span.ant-typography,
+a.ant-typography {
+	font-weight: normal;
+	font-size: 17px;
+
+	@media (max-width: 768px) {
+		font-size: 14px;
+	}
+}
+
 .ant-menu-root {
 	height: calc(100vh - 76px);
 	overflow-y: auto;

@@ -1,10 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react'
 import Head from 'next/head'
 import Header from '../../comps/Header'
+import Footer from '../../comps/Footer'
 import { ThemeContext } from '../../pages/_app.jsx'
+import styles from '../../styles/DelegateGuide.module.scss'
 import 'highlight.js/styles/github.css'
 import { Typography } from 'antd'
-const { Paragraph } = Typography
+import Image from 'next/image'
+const { Title, Paragraph, Text, Link } = Typography
 
 const about = () => {
 	const { theme, toggleTheme } = useContext(ThemeContext)
@@ -30,6 +33,145 @@ const about = () => {
 			</Head>
 
 			<Header />
+
+			<div className='center-flex'>
+				<div className={styles.contentWrapper}>
+					<Typography>
+						<Title>Quicksilver: How to stake coins?</Title>
+						<Paragraph>
+							You can stake both locked and unlocked tokens.
+						</Paragraph>
+						<Paragraph>
+							<Text strong>Our validator: </Text>
+							<Text copyable>
+								quickvaloper1jlh8cttv96kyxu0j0r2ppv4sga6ju4uzxa3c2x
+							</Text>
+						</Paragraph>
+						<Paragraph>
+							<Text>Explorer: </Text>
+							<Link href='https://explorer.nodestake.top/quicksilver/staking/quickvaloper1jlh8cttv96kyxu0j0r2ppv4sga6ju4uzxa3c2x'>
+								https://explorer.nodestake.top/quicksilver/staking/quickvaloper1jlh8cttv96kyxu0j0r2ppv4sga6ju4uzxa3c2x
+							</Link>
+						</Paragraph>
+						<Title level={2}>Guideline</Title>
+						<Paragraph>
+							<ul>
+								<li>
+									<Text>Install </Text>
+									<Link href='https://www.keplr.app/download'>Keplr</Link> if
+									you don't already have it and restore the wallet using the
+									mnemonic phrase or private key
+								</li>
+								<li>
+									<Text>Go to the </Text>
+									<Link href='https://explorer.nodestake.top/quicksilver/staking/quickvaloper1jlh8cttv96kyxu0j0r2ppv4sga6ju4uzxa3c2x'>
+										staking portal
+									</Link>
+									<Text> and connect your wallet</Text>
+								</li>
+							</ul>
+						</Paragraph>
+						<Paragraph>Connect your wallet:</Paragraph>
+						<Image
+							src={require('../../public/delegateGuide/quicksilver/1.jpeg')}
+							alt='item'
+							layout='responsive'
+							width='100%'
+							height='100%'
+						/>
+						<br />
+						<br />
+						<Paragraph>Confirm connection:</Paragraph>
+						<Image
+							src={require('../../public/delegateGuide/quicksilver/2.jpeg')}
+							alt='item'
+							layout='responsive'
+							width='100%'
+							height='100%'
+						/>
+						<br />
+						<br />
+						<Paragraph>
+							Select the Quicksilver network, in the Account name field enter
+							the name of your account, for example Quicksilver and click the
+							Next button:
+						</Paragraph>
+						<Image
+							src={require('../../public/delegateGuide/quicksilver/3.jpeg')}
+							alt='item'
+							layout='responsive'
+							width='100%'
+							height='100%'
+						/>
+						<br />
+						<br />
+						<Paragraph>
+							Hit confirm, you will see the address of your wallet, click Save
+						</Paragraph>
+						<Image
+							src={require('../../public/delegateGuide/quicksilver/4.jpeg')}
+							alt='item'
+							layout='responsive'
+							width='100%'
+							height='100%'
+						/>
+						<br />
+						<br />
+
+						<Paragraph>Create an account on the portal</Paragraph>
+						<Image
+							src={require('../../public/delegateGuide/quicksilver/5.jpeg')}
+							alt='item'
+							layout='responsive'
+							width='100%'
+							height='100%'
+						/>
+						<br />
+						<br />
+						<Paragraph>
+							<Text>Now you need to return to the </Text>
+							<Link href='https://explorer.nodestake.top/quicksilver/staking/quickvaloper1jlh8cttv96kyxu0j0r2ppv4sga6ju4uzxa3c2x'>
+								portal page
+							</Link>
+							<Text> and try to delegate</Text>
+						</Paragraph>
+						<Image
+							src={require('../../public/delegateGuide/quicksilver/6.jpeg')}
+							alt='item'
+							layout='responsive'
+							width='100%'
+							height='100%'
+						/>
+						<br />
+						<br />
+						<Paragraph>
+							Be sure to open <b>Advanced</b> <Text>settings and set </Text>
+							<b>Fee - 0, Gas - 250k.</b>
+						</Paragraph>
+						<Image
+							src={require('../../public/delegateGuide/quicksilver/7.jpeg')}
+							alt='item'
+							layout='responsive'
+							width='100%'
+							height='100%'
+						/>
+						<br />
+						<br />
+						<Paragraph>Confirm delegation ✅</Paragraph>
+						<Image
+							src={require('../../public/delegateGuide/quicksilver/8.jpeg')}
+							alt='item'
+							layout='responsive'
+							width='100%'
+							height='100%'
+						/>
+						<br />
+						<br />
+					</Typography>
+				</div>
+			</div>
+
+			<Footer />
 		</>
 	)
 }

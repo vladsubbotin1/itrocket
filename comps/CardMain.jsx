@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { useContext, useState } from 'react'
 import Modal from './Modal'
 import { ThemeContext } from '../pages/_app'
+import Link from 'next/link'
 
 const Card = () => {
 	const { theme, toggleTheme } = useContext(ThemeContext)
@@ -176,13 +177,7 @@ const Card = () => {
 			<br /> <br />
 			<div className='center-flex'>
 				<button className={styles.btnDelegate}>
-					<a
-						href='https://teletype.in/@itrocket/VYyiokum1pR'
-						rel='noopener noreferrer'
-						target='_blank'
-					>
-						Delegate
-					</a>
+					<Link href='/pages/delegate/quicksilver'>Delegate</Link>
 				</button>
 			</div>
 		</>
