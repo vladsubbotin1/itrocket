@@ -5,6 +5,9 @@ import { useContext, useState } from 'react'
 import Modal from './Modal'
 import { ThemeContext } from '../pages/_app'
 import Link from 'next/link'
+import { Typography } from 'antd'
+
+const { Text } = Typography
 
 const Card = () => {
 	const { theme, toggleTheme } = useContext(ThemeContext)
