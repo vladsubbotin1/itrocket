@@ -30,8 +30,6 @@ const about = () => {
 			</Head>
 
 			<Header />
-
-			<div className={styles.container}></div>
 		</>
 	)
 }
