@@ -28,7 +28,7 @@ const Card = () => {
 		{
 			id: 3,
 			name: 'Quicksilver',
-			link: 'https://quicksilver.explorers.guru/',
+			link: 'https://explorer.nodestake.top/quicksilver/staking',
 			imgUrl: 'quicksilver.jpg',
 		},
 	]
@@ -140,8 +140,11 @@ const Card = () => {
 
 	const QuicksilverDesc = (
 		<>
-			<b>ITRocket team invites you to delegate to our node. Welcome aboard!</b>
+			<b>
+				ITRocket team invites you to delegate to to our Quicksilver validator!
+			</b>
 			<br />
+			<br /> <b>Only 3% fees</b> - guaranteed to never go up <br />
 			<br />
 			We offer you: <br />
 			🚀 High quality hardware <br />
@@ -149,42 +152,37 @@ const Card = () => {
 			🚀 24/7 node monitoring <br />
 			🚀 Tech support for delegators
 			<br />
-			<br /> If you have any questions, feel free to contact us on{' '}
+			<br />
+			You can stake your own tokens and locked tokens. If you have any
+			questions, feel free to contact us on{' '}
 			<a href='https://t.me/SEM3gs' style={{ color: '#44b5dd' }}>
 				Telegram!
 			</a>
 			<br /> <br />
-			<b>Coming soon...</b>
-			{/* <div className={styles.delegateWrapper}>
-				<div>
-					<b>Forta Ethereum scan node: </b>
-					<div className='center-flex'>
-						<button className={styles.btnDelegate_blue}>
-							<a
-								href='https://explorer.forta.network/scan-node/0x7c224eB61cF0Dd6aD66F04fb7211dc842EA130e3'
-								rel='noopener noreferrer'
-								target='_blank'
-							>
-								Delegate
-							</a>
-						</button>
-					</div>
-				</div>
-				<div className={styles.delegateColumn}>
-					<b>Forta Optymism scan node: </b>
-					<div className='center-flex'>
-						<button className={styles.btnDelegate}>
-							<a
-								href='https://explorer.forta.network/scan-node/0x716dBd07d5613b96617a2454231f408A8598D8CE'
-								rel='noopener noreferrer'
-								target='_blank'
-							>
-								Delegate
-							</a>
-						</button>
-					</div>
-				</div>
-			</div> */}
+			<div>
+				<b>Validator address: </b> <br />
+				quickvaloper1jlh8cttv96kyxu0j0r2ppv4sga6ju4uzxa3c2x
+			</div>
+			<b>Link to the explorer: </b> <br />
+			<a
+				href='https://explorer.nodestake.top/quicksilver/staking/quickvaloper1jlh8cttv96kyxu0j0r2ppv4sga6ju4uzxa3c2x'
+				rel='noopener noreferrer'
+				target='_blank'
+			>
+				https://explorer.nodestake.top/quicksilver/staking/quickvaloper1jlh8cttv96kyxu0j0r2ppv4sga6ju4uzxa3c2x
+			</a>
+			<br /> <br />
+			<div className='center-flex'>
+				<button className={styles.btnDelegate}>
+					<a
+						href='https://teletype.in/@itrocket/VYyiokum1pR'
+						rel='noopener noreferrer'
+						target='_blank'
+					>
+						Delegate
+					</a>
+				</button>
+			</div>
 		</>
 	)
 

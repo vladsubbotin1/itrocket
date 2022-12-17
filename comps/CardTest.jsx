@@ -131,7 +131,7 @@ const Card = () => {
 		{
 			id: 21,
 			name: 'Terp',
-			link: 'https://explorer.kjnodes.com/terp/staking',
+			link: 'https://explorer.bccnodes.com/terp',
 			imgUrl: 'terp.svg',
 		},
 		{
