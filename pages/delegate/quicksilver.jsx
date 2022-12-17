@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import Head from 'next/head'
-import styles from '../styles/Support.module.scss'
-import Header from '../comps/Header'
+import Header from '../../comps/Header'
 import { ThemeContext } from '../pages/_app.jsx'
 import 'highlight.js/styles/github.css'
 import { Typography } from 'antd'
