@@ -5,7 +5,6 @@ import Header from '../comps/Header'
 import SideMenu from '../comps/SideMenu'
 import { ThemeContext } from '../pages/_app.jsx'
 import 'highlight.js/styles/github.css'
-import { Alert } from 'antd'
 import Link from 'next/link'
 
 const about = () => {
@@ -36,13 +35,6 @@ const about = () => {
 			<div className={styles.container}>
 				<SideMenu />
 				<main className={styles.MainColumn}>
-					<Alert
-						message='Please pay attention that networks have Mainnet and Testnet separate guides.'
-						style={{ marginTop: '15px' }}
-						type='info'
-						closable
-					/>
-
 					<h2>Support 🌟</h2>
 					<span>Here is the list of networks supported by ITRocket team:</span>
 					<h3>Mainnets</h3>

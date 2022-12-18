@@ -39,9 +39,7 @@ const Card = () => {
 
 	const NYMDesc = (
 		<>
-			<b>
-				ITRocket team invites you to delegate to our node hosted in the USA!{' '}
-			</b>
+			<b>ITRocket team invites you to delegate to our nodes! </b>
 			<br />
 			<br /> <b>Only 3% fees</b> - guaranteed to never go up <br /> <br />
 			We offer you: <br />
@@ -159,7 +157,7 @@ const Card = () => {
 			<br />
 			<br />
 			You can stake your own tokens and locked tokens. If you have any
-			questions, feel free to contact us on{' '}
+			questions, feel free to contact us on
 			<a href='https://t.me/SEM3gs' style={{ color: '#44b5dd' }}>
 				Telegram!
 			</a>
