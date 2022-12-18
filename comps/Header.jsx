@@ -92,7 +92,7 @@ const Header = () => {
 						<Image
 							src='/logo.svg'
 							alt='logo'
-							width={215}
+							width={210}
 							height={65}
 							className={styles.logo}
 							style={{ display: theme === 'light' ? 'block' : 'none' }}
@@ -101,7 +101,7 @@ const Header = () => {
 						<Image
 							src='/darkLogo.svg'
 							alt='logo'
-							width={215}
+							width={210}
 							height={65}
 							className={styles.logo}
 							style={{ display: theme === 'dark' ? 'block' : 'none' }}
