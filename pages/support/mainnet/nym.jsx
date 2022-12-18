@@ -23,7 +23,37 @@ const axelar = () => {
 		}
 	}, [theme])
 
-	const markdown = `### Coming soon...
+	const markdown = `<h2 id="about">About</h2>
+
+### NYM
+Building the next generation of privacy infrastructure  
+
+Explorer: https://explorer.nymtech.net/network-components/mixnodes
+
+<br/><br/>
+
+* Website: https://nymtech.net/ 
+* Github: https://github.com/nymtech
+* Discord: https://discord.gg/nym   
+* Telegram: https://t.me/nymchan  
+* Twitter: https://twitter.com/nymproject  
+* Medium: https://medium.com/nymtech
+
+<h2 id="guide">Guide</h2>  
+Mixnode installation guide: <a href="https://github.com/marutyan/testnet_guides/tree/main/nym" target="_blank" rel="noopener noreferrer">https://github.com/marutyan/testnet_guides/tree/main/nym</a> 
+
+<h2 id="rpc">RPC, API, gRPC</h2> 
+
+Sorry, not supported
+
+
+<h2 id="snap">Snapshot</h2> 
+
+Sorry, not supported
+
+<h2 id="sync">State Sync</h2> 
+
+Sorry, not supported
 `
 
 	return (
