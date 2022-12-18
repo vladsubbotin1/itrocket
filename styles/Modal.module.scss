@@ -44,7 +44,10 @@
 
 .exit {
 	position: absolute;
-	display: inline-block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
 	height: 40px;
 	width: 40px;
 	top: 20px;
@@ -62,5 +65,9 @@
 		height: 20px;
 		top: 5px;
 		right: 5px;
+
+		span {
+			font-size: 12px;
+		}
 	}
 }

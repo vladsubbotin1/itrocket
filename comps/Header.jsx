@@ -5,6 +5,42 @@ import Link from 'next/link'
 import { ThemeContext } from '../pages/_app'
 import Image from 'next/image'
 
+const ulVariants = {
+	open: {
+		transition: { staggerChildren: 0.1, delayChildren: 0.2 },
+	},
+	closed: {
+		transition: { staggerChildren: 0.07, staggerDirection: -1 },
+	},
+}
+
+const liVariants = {
+	open: {
+		x: 0,
+		opacity: 1,
+		transition: {
+			y: { stiffness: 1000, velocity: -100 },
+		},
+	},
+	closed: {
+		x: 30,
+		opacity: 0,
+		transition: {
+			y: { stiffness: 1000 },
+		},
+	},
+}
+
+const socialsVariants = {
+	open: {
+		opacity: 1,
+		transition: { duration: 0.3, delay: 0.8 },
+	},
+	closed: {
+		opacity: 0,
+	},
+}
+
 const Header = () => {
 	const { theme, toggleTheme } = useContext(ThemeContext)
 	const [isOpen, setIsOpen] = useState(false)
@@ -35,6 +71,13 @@ const Header = () => {
 		}
 	}, [])
 
+	const items = [
+		<Link href='/#mainnet'>Mainnets</Link>,
+		<Link href='/#testnet'>Testnets</Link>,
+		<Link href='/support'>Services</Link>,
+		<Link href='/#faq'>FAQ</Link>,
+	]
+
 	const spring = {
 		type: 'spring',
 		stiffness: 700,
@@ -49,8 +92,8 @@ const Header = () => {
 						<Image
 							src='/logo.svg'
 							alt='logo'
-							width={200}
-							height={60}
+							width={215}
+							height={65}
 							className={styles.logo}
 							style={{ display: theme === 'light' ? 'block' : 'none' }}
 						/>
@@ -58,8 +101,8 @@ const Header = () => {
 						<Image
 							src='/darkLogo.svg'
 							alt='logo'
-							width={200}
-							height={60}
+							width={215}
+							height={65}
 							className={styles.logo}
 							style={{ display: theme === 'dark' ? 'block' : 'none' }}
 						/>
@@ -131,38 +174,36 @@ const Header = () => {
 				exitBeforeEnter={true}
 				onExitComplete={() => null}
 			>
-				<div
+				<motion.div
 					className={styles.burgerMenu}
 					style={{
 						backgroundColor: theme === 'dark' ? '#000' : '#fff',
-						opacity: isOpen ? '1' : '0',
 						display: isOpen ? 'flex' : 'none',
-						padding: isOpen ? '10px 30px 20px' : '0',
+						transition: '2s',
 					}}
+					transition={{ duration: 0.3, delay: 0.5 }}
 				>
-					<nav>
-						<ul
+					<motion.nav initial={false} animate={isOpen ? 'open' : 'closed'}>
+						<motion.ul
 							onClick={() => {
 								setIsOpen(!isOpen)
 							}}
+							variants={ulVariants}
 						>
-							<li>
-								<Link href='/#mainnet'>Mainnets</Link>
-							</li>
-							<li>
-								<Link href='/#testnet'>Testnets</Link>
-							</li>
-							<li>
-								<Link href='/support'>Services</Link>
-							</li>
+							{items.map((item, i) => (
+								<motion.li key={i} variants={liVariants}>
+									{item}
+								</motion.li>
+							))}
+						</motion.ul>
+					</motion.nav>
 
-							<li>
-								<Link href='/#faq'>FAQ</Link>
-							</li>
-						</ul>
-					</nav>
-
-					<div className='socials'>
+					<motion.div
+						className='socials'
+						initial={false}
+						animate={isOpen ? 'open' : 'closed'}
+						variants={socialsVariants}
+					>
 						<a
 							href='https://t.me/SEM3gs'
 							target='_blank'
@@ -200,8 +241,8 @@ const Header = () => {
 								height={30}
 							/>
 						</a>
-					</div>
-				</div>
+					</motion.div>
+				</motion.div>
 			</AnimatePresence>
 		</>
 	)

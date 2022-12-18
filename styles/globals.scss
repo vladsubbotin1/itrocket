@@ -34,10 +34,10 @@ section {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	margin-bottom: 90px;
+	padding-bottom: 90px;
 
 	&:last-of-type {
-		margin-bottom: 40px;
+		padding-bottom: 60px;
 	}
 
 	@media (max-width: 768px) {
@@ -298,7 +298,7 @@ a.ant-typography {
 }
 
 .ant-menu {
-	transition: 0.3s;
+	transition: 0.6s;
 }
 
 .ant-btn {
@@ -329,4 +329,9 @@ a.ant-typography {
 	justify-content: center;
 	width: fit-content;
 	gap: 20px;
+
+	a {
+		display: flex;
+		align-items: center;
+	}
 }

@@ -16,7 +16,7 @@ const Footer = () => {
 				</div>
 
 				<div className={styles.copyright}>
-					<span>© 2022 ITRocket Team.</span>
+					<span>© 2022 ITRocket</span>
 				</div>
 				<div className='socials'>
 					<a

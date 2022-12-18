@@ -38,6 +38,14 @@
 	align-content: center;
 	width: 100%;
 
+	@media (max-width: 1024px) {
+		width: 100%;
+	}
+
+	@media (max-width: 768px) {
+		padding: 5px 15px 15px;
+	}
+
 	&:hover {
 		&::-webkit-scrollbar-thumb {
 			background-color: rgba(153, 153, 153, 0.5);
@@ -67,18 +75,10 @@
 		width: 0px;
 	}
 
-	@media (max-width: 1024px) {
-		width: 100%;
-	}
-
-	@media (max-width: 768px) {
-		padding: 14px;
-	}
-
 	p {
 		font-size: 15px;
 		@media (max-width: 768px) {
-			font-size: 13px;
+			font-size: 14px;
 		}
 	}
 

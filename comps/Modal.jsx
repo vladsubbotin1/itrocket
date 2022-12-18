@@ -40,7 +40,7 @@ const Modal = ({ handleClose, text }) => {
 			>
 				<div>{text}</div>
 				<button onClick={handleClose} className={styles.exit}>
-					x
+					<span>x</span>
 				</button>
 			</motion.div>
 		</Backdrop>

@@ -12,6 +12,17 @@ import Finished from '../comps/Finished.jsx'
 export default function Home() {
 	const [showing, setShowing] = useState(false)
 
+	const container = {
+		hidden: { opacity: 0 },
+		show: {
+			opacity: 1,
+			transition: {
+				delayChildren: 0.5,
+				staggerDirection: -1,
+			},
+		},
+	}
+
 	useEffect(() => {
 		setShowing(true)
 	}, [])
@@ -38,13 +49,18 @@ export default function Home() {
 				<main>
 					<section className={styles.hero}>
 						<div className={styles.container} style={{ paddingRight: '0px' }}>
-							<div className={styles.hero__wrapper}>
+							<div
+								variants={container}
+								initial='hidden'
+								animate='show'
+								className={styles.hero__wrapper}
+							>
 								<motion.div
 									className={styles.hero__column}
 									initial='hidden'
 									whileInView='visible'
 									viewport={{ once: true }}
-									transition={{ duration: 1 }}
+									transition={{ duration: 0.8 }}
 									variants={{
 										visible: {
 											opacity: 1,
@@ -82,7 +98,7 @@ export default function Home() {
 									initial='hidden'
 									viewport={{ once: true }}
 									whileInView='visible'
-									transition={{ duration: 1 }}
+									transition={{ duration: 0.8 }}
 									variants={{
 										visible: {
 											opacity: 1,
@@ -128,13 +144,13 @@ export default function Home() {
 								initial='hidden'
 								whileInView='visible'
 								viewport={{ once: true }}
-								transition={{ duration: 1 }}
+								transition={{ duration: 0.8 }}
 								variants={{
 									visible: {
 										opacity: 1,
 										y: 0,
 									},
-									hidden: { opacity: 0, y: 30 },
+									hidden: { opacity: 0, y: 20 },
 								}}
 							>
 								<h3 className={styles.title} id='mainnet'>
@@ -158,13 +174,13 @@ export default function Home() {
 								initial='hidden'
 								whileInView='visible'
 								viewport={{ once: true }}
-								transition={{ duration: 1 }}
+								transition={{ duration: 0.8 }}
 								variants={{
 									visible: {
 										opacity: 1,
 										y: 0,
 									},
-									hidden: { opacity: 0, y: 30 },
+									hidden: { opacity: 0, y: 20 },
 								}}
 							>
 								<h3 className={styles.title} id='testnet'>
@@ -187,7 +203,7 @@ export default function Home() {
 								initial='hidden'
 								whileInView='visible'
 								viewport={{ once: true }}
-								transition={{ duration: 1 }}
+								transition={{ duration: 0.8 }}
 								variants={{
 									visible: { opacity: 1 },
 									hidden: { opacity: 0 },
