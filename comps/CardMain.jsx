@@ -156,8 +156,10 @@ const Card = () => {
 			🚀 Tech support for delegators
 			<br />
 			<br />
-			You can stake your own tokens and locked tokens. If you have any
-			questions, feel free to contact us on
+			<span>
+				You can stake your own tokens and locked tokens. If you have any
+				questions, feel free to contact us on{' '}
+			</span>
 			<a href='https://t.me/SEM3gs' style={{ color: '#44b5dd' }}>
 				Telegram!
 			</a>
