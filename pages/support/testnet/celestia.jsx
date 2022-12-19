@@ -60,10 +60,11 @@ Public gRPc: <a href="http://65.109.92.79:11090">http://65.109.92.79:11090</a>
 1afcd97b0bf289700378e18b45dc1f927917bba0@65.109.92.79:11656
 ~~~
 
+
 ### addrbook:  
 
 ~~~bash
-wget -O $HOME/.celestia-app/config/addrbook.json https://raw.githubusercontent.com/marutyan/testnet_guides/main/celestia/addrbook.json
+wget -O $HOME/.celestia-app/config/addrbook.json https://raw.githubusercontent.com/itrocket-team/testnet_guides/main/celestia/addrbook.json
 ~~~
 
 <h2 id="snap">Snapshot</h2> 

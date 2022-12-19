@@ -38,8 +38,8 @@ The Business Grade Multi-Chain NFT Infrastructure for Web 3.0
 
 <h2 id="guide">Guide</h2> 
 Installation guide: 
+<a href="https://github.com/itrocket-team/testnet_guides/tree/main/uptick" target="_blank" rel="noopener noreferrer">https://github.com/itrocket-team/testnet_guides/tree/main/uptick</a>
 
-https://github.com/marutyan/testnet_guides/tree/main/uptick
 
 <h2 id="rpc">RPC, API, gRPC</h2> 
 
@@ -58,7 +58,7 @@ peers: 86f50af23369997882ca3988eabeba998b4f07cc@65.109.92.79:10656
 ### addrbook: 
 
 ~~~bash
-wget -O $HOME/.uptickd/addrbook.json https://raw.githubusercontent.com/marutyan/testnet_guides/main/uptick/addrbook.json
+wget -O $HOME/.uptickd/addrbook.json https://raw.githubusercontent.com/itrocket-team/testnet_guides/main/uptick/addrbook.json
 ~~~
 
 <h2 id="snap">Snapshot</h2> 

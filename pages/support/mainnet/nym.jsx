@@ -40,7 +40,7 @@ Explorer: https://explorer.nymtech.net/network-components/mixnodes
 * Medium: https://medium.com/nymtech
 
 <h2 id="guide">Guide</h2>  
-Mixnode installation guide: <a href="https://github.com/marutyan/testnet_guides/tree/main/nym" target="_blank" rel="noopener noreferrer">https://github.com/marutyan/testnet_guides/tree/main/nym</a> 
+Mixnode installation guide: <a href="https://github.com/itrocket-team/testnet_guides/tree/main/nym" target="_blank" rel="noopener noreferrer">https://github.com/itrocket-team/testnet_guides/tree/main/nym</a> 
 
 <h2 id="rpc">RPC, API, gRPC</h2> 
 

@@ -28,10 +28,11 @@ const axelar = () => {
 ### Quicksilver
 THE COSMOS LIQUID STAKING ZONE  
 
-explorer: https://quicksilver.explorers.guru/
-
 The Quicksilver Token is a Liquid Staking token with multiple use cases
-<br/><br/>
+
+Explorer: https://quicksilver.explorers.guru/
+
+<br/>
 
 * Website: https://quicksilver.zone/ 
 * Discord: https://discord.com/invite/xrSmYMDVrQ   
@@ -40,8 +41,9 @@ The Quicksilver Token is a Liquid Staking token with multiple use cases
 * Medium: https://medium.com/quicksilverzone
 
 <h2 id="guide">Guide</h2>  
-Installation guide: https://github.com/marutyan/mainnet_guides/tree/main/quicksilver
-
+Installation guide: <a href="https://github.com/itrocket-team/testnet_guides/tree/main/quicksilver
+">https://github.com/itrocket-team/testnet_guides/tree/main/quicksilver
+</a> 
 <h2 id="rpc">RPC, API, gRPC</h2> 
 
 Public RPC - http://65.109.92.79:15657  
@@ -59,7 +61,7 @@ Public gRPC - http://65.109.92.79:15090
 ### addrbook:  
 
 ~~~bash
-wget -O $HOME/.quicksilverd/config/addrbook.json https://raw.githubusercontent.com/marutyan/testnet_guides/main/quicksilver/addrbook.json
+wget -O $HOME/.quicksilverd/config/addrbook.json https://raw.githubusercontent.com/itrocket-team/testnet_guides/main/quicksilver/addrbook.json
 ~~~
 
 

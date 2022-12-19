@@ -39,7 +39,7 @@ Unlock leverage at scale for the Cosmos ecosystem
 
 Installation guide: 
 
-<a href="https://github.com/marutyan/testnet_guides/tree/main/nibiru" target="_blank" rel="noopener noreferrer">https://github.com/marutyan/testnet_guides/tree/main/nibiru</a>
+https://github.com/itrocket-team/testnet_guides/tree/main/nibiru</a>
 
 
 <h2 id="rpc">RPC, API, gRPC</h2> 
@@ -58,7 +58,7 @@ d8ced042dee3d657e8b9e9a8fcec6d8760764c49@65.109.92.79:12656
 ### addrbook:  
 
 ~~~bash
-wget -O $HOME/.nibid/config/addrbook.json https://raw.githubusercontent.com/marutyan/testnet_guides/main/nibiru/addrbook.json
+wget -O $HOME/.nibid/config/addrbook.json https://raw.githubusercontent.com/itrocket-team/testnet_guides/main/nibiru/addrbook.json
 ~~~
 
 <h2 id="snap">Snapshot</h2> 
