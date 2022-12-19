@@ -40,6 +40,7 @@ Celestia is the first modular blockchain network. It is a modular consensus and 
 * Github: <a href="https://github.com/celestiaorg">https://github.com/celestiaorg</a>  
 
 <h2 id="guide">Guide</h2> 
+<a href="https://docs.celestia.org/nodes/overview/" target="_blank" rel="noopener referrer">Official documentation</a>
 <a href="https://github.com/marutyan/testnet_guides/tree/main/celestia" target="_blank" rel="noopener referrer">Set up Validator node</a>
 <a href="https://github.com/marutyan/testnet_guides/blob/main/celestia/bridge.md" target="_blank" rel="noopener referrer">Set up Bridge node</a>
 <a href="https://github.com/marutyan/testnet_guides/blob/main/celestia/light.md" target="_blank" rel="noopener referrer">Set up Light node</a>
@@ -61,7 +62,9 @@ Public gRPc: <a href="http://65.109.92.79:11090">http://65.109.92.79:11090</a>
 
 ### addrbook:  
 
-Sorry, not supported yet
+~~~bash
+wget -O $HOME/.celestia-app/config/addrbook.json https://raw.githubusercontent.com/marutyan/testnet_guides/main/celestia/addrbook.json
+~~~
 
 <h2 id="snap">Snapshot</h2> 
 
