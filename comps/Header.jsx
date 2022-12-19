@@ -218,18 +218,6 @@ const Header = () => {
 						</a>
 
 						<a
-							href='https://discord.com/users/SEM#4095'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							<Image
-								src='/icons/disc.svg'
-								alt='discord'
-								width={30}
-								height={30}
-							/>
-						</a>
-						<a
 							href='https://twitter.com/SEM23404846'
 							target='_blank'
 							rel='noopener noreferrer'
@@ -237,6 +225,18 @@ const Header = () => {
 							<Image
 								src='/icons/twitter.svg'
 								alt='twitter'
+								width={30}
+								height={30}
+							/>
+						</a>
+						<a
+							href='https://github.com/itrocket-team'
+							target='_blank'
+							rel='noopener noreferrer'
+						>
+							<Image
+								src='/icons/github.svg'
+								alt='github'
 								width={30}
 								height={30}
 							/>

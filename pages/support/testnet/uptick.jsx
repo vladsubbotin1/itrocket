@@ -38,7 +38,7 @@ The Business Grade Multi-Chain NFT Infrastructure for Web 3.0
 
 <h2 id="guide">Guide</h2> 
 Installation guide: 
-<a href="https://github.com/itrocket-team/testnet_guides/tree/main/uptick" target="_blank" rel="noopener noreferrer">https://github.com/itrocket-team/testnet_guides/tree/main/uptick</a>
+<a href="https://github.com/itrocket-team/testnet_guides/tree/main/uptick" target="_blank" rel="noopener noreferrer">https://github.com/itrocket-team/testnet_guides/tree/main/upticky</a>
 
 
 <h2 id="rpc">RPC, API, gRPC</h2> 
