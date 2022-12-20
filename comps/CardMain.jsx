@@ -18,19 +18,16 @@ const Card = () => {
 
 	let data = [
 		{
-			id: 1,
 			name: 'NYM',
 			link: 'https://mixnet.explorers.guru/',
 			imgUrl: 'nym.png',
 		},
 		{
-			id: 2,
 			name: 'Forta',
 			link: 'https://explorer.forta.network/',
 			imgUrl: 'forta.jpg',
 		},
 		{
-			id: 3,
 			name: 'Quicksilver',
 			link: 'https://explorer.nodestake.top/quicksilver/staking',
 			imgUrl: 'quicksilver.jpg',
@@ -187,9 +184,9 @@ const Card = () => {
 	)
 
 	const [modalDesc, setModalDesc] = useState(false)
-	let toggleModalDesc = id => {
-		if (id === 1) setModalDesc(NYMDesc)
-		else if (id === 2) setModalDesc(FortaDesc)
+	let toggleModalDesc = name => {
+		if (name === 'NYM') setModalDesc(NYMDesc)
+		else if (name === 'Forta') setModalDesc(FortaDesc)
 		else setModalDesc(QuicksilverDesc)
 	}
 
@@ -229,7 +226,7 @@ const Card = () => {
 		>
 			{data.map(item => {
 				return (
-					<motion.div className={styles.card} key={item.id} variants={items}>
+					<motion.div className={styles.card} key={item.name} variants={items}>
 						<h5 className={styles.card__heading}>{item.name}</h5>
 						<div className={styles.card__img}>
 							<Image
@@ -253,7 +250,7 @@ const Card = () => {
 								role='button'
 								onClick={() => {
 									modalOpen ? close() : open()
-									toggleModalDesc(item.id)
+									toggleModalDesc(item.name)
 								}}
 							>
 								<span>Delegate</span>

@@ -52,19 +52,16 @@ const SideMenu = () => {
 
 	let mainnetData = [
 		{
-			id: 1,
 			name: 'NYM',
 			link: 'https://nymtech.net/',
 			imgUrl: 'nym.png',
 		},
 		{
-			id: 2,
 			name: 'Forta',
 			link: 'https://forta.org/',
 			imgUrl: 'forta.jpg',
 		},
 		{
-			id: 3,
 			name: 'Quicksilver',
 			link: 'https://quicksilver.explorers.guru/',
 			imgUrl: 'quicksilver.jpg',
@@ -73,9 +70,8 @@ const SideMenu = () => {
 
 	let testnetData = [
 		{
-			id: 1,
 			name: 'Axelar',
-			link: 'https://axelar.network/',
+			link: 'https://testnet.axelarscan.io/',
 			imgUrl: 'axelar.jpg',
 		},
 		// {
@@ -85,133 +81,122 @@ const SideMenu = () => {
 		// 	imgUrl: 'bifrost.png',
 		// },
 		{
-			id: 3,
 			name: 'BlastAPI',
-			link: 'https://blastapi.io/',
+			link: 'https://houston.blastapi.io/',
 			imgUrl: 'blastapi.jpg',
 		},
 		{
-			id: 4,
 			name: 'Bundlr',
-			link: 'https://bundlr.network/',
+			link: 'https://bundlr.network/explorer',
 			imgUrl: 'bundlr.jpg',
 		},
 		{
-			id: 5,
 			name: 'Celestia',
-			link: 'https://celestia.org/',
+			link: 'https://celestia.explorers.guru/validators',
 			imgUrl: 'celestia.png',
 		},
 		// {
-		// 	id: 6,
 		// 	name: 'DeWeb',
 		// 	link: 'https://deweb.services/',
 		// 	imgUrl: 'deweb.png',
 		// },
 		// {
-		// 	id: 7,
+
 		// 	name: 'Empower',
 		// 	link: 'https://www.empowerchain.io/',
 		// 	imgUrl: 'empower.png',
 		// },
 		{
-			id: 8,
 			name: 'Gear',
-			link: 'https://www.gear-tech.io/',
+			link: 'https://telemetry.gear-tech.io/',
 			imgUrl: 'gear.jpg',
 		},
+		{
+			name: 'Humans',
+			link: 'https://explorer.humans.zone/humans-testnet',
+			imgUrl: 'humans.jpg',
+		},
 		// {
-		// 	id: 9,
 		// 	name: 'IronFish',
 		// 	link: 'https://ironfish.network/',
 		// 	imgUrl: 'ironfish.png',
 		// },
 		{
-			id: 10,
 			name: 'Kira',
-			link: 'https://kira.network/',
+			link: 'https://kirastats.dragonstake.io/',
 			imgUrl: 'kira.svg',
 		},
 		{
-			id: 11,
 			name: 'Masa',
 			link: 'https://www.masa.finance/',
 			imgUrl: 'masa.svg',
 		},
 		{
-			id: 12,
 			name: 'Massa',
 			link: 'https://massa.net/testnet/',
 			imgUrl: 'massa.jpg',
 		},
 		{
-			id: 13,
+			name: 'Nolus',
+			link: 'https://explorer-rila.nolus.io/nolus-rila/staking',
+			imgUrl: 'nolus.svg',
+		},
+		{
 			name: 'Nois',
-			link: 'https://nois.network/',
+			link: 'https://explorer.kjnodes.com/nois',
 			imgUrl: 'nois.png',
 		},
 		{
-			id: 14,
 			name: 'Nibiru',
-			link: 'https://nibiru.fi/',
+			link: 'https://nibiru.explorers.guru/validators',
 			imgUrl: 'nibiru.jpg',
 		},
 		{
-			id: 15,
 			name: 'Oasys',
-			link: 'https://www.oasys.games/',
+			link: 'https://explorer.oasys.games/',
 			imgUrl: 'oasys.webp',
 		},
 		{
-			id: 16,
 			name: 'Penumbra',
-			link: 'https://penumbra.zone/',
+			link: 'https://guide.penumbra.zone/main/pd/join-testnet.html',
 			imgUrl: 'penumbra.webp',
 		},
 		{
-			id: 17,
 			name: 'Sei',
-			link: 'https://www.seinetwork.io/',
+			link: 'https://sei.explorers.guru/',
 			imgUrl: 'sei.svg',
 		},
 		{
-			id: 18,
 			name: 'Sui',
-			link: 'https://sui.io/',
+			link: 'https://explorer.sui.io/',
 			imgUrl: 'sui.svg',
 		},
 		// {
-		// 	id: 19,
 		// 	name: 'Subspace',
 		// 	link: 'https://subspace.network/',
 		// 	imgUrl: 'subspace.jpg',
 		// },
 		{
-			id: 20,
 			name: 'Starknet',
-			link: 'https://starknet.io/',
+			link: 'https://starkscan.co/',
 			imgUrl: 'starknet.png',
 		},
 		{
-			id: 21,
 			name: 'Terp',
-			link: 'https://terp.network/',
+			link: 'https://explorer.bccnodes.com/terp',
 			imgUrl: 'terp.svg',
 		},
 		{
-			id: 22,
 			name: 'Uptick',
-			link: 'https://www.uptick.network/',
+			link: 'https://uptick.explorers.guru/validators',
 			imgUrl: 'uptick.jpg',
 		},
 		{
-			id: 23,
 			name: 'HAQQ',
-			link: 'https://islamiccoin.net/',
+			link: 'https://testnet.manticore.team/haqq/staking',
 			imgUrl: 'haqq.png',
 		},
 		// {
-		// 	id: 24,
 		// 	name: 'OKP4',
 		// 	link: 'https://okp4.network/',
 		// 	imgUrl: 'okp4.jpg',
@@ -223,7 +208,7 @@ const SideMenu = () => {
 	items.push(getItem('Mainnets', 'grp1', null, null, 'group'))
 	mainnetData.map(item => {
 		let name = item.name
-		let id = 'mainnet' + item.id
+		let id = 'mainnet' + item.name
 
 		items.push(
 			getItem(`${name}`, `sub${id}`, null, [
@@ -267,7 +252,7 @@ const SideMenu = () => {
 	items.push(getItem('Testnets', 'grp2', null, null, 'group'))
 	testnetData.map(item => {
 		let name = item.name
-		let id = 'testnet' + item.id
+		let id = 'testnet' + item.name
 
 		items.push(
 			getItem(`${name}`, `sub${id}`, null, [

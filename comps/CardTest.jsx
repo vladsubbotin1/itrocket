@@ -57,6 +57,12 @@ const Card = () => {
 			link: 'https://telemetry.gear-tech.io/',
 			imgUrl: 'gear.jpg',
 		},
+		{
+			id: 9,
+			name: 'Humans',
+			link: 'https://explorer.humans.zone/humans-testnet',
+			imgUrl: 'humans.jpg',
+		},
 		// {
 		// 	id: 9,
 		// 	name: 'IronFish',
@@ -64,55 +70,61 @@ const Card = () => {
 		// 	imgUrl: 'ironfish.png',
 		// },
 		{
-			id: 10,
+			id: 11,
 			name: 'Kira',
 			link: 'https://kirastats.dragonstake.io/',
 			imgUrl: 'kira.svg',
 		},
 		{
-			id: 11,
+			id: 12,
 			name: 'Masa',
 			link: 'https://www.masa.finance/',
 			imgUrl: 'masa.svg',
 		},
 		{
-			id: 12,
+			id: 13,
 			name: 'Massa',
 			link: 'https://massa.net/testnet/',
 			imgUrl: 'massa.jpg',
 		},
 		{
-			id: 13,
+			id: 14,
+			name: 'Nolus',
+			link: 'https://explorer-rila.nolus.io/nolus-rila/staking',
+			imgUrl: 'nolus.svg',
+		},
+		{
+			id: 15,
 			name: 'Nois',
 			link: 'https://explorer.kjnodes.com/nois',
 			imgUrl: 'nois.png',
 		},
 		{
-			id: 14,
+			id: 16,
 			name: 'Nibiru',
 			link: 'https://nibiru.explorers.guru/validators',
 			imgUrl: 'nibiru.jpg',
 		},
 		{
-			id: 15,
+			id: 17,
 			name: 'Oasys',
 			link: 'https://explorer.oasys.games/',
 			imgUrl: 'oasys.webp',
 		},
 		{
-			id: 16,
+			id: 18,
 			name: 'Penumbra',
 			link: 'https://guide.penumbra.zone/main/pd/join-testnet.html',
 			imgUrl: 'penumbra.webp',
 		},
 		{
-			id: 17,
+			id: 19,
 			name: 'Sei',
 			link: 'https://sei.explorers.guru/',
 			imgUrl: 'sei.svg',
 		},
 		{
-			id: 18,
+			id: 20,
 			name: 'Sui',
 			link: 'https://explorer.sui.io/',
 			imgUrl: 'sui.svg',
@@ -124,25 +136,25 @@ const Card = () => {
 		// 	imgUrl: 'subspace.jpg',
 		// },
 		{
-			id: 20,
+			id: 21,
 			name: 'Starknet',
 			link: 'https://starkscan.co/',
 			imgUrl: 'starknet.png',
 		},
 		{
-			id: 21,
+			id: 22,
 			name: 'Terp',
 			link: 'https://explorer.bccnodes.com/terp',
 			imgUrl: 'terp.svg',
 		},
 		{
-			id: 22,
+			id: 23,
 			name: 'Uptick',
 			link: 'https://uptick.explorers.guru/validators',
 			imgUrl: 'uptick.jpg',
 		},
 		{
-			id: 23,
+			id: 24,
 			name: 'HAQQ',
 			link: 'https://testnet.manticore.team/haqq/staking',
 			imgUrl: 'haqq.png',
@@ -191,7 +203,7 @@ const Card = () => {
 		>
 			{data.map(item => {
 				return (
-					<motion.div className={styles.card} key={item.id} variants={items}>
+					<motion.div className={styles.card} key={item.name} variants={items}>
 						<h5 className={styles.card__heading}>{item.name}</h5>
 						<div className={styles.card__img}>
 							<Image
