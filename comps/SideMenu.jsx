@@ -142,15 +142,16 @@ const SideMenu = () => {
 			imgUrl: 'massa.jpg',
 		},
 		{
-			name: 'Nolus',
-			link: 'https://explorer-rila.nolus.io/nolus-rila/staking',
-			imgUrl: 'nolus.svg',
-		},
-		{
 			name: 'Nois',
 			link: 'https://explorer.kjnodes.com/nois',
 			imgUrl: 'nois.png',
 		},
+		{
+			name: 'Nolus',
+			link: 'https://explorer-rila.nolus.io/nolus-rila/staking',
+			imgUrl: 'nolus.svg',
+		},
+
 		{
 			name: 'Nibiru',
 			link: 'https://nibiru.explorers.guru/validators',
