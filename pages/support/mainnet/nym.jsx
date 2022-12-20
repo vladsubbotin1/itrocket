@@ -72,6 +72,7 @@ Sorry, not supported
 				<SideMenu />
 				<main className={styles.MainColumn}>
 					<ReactMarkdown
+						linkTarget='_blank'
 						rehypePlugins={[rehypeHighlight, rehypeRaw]}
 						remarkPlugins={[remarkGfm]}
 					>

@@ -132,6 +132,7 @@ sudo systemctl restart uptickd && sudo journalctl -u uptickd -f
 				<SideMenu />
 				<main className={styles.MainColumn}>
 					<ReactMarkdown
+						linkTarget='_blank'
 						rehypePlugins={[rehypeHighlight, rehypeRaw]}
 						remarkPlugins={[remarkGfm]}
 					>

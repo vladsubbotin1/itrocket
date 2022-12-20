@@ -30,7 +30,9 @@ THE COSMOS LIQUID STAKING ZONE
 
 The Quicksilver Token is a Liquid Staking token with multiple use cases
 
-Explorer: https://quicksilver.explorers.guru/
+Explorer:  <a href="https://quicksilver.explorers.guru/" target="_blank" rel="noopener noreferrer">\https://\quicksilver\.explorers.guru/
+</a>  
+
 
 <br/>
 
@@ -42,7 +44,7 @@ Explorer: https://quicksilver.explorers.guru/
 
 <h2 id="guide">Guide</h2>  
 Installation guide: <a href="https://github.com/itrocket-team/testnet_guides/tree/main/quicksilver
-">https://github.com/itrocket-team/testnet_guides/tree/main/quicksilver
+"  target="_blank" rel="noopener noreferrer">https://github.com/itrocket-team/testnet_guides/tree/main/quicksilver
 </a> 
 <h2 id="rpc">RPC, API, gRPC</h2> 
 
@@ -133,6 +135,7 @@ sudo systemctl restart quicksilverd && sudo journalctl -u quicksilverd -f
 				<SideMenu />
 				<main className={styles.MainColumn}>
 					<ReactMarkdown
+						linkTarget='_blank'
 						rehypePlugins={[rehypeHighlight, rehypeRaw]}
 						remarkPlugins={[remarkGfm]}
 					>

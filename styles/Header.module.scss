@@ -6,8 +6,9 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 2rem;
-	transition: 0.3s;
+	transition: 0.3s ease;
 	border-bottom: 1px solid #8b8b8b15;
+
 	@media (max-width: 768px) {
 		padding: 6px 15px;
 	}
@@ -39,7 +40,7 @@
 	}
 
 	a {
-		opacity: 0.8;
+		opacity: 0.9;
 		text-decoration: none;
 
 		&:hover {

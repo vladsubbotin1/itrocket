@@ -60,13 +60,13 @@ export default function Home() {
 									initial='hidden'
 									whileInView='visible'
 									viewport={{ once: true }}
-									transition={{ duration: 0.8 }}
+									transition={{ ease: [0.17, 0.67, 0.83, 0.67] }}
 									variants={{
 										visible: {
 											opacity: 1,
 											y: 0,
 										},
-										hidden: { opacity: 0, y: 30 },
+										hidden: { opacity: 0, y: 10 },
 									}}
 								>
 									<h3 className={styles.hero__heading}>Staking provider</h3>
@@ -98,13 +98,13 @@ export default function Home() {
 									initial='hidden'
 									viewport={{ once: true }}
 									whileInView='visible'
-									transition={{ duration: 0.8 }}
+									transition={{ ease: [0.17, 0.67, 0.83, 0.67] }}
 									variants={{
 										visible: {
 											opacity: 1,
 											y: 0,
 										},
-										hidden: { opacity: 0, y: 30 },
+										hidden: { opacity: 0, y: 10 },
 									}}
 								>
 									<h3 className={styles.hero__heading}>Project support</h3>

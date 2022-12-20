@@ -42,6 +42,7 @@ const axelar = () => {
 				<SideMenu />
 				<main className={styles.MainColumn}>
 					<ReactMarkdown
+						linkTarget='_blank'
 						rehypePlugins={[rehypeHighlight, rehypeRaw]}
 						remarkPlugins={[remarkGfm]}
 					>

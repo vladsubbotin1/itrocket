@@ -92,8 +92,8 @@ const Header = () => {
 						<Image
 							src='/logo.svg'
 							alt='logo'
-							width={210}
-							height={65}
+							width={205}
+							height={60}
 							className={styles.logo}
 							style={{ display: theme === 'light' ? 'block' : 'none' }}
 						/>
@@ -101,8 +101,8 @@ const Header = () => {
 						<Image
 							src='/darkLogo.svg'
 							alt='logo'
-							width={210}
-							height={65}
+							width={205}
+							height={60}
 							className={styles.logo}
 							style={{ display: theme === 'dark' ? 'block' : 'none' }}
 						/>
@@ -183,11 +183,13 @@ const Header = () => {
 					}}
 					transition={{ duration: 0.3, delay: 0.5 }}
 				>
-					<motion.nav initial={false} animate={isOpen ? 'open' : 'closed'}>
+					<nav>
 						<motion.ul
 							onClick={() => {
 								setIsOpen(!isOpen)
 							}}
+							initial={false}
+							animate={isOpen ? 'open' : 'closed'}
 							variants={ulVariants}
 						>
 							{items.map((item, i) => (
@@ -196,7 +198,7 @@ const Header = () => {
 								</motion.li>
 							))}
 						</motion.ul>
-					</motion.nav>
+					</nav>
 
 					<motion.div
 						className='socials'
