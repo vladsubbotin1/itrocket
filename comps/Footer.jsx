@@ -45,7 +45,7 @@ const Footer = () => {
 						rel='noopener noreferrer'
 					>
 						<Image
-							src='/icons/github.svg'
+							src='/icons/github-white.svg'
 							alt='github'
 							width={40}
 							height={40}

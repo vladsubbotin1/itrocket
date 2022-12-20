@@ -1,5 +1,6 @@
 import styles from '../styles/CardMain.module.scss'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 const Finished = () => {
 	let data = [
@@ -48,7 +49,20 @@ const Finished = () => {
 	]
 
 	return (
-		<div className={`${styles.card__root} ${styles.finishedRoot}`}>
+		<motion.div
+			className={`${styles.card__root} ${styles.finishedRoot}`}
+			initial='hidden'
+			whileInView='visible'
+			viewport={{ once: true }}
+			transition={{ duration: 0.8 }}
+			variants={{
+				visible: {
+					opacity: 1,
+					y: 0,
+				},
+				hidden: { opacity: 0, y: 20 },
+			}}
+		>
 			{data.map(item => {
 				return (
 					<div
@@ -70,7 +84,7 @@ const Finished = () => {
 					</div>
 				)
 			})}
-		</div>
+		</motion.div>
 	)
 }
 

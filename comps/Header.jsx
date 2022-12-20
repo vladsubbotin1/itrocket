@@ -92,7 +92,7 @@ const Header = () => {
 						<Image
 							src='/logo.svg'
 							alt='logo'
-							width={205}
+							width={200}
 							height={60}
 							className={styles.logo}
 							style={{ display: theme === 'light' ? 'block' : 'none' }}
@@ -101,7 +101,7 @@ const Header = () => {
 						<Image
 							src='/darkLogo.svg'
 							alt='logo'
-							width={205}
+							width={200}
 							height={60}
 							className={styles.logo}
 							style={{ display: theme === 'dark' ? 'block' : 'none' }}
@@ -179,7 +179,6 @@ const Header = () => {
 					style={{
 						backgroundColor: theme === 'dark' ? '#000' : '#fff',
 						display: isOpen ? 'flex' : 'none',
-						transition: '2s',
 					}}
 					transition={{ duration: 0.3, delay: 0.5 }}
 				>
@@ -235,9 +234,23 @@ const Header = () => {
 							href='https://github.com/itrocket-team'
 							target='_blank'
 							rel='noopener noreferrer'
+							style={{ display: theme === 'light' ? 'block' : 'none' }}
 						>
 							<Image
 								src='/icons/github.svg'
+								alt='github'
+								width={30}
+								height={30}
+							/>
+						</a>
+						<a
+							href='https://github.com/itrocket-team'
+							target='_blank'
+							rel='noopener noreferrer'
+							style={{ display: theme !== 'light' ? 'block' : 'none' }}
+						>
+							<Image
+								src='/icons/github-white.svg'
 								alt='github'
 								width={30}
 								height={30}
