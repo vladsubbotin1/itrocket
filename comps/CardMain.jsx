@@ -190,43 +190,11 @@ const Card = () => {
 		else setModalDesc(QuicksilverDesc)
 	}
 
-	const container = {
-		visible: {
-			transition: { staggerChildren: 0.15, delayChildren: 0.2 },
-		},
-		initial: {
-			transition: { staggerChildren: 0.07, staggerDirection: -1 },
-		},
-	}
-
-	const items = {
-		visible: {
-			y: 0,
-			opacity: 1,
-			transition: {
-				y: { stiffness: 1000, velocity: -100 },
-			},
-		},
-		initial: {
-			y: 30,
-			opacity: 0,
-			transition: {
-				y: { stiffness: 1000 },
-			},
-		},
-	}
-
 	return (
-		<motion.div
-			className={styles.card__root}
-			variants={container}
-			initial={'initial'}
-			whileInView={'visible'}
-			viewport={{ once: true }}
-		>
+		<div className={styles.card__root}>
 			{data.map(item => {
 				return (
-					<motion.div className={styles.card} key={item.name} variants={items}>
+					<div className={styles.card} key={item.name}>
 						<h5 className={styles.card__heading}>{item.name}</h5>
 						<div className={styles.card__img}>
 							<Image
@@ -283,10 +251,10 @@ const Card = () => {
 								/>
 							)}
 						</AnimatePresence>
-					</motion.div>
+					</div>
 				)
 			})}
-		</motion.div>
+		</div>
 	)
 }
 

@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import styles from '../styles/CardTest.module.scss'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import { ThemeContext } from '../pages/_app'
 import { useContext } from 'react'
 
@@ -143,43 +142,11 @@ const Card = () => {
 		// },
 	]
 
-	const container = {
-		visible: {
-			transition: { staggerChildren: 0.1, delayChildren: 0.2 },
-		},
-		initial: {
-			transition: { staggerChildren: 0.07, staggerDirection: -1 },
-		},
-	}
-
-	const items = {
-		visible: {
-			y: 0,
-			opacity: 1,
-			transition: {
-				y: { stiffness: 1000, velocity: -100 },
-			},
-		},
-		initial: {
-			y: 30,
-			opacity: 0,
-			transition: {
-				y: { stiffness: 1000 },
-			},
-		},
-	}
-
 	return (
-		<motion.div
-			className={styles.card__root}
-			variants={container}
-			initial={'initial'}
-			whileInView={'visible'}
-			viewport={{ once: true }}
-		>
+		<div className={styles.card__root}>
 			{data.map(item => {
 				return (
-					<motion.div className={styles.card} key={item.name} variants={items}>
+					<div className={styles.card} key={item.name}>
 						<h5 className={styles.card__heading}>{item.name}</h5>
 						<div className={styles.card__img}>
 							<Image
@@ -220,10 +187,10 @@ const Card = () => {
 								</button>
 							</a>
 						</div>
-					</motion.div>
+					</div>
 				)
 			})}
-		</motion.div>
+		</div>
 	)
 }
 
