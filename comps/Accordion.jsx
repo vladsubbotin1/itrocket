@@ -1,10 +1,28 @@
-import { useState } from 'react'
+import { useLayoutEffect, useRef, useState } from 'react'
 import styles from '../styles/Accordion.module.scss'
 
 const Accordion = () => {
 	const [isActive1, setIsActive1] = useState()
 	const [isActive2, setIsActive2] = useState()
 	const [isActive3, setIsActive3] = useState()
+	const [height1, setHeight1] = useState(0)
+	const [height2, setHeight2] = useState(0)
+	const [height3, setHeight3] = useState(0)
+	const ref1 = useRef(null)
+	const ref2 = useRef(null)
+	const ref3 = useRef(null)
+
+	useLayoutEffect(() => {
+		setHeight1(ref1.current.scrollHeight)
+	}, [isActive1])
+
+	useLayoutEffect(() => {
+		setHeight2(ref2.current.scrollHeight)
+	}, [isActive2])
+
+	useLayoutEffect(() => {
+		setHeight3(ref3.current.scrollHeight)
+	}, [isActive3])
 
 	return (
 		<div>
@@ -16,8 +34,9 @@ const Accordion = () => {
 				<span className={styles.button__heading}>{isActive1 ? '+' : '-'}</span>
 			</button>
 			<div
+				ref={ref1}
 				className={styles.panel}
-				style={isActive1 ? { display: 'block' } : { display: 'none' }}
+				style={isActive1 ? { maxHeight: `${height1}px` } : { maxHeight: '0' }}
 			>
 				<p className={styles.accordion__desc}>
 					ITRocket is a team of DevOps engineers from Armenia 🇦🇲. We are crypto
@@ -35,8 +54,9 @@ const Accordion = () => {
 				<span className={styles.button__heading}>{isActive2 ? '+' : '-'}</span>
 			</button>
 			<div
+				ref={ref2}
 				className={styles.panel}
-				style={isActive2 ? { display: 'block' } : { display: 'none' }}
+				style={isActive2 ? { maxHeight: `${height2}px` } : { maxHeight: '0' }}
 			>
 				<p className={styles.accordion__desc}>
 					We run nodes on dedicated servers in Europe, USA and Canada. Our team
@@ -53,8 +73,9 @@ const Accordion = () => {
 				<span className={styles.button__heading}>{isActive3 ? '+' : '-'}</span>
 			</button>
 			<div
+				ref={ref3}
 				className={styles.panel}
-				style={isActive3 ? { display: 'block' } : { display: 'none' }}
+				style={isActive3 ? { maxHeight: `${height3}px` } : { maxHeight: '0' }}
 			>
 				<p className={styles.accordion__desc}>
 					We use ssh keys to login in our servers and disable password login and

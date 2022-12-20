@@ -68,8 +68,8 @@
 .panel {
 	background-color: transparent;
 	padding: 0 18px;
-	display: none;
 	overflow: hidden;
+	transition: 0.2s ease-out;
 
 	p {
 		padding: 20px 0;
@@ -81,6 +81,7 @@
 		font-size: 18px;
 		font-weight: 500;
 		color: inherit;
+		transition: 0.2 ease-out;
 
 		@media (max-width: 768px) {
 			font-size: 15px;
