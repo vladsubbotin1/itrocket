@@ -70,6 +70,9 @@ const about = () => {
 									<Link href='/support/testnet/gear'>Gear</Link>
 								</li>
 								<li>
+									<Link href='/support/testnet/humans'>Humans</Link>
+								</li>
+								<li>
 									<Link href='/support/testnet/kira'>Kira</Link>
 								</li>
 								<li>
@@ -87,6 +90,9 @@ const about = () => {
 							<ul>
 								<li>
 									<Link href='/support/testnet/nibiru'>Nibiru</Link>
+								</li>
+								<li>
+									<Link href='/support/testnet/nolus'>Nolus</Link>
 								</li>
 								<li>
 									<Link href='/support/testnet/oasys'>Oasys</Link>
