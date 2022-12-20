@@ -101,11 +101,11 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 
 Configure the state sync
 ~~~bash
-sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\/1true| ; \
-s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\/1\"$SNAP_RPC,$SNAP_RPC\"| ; \
-s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\/1$BLOCK_HEIGHT| ; \
-s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\/1\"$TRUST_HASH\"| ; \
-s|^(seeds[[:space:]]+=[[:space:]]+).*$|\/1\"\"|" $HOME/.nolus/config/config.toml
+sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\\1true| ; 
+s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\\1\"$SNAP_RPC,$SNAP_RPC\"| ; 
+s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\\1$BLOCK_HEIGHT| ; 
+s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\\1\"$TRUST_HASH\"| ; 
+s|^(seeds[[:space:]]+=[[:space:]]+).*$|\\1\"\"|" $HOME/.nolus/config/config.toml
 ~~~
 
 Clean old data
