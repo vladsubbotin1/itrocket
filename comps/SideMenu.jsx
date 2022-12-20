@@ -112,6 +112,11 @@ const SideMenu = () => {
 			imgUrl: 'gear.jpg',
 		},
 		{
+			name: 'HAQQ',
+			link: 'https://testnet.manticore.team/haqq/staking',
+			imgUrl: 'haqq.png',
+		},
+		{
 			name: 'Humans',
 			link: 'https://explorer.humans.zone/humans-testnet',
 			imgUrl: 'humans.jpg',
@@ -190,11 +195,6 @@ const SideMenu = () => {
 			name: 'Uptick',
 			link: 'https://uptick.explorers.guru/validators',
 			imgUrl: 'uptick.jpg',
-		},
-		{
-			name: 'HAQQ',
-			link: 'https://testnet.manticore.team/haqq/staking',
-			imgUrl: 'haqq.png',
 		},
 		// {
 		// 	name: 'OKP4',
