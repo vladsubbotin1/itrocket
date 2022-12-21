@@ -8,8 +8,7 @@ body {
 	font-family: 'Inter';
 	font-weight: 300;
 	color: rgba(0, 0, 0, 0.9);
-	transition: 0.4s ease;
-	overflow-x: hidden;
+	transition: 0.3s ease;
 	z-index: 1;
 }
 
@@ -294,10 +293,6 @@ a.ant-typography {
 }
 .ant-menu-light .ant-menu-item-group-title {
 	color: rgba(0, 0, 0, 0.6) !important;
-}
-
-.ant-menu {
-	transition: 0.6s;
 }
 
 .ant-btn {

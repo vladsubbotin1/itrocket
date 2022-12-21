@@ -92,8 +92,8 @@ const Header = () => {
 						<Image
 							src='/logo.svg'
 							alt='logo'
-							width={200}
-							height={60}
+							width={195}
+							height={55}
 							className={styles.logo}
 							style={{ display: theme === 'light' ? 'block' : 'none' }}
 						/>
@@ -101,8 +101,8 @@ const Header = () => {
 						<Image
 							src='/darkLogo.svg'
 							alt='logo'
-							width={200}
-							height={60}
+							width={195}
+							height={55}
 							className={styles.logo}
 							style={{ display: theme === 'dark' ? 'block' : 'none' }}
 						/>
@@ -133,14 +133,13 @@ const Header = () => {
 							className={styles.switch}
 							data-ison={theme === 'dark'}
 							onClick={toggleTheme}
-							style={{ borderColor: theme === 'dark' ? 'white' : 'black' }}
 						>
 							<motion.div
 								className={styles.handle}
 								layout
 								transition={spring}
 								style={{
-									backgroundColor: theme === 'dark' ? 'white' : 'black',
+									backgroundColor: 'white',
 								}}
 							/>
 						</div>

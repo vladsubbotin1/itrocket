@@ -122,7 +122,7 @@ sudo systemctl restart quicksilverd && sudo journalctl -u quicksilverd -f
 	return (
 		<>
 			<Head>
-				<title>ITRocket - Support Provider 🚀</title>
+				<title>ITRocket - Support Provider</title>
 				<meta
 					name='description'
 					content='ITRocket 🚀 | Crypto Multipurpose Project'
