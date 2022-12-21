@@ -52,7 +52,7 @@ Public gRPC - http://65.109.92.79:12090
 
 ### peers 
 ~~~bash
-d8ced042dee3d657e8b9e9a8fcec6d8760764c49@65.109.92.79:12656
+a08e5b25443d038b08230177456ee23196509dd5@65.109.92.79:12656
 ~~~
 
 ### addrbook:  
@@ -78,7 +78,7 @@ Configure
 
 ~~~bash
 cd $HOME 
-peers="d8ced042dee3d657e8b9e9a8fcec6d8760764c49@65.109.92.79:12656" 
+peers="a08e5b25443d038b08230177456ee23196509dd5@65.109.92.79:12656" 
 config=$HOME/.nibid/config/config.toml 
 SNAP_RPC=65.109.92.79:12657
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $config 
