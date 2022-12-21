@@ -208,10 +208,8 @@
 	color: #fff;
 	border: none;
 	cursor: pointer;
-	margin: 10px 0;
+	margin: 15px 0;
 	transition: 0.3s;
-	box-shadow: 5px 5px 10px rgb(108 106 213 / 25%), inset 2px 2px 6px #a78df0,
-		inset -5px -5px 10px #6336e4;
 
 	&:hover {
 		background: #6a5fdf;
@@ -221,6 +219,7 @@
 	@media (max-width: 768px) {
 		font-size: 13px;
 		padding: 8px 16px;
+		margin: 10px 0;
 	}
 }
 
