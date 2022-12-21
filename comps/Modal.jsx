@@ -30,7 +30,7 @@ const Modal = ({ handleClose, text }) => {
 					backgroundColor:
 						theme === 'light'
 							? 'rgba(255, 255, 255, 0.9)'
-							: 'rgba(255, 255, 255, 0.01)',
+							: 'rgba(40,40,40,0.9)',
 					color: theme === 'light' ? '#000' : '#fff',
 				}}
 				variants={dropIn}
