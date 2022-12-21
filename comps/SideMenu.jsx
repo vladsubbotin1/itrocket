@@ -26,13 +26,7 @@ function getItem(label, key, icon, children, type) {
 const rootSubmenuKeys = []
 
 const SideMenu = () => {
-	const [collapsed, setCollapsed] = useState(false)
-
-	useEffect(() => {
-		if (window.innerWidth < 768) {
-			setCollapsed(true)
-		}
-	}, [])
+	const [collapsed, setCollapsed] = useState(true)
 
 	const toggleCollapsed = () => {
 		setCollapsed(!collapsed)

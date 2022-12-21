@@ -127,18 +127,23 @@ const Header = () => {
 							</li>
 						</ul>
 					</nav>
-					<div
-						className={styles.switch}
-						data-ison={theme === 'dark'}
-						onClick={toggleTheme}
-						style={{ borderColor: theme === 'dark' ? 'white' : 'black' }}
-					>
-						<motion.div
-							className={styles.handle}
-							layout
-							transition={spring}
-							style={{ backgroundColor: theme === 'dark' ? 'white' : 'black' }}
-						/>
+
+					<div className={styles.switch__wrapper}>
+						<div
+							className={styles.switch}
+							data-ison={theme === 'dark'}
+							onClick={toggleTheme}
+							style={{ borderColor: theme === 'dark' ? 'white' : 'black' }}
+						>
+							<motion.div
+								className={styles.handle}
+								layout
+								transition={spring}
+								style={{
+									backgroundColor: theme === 'dark' ? 'white' : 'black',
+								}}
+							/>
+						</div>
 					</div>
 
 					<button
