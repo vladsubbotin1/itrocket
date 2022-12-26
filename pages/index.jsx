@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '@styles/Home.module.scss'
 import { motion } from 'framer-motion'
-import CardMain from '@styles/CardMain.jsx'
+import CardMain from '@components/CardMain.jsx'
 import CardTest from '@components/CardTest.jsx'
 import Footer from '@components/Footer.jsx'
 import Accordion from '@components/Accordion.jsx'
