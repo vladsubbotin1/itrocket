@@ -1,4 +1,4 @@
-import styles from '../styles/CardMain.module.scss'
+import styles from '@styles/CardMain.module.scss'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 

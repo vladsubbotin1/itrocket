@@ -1,13 +1,13 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.scss'
+import styles from '@styles/Home.module.scss'
 import { motion } from 'framer-motion'
-import CardMain from '../comps/CardMain.jsx'
-import CardTest from '../comps/CardTest.jsx'
-import Footer from '../comps/Footer.jsx'
-import Accordion from '../comps/Accordion.jsx'
-import Header from '../comps/Header.jsx'
+import CardMain from '@styles/CardMain.jsx'
+import CardTest from '@components/CardTest.jsx'
+import Footer from '@components/Footer.jsx'
+import Accordion from '@components/Accordion.jsx'
+import Header from '@components/Header.jsx'
+import Finished from '@components/Finished.jsx'
 import { useState, useEffect } from 'react'
-import Finished from '../comps/Finished.jsx'
 
 export default function Home() {
 	const [showing, setShowing] = useState(false)

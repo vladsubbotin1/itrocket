@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react'
 import Head from 'next/head'
-import styles from '../styles/Support.module.scss'
-import Header from '../comps/Header'
-import SideMenu from '../comps/SideMenu'
+import styles from '@styles/Support.module.scss'
+import Header from '@components/Header'
+import SideMenu from '@components/SideMenu'
 import { ThemeContext } from '../pages/_app.jsx'
-import 'highlight.js/styles/github.css'
 import Link from 'next/link'
+import 'highlight.js/styles/github.css'
 
 const about = () => {
 	const { theme, toggleTheme } = useContext(ThemeContext)

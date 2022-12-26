@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import styles from '../styles/CardTest.module.scss'
+import styles from '@styles/CardTest.module.scss'
 import Link from 'next/link'
 import { ThemeContext } from '../pages/_app'
 import { useContext } from 'react'

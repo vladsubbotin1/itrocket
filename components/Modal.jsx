@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import Backdrop from './Backdrop'
-import styles from '../styles/Modal.module.scss'
+import styles from '@styles/Modal.module.scss'
 import { ThemeContext } from '../pages/_app'
 import { useContext } from 'react'
 

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import styles from '../styles/Backdrop.module.scss'
+import styles from '@styles/Backdrop.module.scss'
 
 const dropIn = {
 	hidden: {

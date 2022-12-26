@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import styles from '../styles/CardMain.module.scss'
+import styles from '@styles/CardMain.module.scss'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useContext, useState } from 'react'
 import Modal from './Modal'

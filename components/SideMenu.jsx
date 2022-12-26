@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react'
-import styles from '../styles/Support.module.scss'
+import React, { useContext, useState } from 'react'
+import styles from '@styles/Support.module.scss'
 import { Button, Menu } from 'antd'
 import {
 	InfoCircleOutlined,

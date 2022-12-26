@@ -1,5 +1,5 @@
 import { useLayoutEffect, useRef, useState } from 'react'
-import styles from '../styles/Accordion.module.scss'
+import styles from '@styles/Accordion.module.scss'
 
 const Accordion = () => {
 	const [isActive1, setIsActive1] = useState()

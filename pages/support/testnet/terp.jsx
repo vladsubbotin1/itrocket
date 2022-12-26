@@ -1,15 +1,14 @@
 import React, { useContext, useEffect, useState } from 'react'
 import Head from 'next/head'
-import styles from '../../../styles/Support.module.scss'
-import Header from '../../../comps/Header'
-import SideMenu from '../../../comps/SideMenu'
+import styles from '@styles/Support.module.scss'
+import Header from '@components/Header'
+import SideMenu from '@components/SideMenu'
 import { ThemeContext } from '../../_app.jsx'
 import ReactMarkdown from 'react-markdown'
 import rehypeHighlight from 'rehype-highlight'
 import rehypeRaw from 'rehype-raw'
 import remarkGfm from 'remark-gfm'
 import 'highlight.js/styles/github.css'
-
 const axelar = () => {
 	const { theme, toggleTheme } = useContext(ThemeContext)
 	const [current, setCurrent] = useState('1')
