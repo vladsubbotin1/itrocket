@@ -95,7 +95,11 @@ const SideMenu = () => {
 		// 	imgUrl: 'deweb.png',
 		// },
 		// {
-
+		{
+			name: 'Defund',
+			link: 'https://defund.explorers.guru/validators',
+			imgUrl: 'defund.png',
+		},
 		// 	name: 'Empower',
 		// 	link: 'https://www.empowerchain.io/',
 		// 	imgUrl: 'empower.png',

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect } from 'react'
 import Head from 'next/head'
 import styles from '@styles/Support.module.scss'
 import Header from '@components/Header'
@@ -12,7 +12,6 @@ import 'highlight.js/styles/github.css'
 
 const axelar = () => {
 	const { theme, toggleTheme } = useContext(ThemeContext)
-	const [current, setCurrent] = useState('1')
 
 	useEffect(() => {
 		let typo = document.getElementsByClassName('ant-typography')
@@ -23,24 +22,14 @@ const axelar = () => {
 		}
 	}, [theme])
 
-	const markdown = `<h2 id="about">About</h2>
+	const markdown = `<h2 id="about">Quicksilver</h2>  
 
-### Quicksilver
-THE COSMOS LIQUID STAKING ZONE  
-
-The Quicksilver Token is a Liquid Staking token with multiple use cases
-
-Explorer:  <a href="https://quicksilver.explorers.guru/" target="_blank" rel="noopener noreferrer">\https://\quicksilver\.explorers.guru/
-</a>  
-
+The Quicksilver Token is a Liquid Staking token with multiple use cases 
 
 <br/>
 
 * Website: https://quicksilver.zone/ 
-* Discord: https://discord.com/invite/xrSmYMDVrQ   
-* Telegram: https://t.me/quicksilverzone  
-* Twitter: https://twitter.com/quicksilverzone  
-* Medium: https://medium.com/quicksilverzone
+* Explorer: https://testnet.itrocket.net/quicksilver/staking
 
 <h2 id="guide">Guide</h2>  
 Installation guide: <a href="https://github.com/itrocket-team/testnet_guides/tree/main/quicksilver
@@ -48,9 +37,9 @@ Installation guide: <a href="https://github.com/itrocket-team/testnet_guides/tre
 </a> 
 <h2 id="rpc">RPC, API, gRPC</h2> 
 
-Public RPC - http://65.109.92.79:15657  
+Public RPC - https://quicksilver-mainnet-rpc.itrocket.net  
 
-Public API - http://65.109.92.79:15317  
+Public API - https://quicksilver-mainnet-api.itrocket.net 
 
 Public gRPC - http://65.109.92.79:15090
 
@@ -92,7 +81,7 @@ BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
 TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash) 
 ~~~
 
-Check is the state sync information available
+Check if the state sync information available
 
 ~~~bash
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH

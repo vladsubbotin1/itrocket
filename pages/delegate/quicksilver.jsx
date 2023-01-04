@@ -49,8 +49,8 @@ const about = () => {
 						</Paragraph>
 						<Paragraph>
 							<Text>Explorer: </Text>
-							<Link href='https://explorer.nodestake.top/quicksilver/staking/quickvaloper1jlh8cttv96kyxu0j0r2ppv4sga6ju4uzxa3c2x'>
-								https://explorer.nodestake.top/quicksilver/staking/quickvaloper1jlh8cttv96kyxu0j0r2ppv4sga6ju4uzxa3c2x
+							<Link href='https://mainnet.itrocket.net/quicksilver'>
+								https://mainnet.itrocket.net/quicksilver
 							</Link>
 						</Paragraph>
 						<Title level={2}>Guideline</Title>

@@ -23,29 +23,22 @@ const axelar = () => {
 		}
 	}, [theme])
 
-	const markdown = `<h2 id="about">About</h2>
+	const markdown = `<h2 id="about">Nolus</h2>
+Bringing innovation to money markets through a Web3 financial suite designed to make DeFi better for you <br/> <br/> 
 
-### Nolus
-Bringing innovation to money markets through a Web3 financial suite designed to make DeFi better for you. 
-
-Explorer: https://explorer-rila.nolus.io/nolus-rila/staking
-
-The Quicksilver Token is a Liquid Staking token with multiple use cases.
-<br/><br/>
 * Website: https://nolus.io/ 
-* Discord: https://discord.com/invite/nolus-protocol   
-* Telegram: https://t.me/NolusProtocol  
-* Twitter: https://twitter.com/NolusProtocol  
+* Explorer: https://testnet.itrocket.net/nolus/staking   
 
 <h2 id="guide">Guide</h2>  
-Installation guide: <a href="https://github.com/itrocket-team/testnet_guides/blob/main/nolus/" target="_blank" rel="noopener referrer">https://github.com/itrocket-team/testnet_guides/blob/main/nolus/</a>
+ITRocket-team installation guide: 
 
+https://github.com/itrocket-team/testnet_guides/blob/main/nolus/
 
 <h2 id="rpc">RPC, API, gRPC</h2> 
 
-Public RPC - http://65.109.92.79:16657  
+Public RPC - https://nolus-testnet-rpc.itrocket.net  
 
-Public API - http://65.109.92.79:16317  
+Public API - https://nolus-testnet-api.itrocket.net  
 
 Public gRPC - http://65.109.92.79:16090
 
@@ -101,10 +94,10 @@ echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 
 Configure the state sync
 ~~~bash
-sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\\1true| ; 
-s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\\1\"$SNAP_RPC,$SNAP_RPC\"| ; 
-s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\\1$BLOCK_HEIGHT| ; 
-s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\\1\"$TRUST_HASH\"| ; 
+sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\\1true| ; \
+s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
+s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\\1$BLOCK_HEIGHT| ; \
+s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\\1\"\"|" $HOME/.nolus/config/config.toml
 ~~~
 

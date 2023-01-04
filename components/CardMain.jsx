@@ -19,7 +19,7 @@ const Card = () => {
 	let data = [
 		{
 			name: 'NYM',
-			link: 'https://mixnet.explorers.guru/',
+			link: 'https://mainnet.itrocket.net/nyx',
 			imgUrl: 'nym.png',
 		},
 		{
@@ -29,7 +29,7 @@ const Card = () => {
 		},
 		{
 			name: 'Quicksilver',
-			link: 'https://explorer.nodestake.top/quicksilver/staking',
+			link: 'https://mainnet.itrocket.net/quicksilver',
 			imgUrl: 'quicksilver.jpg',
 		},
 	]
@@ -168,11 +168,11 @@ const Card = () => {
 			<br />
 			<b>Link to the explorer: </b> <br />
 			<a
-				href='https://explorer.nodestake.top/quicksilver/staking/quickvaloper1jlh8cttv96kyxu0j0r2ppv4sga6ju4uzxa3c2x'
+				href='https://mainnet.itrocket.net/quicksilver'
 				rel='noopener noreferrer'
 				target='_blank'
 			>
-				https://explorer.nodestake.top/quicksilver/staking/quickvaloper1jlh8cttv96kyxu0j0r2ppv4sga6ju4uzxa3c2x
+				https://mainnet.itrocket.net/quicksilver
 			</a>
 			<br /> <br />
 			<div className='center-flex'>

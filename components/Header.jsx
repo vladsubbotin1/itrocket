@@ -72,10 +72,16 @@ const Header = () => {
 	}, [])
 
 	const items = [
-		<Link href='/#mainnet'>Mainnets</Link>,
-		<Link href='/#testnet'>Testnets</Link>,
-		<Link href='/support'>Services</Link>,
-		<Link href='/#faq'>FAQ</Link>,
+		<Link href='/#mainnet' scroll={false}>
+			Mainnets
+		</Link>,
+		<Link href='/#testnet' scroll={false}>
+			Testnets
+		</Link>,
+		<Link href='/support'>Support</Link>,
+		<Link href='/#faq' scroll={false}>
+			FAQ
+		</Link>,
 	]
 
 	const spring = {
@@ -119,9 +125,8 @@ const Header = () => {
 								<Link href='/#testnet'>Testnets</Link>
 							</li>
 							<li>
-								<Link href='/support'>Services</Link>
+								<Link href='/support'>Support</Link>
 							</li>
-
 							<li>
 								<Link href='/#faq'>FAQ</Link>
 							</li>

@@ -12,7 +12,6 @@ import 'highlight.js/styles/github.css'
 
 const celestia = () => {
 	const { theme, toggleTheme } = useContext(ThemeContext)
-	const [current, setCurrent] = useState('1')
 
 	useEffect(() => {
 		let typo = document.getElementsByClassName('ant-typography')
@@ -23,21 +22,12 @@ const celestia = () => {
 		}
 	}, [theme])
 
-	const markdown = `<h2 id="about">About</h2>
-
-### Celestia
-Celestia is the first modular blockchain network. It is a modular consensus and data network, built to enable anyone to easily deploy their own blockchain with minimal overhead.
-<br/><br/>
+	const markdown = `<h2 id="about">Celestia</h2>
+	Celestia is the first modular blockchain network. It is a modular consensus and data network, built to enable anyone to easily deploy their own blockchain with minimal overhead. <br/> <br/>
 
 * Website: <a href="https://celestia.org">https://celestia.org</a>  
 
-* Discord: <a href="https://discord.com/invite/YsnTPcSfWQ">https://discord.com/invite/YsnTPcSfWQ</a> 
-
-* Telegram: <a href="https://t.me/CelestiaCommunity">https://t.me/CelestiaCommunity</a>  
-
-* Twitter <a href="https://twitter.com/CelestiaOrg"> https://twitter.com/CelestiaOrg</a>  
-
-* Github: <a href="https://github.com/celestiaorg">https://github.com/celestiaorg</a>  
+* Explorer: https://testnet.itrocket.net/celestia/staking  
 
 <h2 id="guide">Guide</h2> 
 <a href="https://docs.celestia.org/nodes/overview/" target="_blank" rel="noopener referrer">Official documentation</a>
@@ -48,9 +38,9 @@ Celestia is the first modular blockchain network. It is a modular consensus and 
 
 <h2 id="rpc">RPC, API, gRPC</h2> 
 
-Public RPC: <a href="http://65.109.92.79:11657/">http://65.109.92.79:11657	</a>    
+Public RPC: https://celestia-testnet-rpc.itrocket.net     
 
-Public API: <a href="http://65.109.92.79:11317/">http://65.109.92.79:11317</a>   
+Public API: https://celestia-testnet-api.itrocket.net 
 
 Public gRPc: <a href="http://65.109.92.79:11090">http://65.109.92.79:11090</a>  
 

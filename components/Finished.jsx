@@ -5,43 +5,36 @@ import { motion } from 'framer-motion'
 const Finished = () => {
 	let data = [
 		{
-			id: 1,
 			name: 'Ironfish',
 			link: 'https://ironfish.network/',
 			imgUrl: 'ironfish.png',
 		},
 		{
-			id: 2,
 			name: 'Pontem',
 			link: 'https://pontem.network/',
 			imgUrl: 'pontem.svg',
 		},
 		// {
-		// 	id: 3,
 		// 	name: 'Quicksilver',
 		// 	link: 'https://quicksilver.zone/',
 		// 	imgUrl: 'quicksilver.jpg',
 		// },
 		{
-			id: 4,
 			name: 'Empower',
 			link: 'https://www.empowerchain.io/',
 			imgUrl: 'empower.png',
 		},
 		{
-			id: 5,
 			name: 'DeWeb',
 			link: 'https://deweb.services/',
 			imgUrl: 'deweb.png',
 		},
 		{
-			id: 6,
 			name: 'Bifrost',
 			link: 'https://thebifrost.io/',
 			imgUrl: 'bifrost.png',
 		},
 		{
-			id: 7,
 			name: 'Subspace',
 			link: 'https://subspace.network/',
 			imgUrl: 'subspace.jpg',
@@ -67,7 +60,7 @@ const Finished = () => {
 				return (
 					<div
 						className={`${styles.card} ${styles.finishedCard}`}
-						key={item.id}
+						key={item.name}
 					>
 						<h5 className={styles.card__heading}>{item.name}</h5>
 						<div className={styles.card__img} style={{ width: '40%' }}>

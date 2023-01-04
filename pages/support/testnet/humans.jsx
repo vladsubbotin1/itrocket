@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect } from 'react'
 import Head from 'next/head'
 import styles from '@styles/Support.module.scss'
 import Header from '@components/Header'
@@ -12,7 +12,6 @@ import 'highlight.js/styles/github.css'
 
 const axelar = () => {
 	const { theme, toggleTheme } = useContext(ThemeContext)
-	const [current, setCurrent] = useState('1')
 
 	useEffect(() => {
 		let typo = document.getElementsByClassName('ant-typography')

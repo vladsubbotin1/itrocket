@@ -23,48 +23,33 @@ const axelar = () => {
 		}
 	}, [theme])
 
-	const markdown = `<h2 id="about">SEI</h2>
+	const markdown = `<h2 id="about">DeFund</h2>
 
-* Website: https://www.seinetwork.io/  
-* Explorer: https://testnet.itrocket.net/sei/staking
+* Website: https://www.defund.app/  
+* Explorer: https://defund.explorers.guru/validators  
+
 
 <h2 id="guide">Guide</h2> 
-
 ITRocket Team installation guide: 
 
-https://github.com/itrocket-team/testnet_guides/tree/main/sei
+https://github.com/marutyan/testnet_guides/tree/main/defund
 
 <h2 id="rpc">RPC, API, gRPC</h2> 
 
-### Public RPC
+Public RPC - https://defund-testnet-rpc.itrocket.net  
 
-~~~bash
-https://sei-testnet-rpc.itrocket.net
-~~~
+Public API - https://defund-testnet-api.itrocket.net  
 
-### Public API
+Public gRPC - http://65.109.92.79:18090
 
-~~~bash
-https://sei-testnet-api.itrocket.net 
-~~~
 
-### Public gRPC
-
-~~~bash
-http://65.109.92.79:14090
-~~~
 
 ### peers 
 
 ~~~bash
-23566c31c1a4f852eb581cee56ce68b4b77756b1@65.109.92.79:14656
+6a7d05dde20bb90bcc574c77a302e617be0376a7@65.109.92.79:18656
 ~~~
 
-### addrbook: 
-
-~~~bash
-N/A
-~~~
 
 <h2 id="snap">Snapshot</h2> 
 

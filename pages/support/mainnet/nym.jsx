@@ -23,9 +23,7 @@ const axelar = () => {
 		}
 	}, [theme])
 
-	const markdown = `<h2 id="about">About</h2>
-
-### NYM
+	const markdown = `<h2 id="about">NYM</h2>
 Building the next generation of privacy infrastructure  
 
 Explorer: https://explorer.nymtech.net/network-components/mixnodes

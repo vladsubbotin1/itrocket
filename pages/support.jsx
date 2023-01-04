@@ -67,6 +67,9 @@ const about = () => {
 									<Link href='/support/testnet/celestia'>Celestia</Link>
 								</li>
 								<li>
+									<Link href='/support/testnet/defund'>Defund</Link>
+								</li>
+								<li>
 									<Link href='/support/testnet/gear'>Gear</Link>
 								</li>
 								<li>

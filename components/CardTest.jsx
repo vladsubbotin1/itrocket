@@ -30,7 +30,7 @@ const Card = () => {
 		},
 		{
 			name: 'Celestia',
-			link: 'https://celestia.explorers.guru/validators',
+			link: 'https://testnet.itrocket.net/celestia',
 			imgUrl: 'celestia.png',
 		},
 		// {
@@ -38,6 +38,11 @@ const Card = () => {
 		// 	link: 'https://deweb.services/',
 		// 	imgUrl: 'deweb.png',
 		// },
+		{
+			name: 'Defund',
+			link: 'https://defund.explorers.guru/validators',
+			imgUrl: 'defund.png',
+		},
 		// {
 		// 	name: 'Empower',
 		// 	link: 'https://www.empowerchain.io/',
@@ -45,12 +50,12 @@ const Card = () => {
 		// },
 		{
 			name: 'Gear',
-			link: 'https://telemetry.gear-tech.io/',
+			link: 'https://telemetry.gear-tech.io/#list/0x209bc5d3262cad676cd1fcd87a958a3d00c0176f8720231cbbb54a10f735d9bb',
 			imgUrl: 'gear.jpg',
 		},
 		{
 			name: 'HAQQ',
-			link: 'https://testnet.manticore.team/haqq/staking',
+			link: 'https://testnet.itrocket.net/haqq',
 			imgUrl: 'haqq.png',
 		},
 		{
@@ -80,7 +85,7 @@ const Card = () => {
 		},
 		{
 			name: 'Nois',
-			link: 'https://explorer.kjnodes.com/nois',
+			link: 'https://testnet.itrocket.net/nois',
 			imgUrl: 'nois.png',
 		},
 		{
@@ -106,7 +111,7 @@ const Card = () => {
 		},
 		{
 			name: 'Sei',
-			link: 'https://sei.explorers.guru/',
+			link: 'https://testnet.itrocket.net/sei',
 			imgUrl: 'sei.svg',
 		},
 		{

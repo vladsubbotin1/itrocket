@@ -23,18 +23,13 @@ const axelar = () => {
 		}
 	}, [theme])
 
-	const markdown = `<h2 id="about">About</h2>
-
-### Uptick Network
+	const markdown = `<h2 id="about">Uptick</h2>
 
 The Business Grade Multi-Chain NFT Infrastructure for Web 3.0
 <br/><br/>
 
 * Website: https://uptick.network/  
-* Telegram: https://t.me/uptickproject  
-* Twitter: https://twitter.com/uptickproject  
-* Medium: https://medium.com/@uptickproject  
-* Reddit: https://www.reddit.com/r/UptickNetwork/
+* Explorer: https://testnet.itrocket.net/uptick/staking 
 
 <h2 id="guide">Guide</h2> 
 Installation guide: 
@@ -43,9 +38,9 @@ Installation guide:
 
 <h2 id="rpc">RPC, API, gRPC</h2> 
 
-Public RPC - http://65.109.92.79:10657  
+Public RPC - https://uptick-testnet-rpc.itrocket.net  
 
-Public API - http://65.109.92.79:10317  
+Public API - https://uptick-testnet-api.itrocket.net 
 
 Public gRPC - http://65.109.92.79:10090
 
