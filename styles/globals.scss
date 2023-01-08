@@ -134,6 +134,19 @@ section {
 	}
 }
 
+.ant-btn-primary {
+	background-color: #7573736d;
+	box-shadow: 0 2px 0 rgb(5 5 5 / 10%);
+}
+
+.ant-menu-light.ant-menu-inline .ant-menu-sub.ant-menu-inline {
+	background: inherit !important;
+}
+
+.ant-menu-dark {
+	background-color: inherit !important;
+}
+
 div.ant-typography,
 span.ant-typography,
 a.ant-typography {

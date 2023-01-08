@@ -37,7 +37,7 @@ export default function Home() {
 		return (
 			<div>
 				<Head>
-					<title>ITRocket - Staking Provider</title>
+					<title>ITRocket</title>
 					<meta
 						name='description'
 						content='ITRocket 🚀 | Crypto Multipurpose Project'

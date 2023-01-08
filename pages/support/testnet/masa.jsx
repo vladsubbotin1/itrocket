@@ -3,6 +3,7 @@ import Head from 'next/head'
 import styles from '@styles/Support.module.scss'
 import Header from '@components/Header'
 import SideMenu from '@components/SideMenu'
+import HeadSupport from '@components/HeadSupport.jsx'
 import { ThemeContext } from '../../_app.jsx'
 import ReactMarkdown from 'react-markdown'
 import rehypeHighlight from 'rehype-highlight'
@@ -28,13 +29,7 @@ const axelar = () => {
 
 	return (
 		<>
-			<Head>
-				<title>ITRocket - Support Provider </title>
-				<meta
-					name='description'
-					content='ITRocket 🚀 | Crypto Multipurpose Project'
-				/>
-			</Head>
+			<HeadSupport />
 
 			<Header />
 

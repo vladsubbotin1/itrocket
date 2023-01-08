@@ -1,8 +1,8 @@
-import React, { useContext, useEffect, useState } from 'react'
-import Head from 'next/head'
+import React, { useContext, useEffect } from 'react'
 import styles from '@styles/Support.module.scss'
 import Header from '@components/Header'
 import SideMenu from '@components/SideMenu'
+import HeadSupport from '@components/HeadSupport.jsx'
 import { ThemeContext } from '../../_app.jsx'
 import ReactMarkdown from 'react-markdown'
 import rehypeHighlight from 'rehype-highlight'
@@ -12,7 +12,6 @@ import 'highlight.js/styles/github.css'
 
 const axelar = () => {
 	const { theme, toggleTheme } = useContext(ThemeContext)
-	const [current, setCurrent] = useState('1')
 
 	useEffect(() => {
 		let typo = document.getElementsByClassName('ant-typography')
@@ -64,62 +63,13 @@ Sorry, not supported yet
 
 ### State Sync: 
 
-Stop the service 
-
-~~~bash
-sudo systemctl stop uptickd
-~~~
-
-Configure
-
-~~~bash
-cd $HOME peers="86f50af23369997882ca3988eabeba998b4f07cc@65.109.92.79:10656" 
-config=$HOME/.uptickd/config/config.toml 
-SNAP_RPC=65.109.92.79:10657
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $config 
-sed -i.bak -e "s/^snapshot-interval *=.*/snapshot-interval = \"2000\"/" $HOME/.uptickd/config/app.toml 
-LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \ 
-BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \ 
-TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash) 
-~~~
-
-Сheck is the state sync information available
-
-~~~bash
-echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
-~~~
-
-Configure the state sync
-~~~bash
-sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\\1true| ; \
-s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
-s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\\1$BLOCK_HEIGHT| ; \
-s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\\1\"$TRUST_HASH\"| ; \
-s|^(seeds[[:space:]]+=[[:space:]]+).*$|\\1\"\"|" $config
-~~~
-
-Clean old data
-
-~~~bash
-uptickd tendermint unsafe-reset-all --home $HOME/.uptickd --keep-addr-book
-~~~
-Restart the service and check the log
-
-~~~bash
-sudo systemctl restart uptickd && sudo journalctl -u uptickd -f
-~~~
+https://github.com/itrocket-team/testnet_guides/blob/main/uptick/statesync.md
 
 `
 
 	return (
 		<>
-			<Head>
-				<title>ITRocket - Support Provider </title>
-				<meta
-					name='description'
-					content='ITRocket 🚀 | Crypto Multipurpose Project'
-				/>
-			</Head>
+			<HeadSupport />
 
 			<Header />
 

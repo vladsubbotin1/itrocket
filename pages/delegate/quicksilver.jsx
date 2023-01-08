@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect } from 'react'
 import Head from 'next/head'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
@@ -11,7 +11,6 @@ const { Title, Paragraph, Text, Link } = Typography
 
 const about = () => {
 	const { theme, toggleTheme } = useContext(ThemeContext)
-	const [current, setCurrent] = useState('1')
 
 	useEffect(() => {
 		let typo = document.getElementsByClassName('ant-typography')
@@ -49,8 +48,8 @@ const about = () => {
 						</Paragraph>
 						<Paragraph>
 							<Text>Explorer: </Text>
-							<Link href='https://mainnet.itrocket.net/quicksilver'>
-								https://mainnet.itrocket.net/quicksilver
+							<Link href='https://mainnet.itrocket.net/quicksilver/staking/quickvaloper1jlh8cttv96kyxu0j0r2ppv4sga6ju4uzxa3c2x'>
+								https://mainnet.itrocket.net/quicksilver/staking/quickvaloper1jlh8cttv96kyxu0j0r2ppv4sga6ju4uzxa3c2x
 							</Link>
 						</Paragraph>
 						<Title level={2}>Guideline</Title>
@@ -64,7 +63,7 @@ const about = () => {
 								</li>
 								<li>
 									<Text>Go to the </Text>
-									<Link href='https://explorer.nodestake.top/quicksilver/staking/quickvaloper1jlh8cttv96kyxu0j0r2ppv4sga6ju4uzxa3c2x'>
+									<Link href='https://mainnet.itrocket.net/quicksilver/staking/quickvaloper1jlh8cttv96kyxu0j0r2ppv4sga6ju4uzxa3c2x'>
 										staking portal
 									</Link>
 									<Text> and connect your wallet</Text>
@@ -130,7 +129,7 @@ const about = () => {
 						<br />
 						<Paragraph>
 							<Text>Now you need to return to the </Text>
-							<Link href='https://explorer.nodestake.top/quicksilver/staking/quickvaloper1jlh8cttv96kyxu0j0r2ppv4sga6ju4uzxa3c2x'>
+							<Link href='https://mainnet.itrocket.net/quicksilver/staking/quickvaloper1jlh8cttv96kyxu0j0r2ppv4sga6ju4uzxa3c2x'>
 								portal page
 							</Link>
 							<Text> and try to delegate</Text>

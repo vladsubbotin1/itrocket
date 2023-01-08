@@ -1,14 +1,12 @@
 import React, { useContext, useState } from 'react'
 import styles from '@styles/Support.module.scss'
-import { Button, Menu } from 'antd'
+import { Menu } from 'antd'
 import {
 	InfoCircleOutlined,
 	BookOutlined,
 	SettingOutlined,
 	ReloadOutlined,
 	DatabaseOutlined,
-	MenuUnfoldOutlined,
-	MenuFoldOutlined,
 } from '@ant-design/icons'
 import Link from 'next/link.js'
 import { ThemeContext } from '../pages/_app.jsx'
@@ -294,26 +292,12 @@ const SideMenu = () => {
 
 	return (
 		<aside className={styles.SideColumn}>
-			<Button
-				type='primary'
-				onClick={toggleCollapsed}
-				style={{
-					paddingBottom: 10,
-				}}
-			>
-				{collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-			</Button>
 			<Menu
 				style={{
-					width: collapsed ? 0 : 275,
-					borderInlineEnd: collapsed ? 'none' : '1px solid rgba(5, 5, 5, 0.06)',
+					width: 245,
+					borderInlineEnd: '1px solid rgba(130, 130, 130, 0.07)',
 				}}
-				defaultSelectedKeys={['1']}
-				defaultOpenKeys={['sub1']}
-				inlineCollapsed={collapsed}
-				openKeys={openKeys}
-				onOpenChange={onOpenChange}
-				mode='inline'
+				mode='vertical'
 				theme={theme}
 				items={items}
 			/>

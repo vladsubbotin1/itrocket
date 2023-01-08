@@ -1,8 +1,8 @@
 import React, { useContext, useEffect } from 'react'
-import Head from 'next/head'
 import styles from '@styles/Support.module.scss'
 import Header from '@components/Header'
 import SideMenu from '@components/SideMenu'
+import HeadSupport from '@components/HeadSupport.jsx'
 import { ThemeContext } from '../../_app.jsx'
 import ReactMarkdown from 'react-markdown'
 import rehypeHighlight from 'rehype-highlight'
@@ -22,12 +22,12 @@ const axelar = () => {
 		}
 	}, [theme])
 
-	const markdown = `<h2 id="about">About</h2>
+	const markdown = `<h2 id="about">Humans</h2>
 
-### Humans
 We are creating a scalable blockchain providing the economy of the heart driven AI, placing the humans at the facefront of the AI evolution.
+<br/><br/>
 
-explorer: https://explorer.humans.zone/humans-testnet
+Explorer: https://explorer.humans.zone/humans-testnet
 <br/><br/>
 
 * Website: https://humans.ai/  
@@ -114,13 +114,7 @@ sudo systemctl restart humansd && sudo journalctl -u humansd -f
 
 	return (
 		<>
-			<Head>
-				<title>ITRocket - Support Provider </title>
-				<meta
-					name='description'
-					content='ITRocket 🚀 | Crypto Multipurpose Project'
-				/>
-			</Head>
+			<HeadSupport />
 
 			<Header />
 

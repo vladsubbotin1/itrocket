@@ -168,11 +168,11 @@ const Card = () => {
 			<br />
 			<b>Link to the explorer: </b> <br />
 			<a
-				href='https://mainnet.itrocket.net/quicksilver'
+				href='https://mainnet.itrocket.net/quicksilver/staking/quickvaloper1jlh8cttv96kyxu0j0r2ppv4sga6ju4uzxa3c2x'
 				rel='noopener noreferrer'
 				target='_blank'
 			>
-				https://mainnet.itrocket.net/quicksilver
+				https://mainnet.itrocket.net/quicksilver/staking/quickvaloper1jlh8cttv96kyxu0j0r2ppv4sga6ju4uzxa3c2x
 			</a>
 			<br /> <br />
 			<div className='center-flex'>

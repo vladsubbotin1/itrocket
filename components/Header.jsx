@@ -1,5 +1,5 @@
 import styles from '@styles/Header.module.scss'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useContext, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { ThemeContext } from '../pages/_app'
@@ -178,96 +178,85 @@ const Header = () => {
 				</div>
 			</header>
 
-			<AnimatePresence
-				initial={false}
-				exitBeforeEnter={true}
-				onExitComplete={() => null}
+			<motion.div
+				className={styles.burgerMenu}
+				style={{
+					backgroundColor: theme === 'dark' ? '#000' : '#fff',
+					display: isOpen ? 'flex' : 'none',
+				}}
+				transition={{ duration: 0.3, delay: 0.5 }}
 			>
-				<motion.div
-					className={styles.burgerMenu}
-					style={{
-						backgroundColor: theme === 'dark' ? '#000' : '#fff',
-						display: isOpen ? 'flex' : 'none',
-					}}
-					transition={{ duration: 0.3, delay: 0.5 }}
-				>
-					<nav>
-						<motion.ul
-							onClick={() => {
-								setIsOpen(!isOpen)
-							}}
-							initial={false}
-							animate={isOpen ? 'open' : 'closed'}
-							variants={ulVariants}
-						>
-							{items.map((item, i) => (
-								<motion.li key={i} variants={liVariants}>
-									{item}
-								</motion.li>
-							))}
-						</motion.ul>
-					</nav>
-
-					<motion.div
-						className='socials'
+				<nav>
+					<motion.ul
+						onClick={() => {
+							setIsOpen(!isOpen)
+						}}
 						initial={false}
 						animate={isOpen ? 'open' : 'closed'}
-						variants={socialsVariants}
+						variants={ulVariants}
 					>
-						<a
-							href='https://t.me/SEM3gs'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							<Image
-								src='/icons/tg.svg'
-								alt='telegram'
-								width={30}
-								height={30}
-							/>
-						</a>
+						{items.map((item, i) => (
+							<motion.li key={i} variants={liVariants}>
+								{item}
+							</motion.li>
+						))}
+					</motion.ul>
+				</nav>
 
-						<a
-							href='https://twitter.com/SEM23404846'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							<Image
-								src='/icons/twitter.svg'
-								alt='twitter'
-								width={30}
-								height={30}
-							/>
-						</a>
-						<a
-							href='https://github.com/itrocket-team'
-							target='_blank'
-							rel='noopener noreferrer'
-							style={{ display: theme === 'light' ? 'block' : 'none' }}
-						>
-							<Image
-								src='/icons/github.svg'
-								alt='github'
-								width={30}
-								height={30}
-							/>
-						</a>
-						<a
-							href='https://github.com/itrocket-team'
-							target='_blank'
-							rel='noopener noreferrer'
-							style={{ display: theme !== 'light' ? 'block' : 'none' }}
-						>
-							<Image
-								src='/icons/github-white.svg'
-								alt='github'
-								width={30}
-								height={30}
-							/>
-						</a>
-					</motion.div>
+				<motion.div
+					className='socials'
+					initial={false}
+					animate={isOpen ? 'open' : 'closed'}
+					variants={socialsVariants}
+				>
+					<a
+						href='https://t.me/SEM3gs'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
+						<Image src='/icons/tg.svg' alt='telegram' width={30} height={30} />
+					</a>
+
+					<a
+						href='https://twitter.com/SEM23404846'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
+						<Image
+							src='/icons/twitter.svg'
+							alt='twitter'
+							width={30}
+							height={30}
+						/>
+					</a>
+					<a
+						href='https://github.com/itrocket-team'
+						target='_blank'
+						rel='noopener noreferrer'
+						style={{ display: theme === 'light' ? 'block' : 'none' }}
+					>
+						<Image
+							src='/icons/github.svg'
+							alt='github'
+							width={30}
+							height={30}
+						/>
+					</a>
+					<a
+						href='https://github.com/itrocket-team'
+						target='_blank'
+						rel='noopener noreferrer'
+						style={{ display: theme !== 'light' ? 'block' : 'none' }}
+					>
+						<Image
+							src='/icons/github-white.svg'
+							alt='github'
+							width={30}
+							height={30}
+						/>
+					</a>
 				</motion.div>
-			</AnimatePresence>
+			</motion.div>
 		</>
 	)
 }

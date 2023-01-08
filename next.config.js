@@ -84,6 +84,9 @@ const nextConfig = {
 			'/support/mainnet/quicksilver': {
 				page: '/support/mainnet/quicksilver',
 			},
+			'/delegate/quicksilver': {
+				page: '/delegate/quicksilver',
+			},
 		}
 	},
 }

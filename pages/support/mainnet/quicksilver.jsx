@@ -3,6 +3,7 @@ import Head from 'next/head'
 import styles from '@styles/Support.module.scss'
 import Header from '@components/Header'
 import SideMenu from '@components/SideMenu'
+import CodeSnippet from '@components/CodeSnippet.jsx'
 import { ThemeContext } from '../../_app.jsx'
 import ReactMarkdown from 'react-markdown'
 import rehypeHighlight from 'rehype-highlight'
@@ -29,7 +30,7 @@ The Quicksilver Token is a Liquid Staking token with multiple use cases
 <br/>
 
 * Website: https://quicksilver.zone/ 
-* Explorer: https://testnet.itrocket.net/quicksilver/staking
+* Explorer: https://mainnet.itrocket.net/quicksilver/staking
 
 <h2 id="guide">Guide</h2>  
 Installation guide: <a href="https://github.com/itrocket-team/testnet_guides/tree/main/quicksilver
@@ -62,56 +63,13 @@ Sorry, not supported yet
 
 <h2 id="sync">State Sync</h2> 
 
-Stop the service 
-
-~~~bash
-sudo systemctl stop quicksilverd
-~~~
-
-Configure
-
-~~~bash
-cd $HOME 
-peers="4559f4c24037bfad4791b2a6d6d5c769a16cad53@65.109.92.79:15656"  
-SNAP_RPC=65.109.92.79:15657
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.quicksilverd/config/config.toml 
-sed -i.bak -e "s/^snapshot-interval *=.*/snapshot-interval = \"2000\"/" $HOME/.quicksilverd/config/app.toml 
-LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \ 
-BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \ 
-TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash) 
-~~~
-
-Check if the state sync information available
-
-~~~bash
-echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
-~~~
-
-Configure the state sync
-~~~bash
-sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\\1true| ; \
-s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
-s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\\1$BLOCK_HEIGHT| ; \
-s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\\1\"$TRUST_HASH\"| ; \
-s|^(seeds[[:space:]]+=[[:space:]]+).*$|\\1\"\"|" $HOME/.quicksilverd/config/config.toml
-~~~
-
-Clean old data
-
-~~~bash
-quicksilverd tendermint unsafe-reset-all --home $HOME/.quicksilverd --keep-addr-book
-~~~
-Restart the service and check the log
-
-~~~bash
-sudo systemctl restart quicksilverd && sudo journalctl -u quicksilverd -f
-~~~	
+https://github.com/itrocket-team/testnet_guides/blob/main/quicksilver/statesync.md	
 `
 
 	return (
 		<>
 			<Head>
-				<title>ITRocket - Support Provider</title>
+				<title>ITRocket - Project Support </title>
 				<meta
 					name='description'
 					content='ITRocket 🚀 | Crypto Multipurpose Project'
@@ -130,6 +88,125 @@ sudo systemctl restart quicksilverd && sudo journalctl -u quicksilverd -f
 					>
 						{markdown}
 					</ReactMarkdown>
+
+					{/* <h2 id='about'>Celestia</h2>
+					<p>
+						Celestia is the first modular blockchain network. It is a modular
+						consensus and data network, built to enable anyone to easily deploy
+						their own blockchain with minimal overhead.
+					</p>
+					<ul>
+						<li>
+							<span>Website: </span>
+							<a
+								href='https://celestia.org'
+								target='_blank'
+								rel='noopener referrer'
+							>
+								https://celestia.org
+							</a>
+						</li>
+						<li>
+							<span>Explorer: </span>
+							<a
+								href='https://testnet.itrocket.net/celestia/stakin'
+								target='_blank'
+								rel='noopener referrer'
+							>
+								https://testnet.itrocket.net/celestia/staking
+							</a>
+						</li>
+					</ul>
+					<h2 id='guide'>Guide</h2>
+					<a
+						href='https://docs.celestia.org/nodes/overview/'
+						target='_blank'
+						rel='noopener referrer'
+					>
+						Official documentation
+					</a>
+					<a
+						href='https://github.com/marutyan/testnet_guides/tree/main/celestia'
+						target='_blank'
+						rel='noopener referrer'
+					>
+						Set up Validator node
+					</a>
+					<a
+						href='https://github.com/marutyan/testnet_guides/blob/main/celestia/bridge.md'
+						target='_blank'
+						rel='noopener referrer'
+					>
+						Set up Bridge node
+					</a>
+					<a
+						href='https://github.com/marutyan/testnet_guides/blob/main/celestia/light.md'
+						target='_blank'
+						rel='noopener referrer'
+					>
+						Set up Light node
+					</a>
+					<a
+						href='https://github.com/marutyan/testnet_guides/blob/main/celestia/full.md'
+						target='_blank'
+						rel='noopener referrer'
+					>
+						Set up Full node
+					</a>
+					<h2 id='rpc'>RPC, API, gRPC</h2>
+					<p>
+						<span>Public RPC: </span>
+						<a
+							href='https://celestia-testnet-rpc.itrocket.net'
+							target='_blank'
+							rel='noopener referrer'
+						>
+							https://celestia-testnet-rpc.itrocket.net
+						</a>
+					</p>
+					<p>
+						<span>Public API: </span>
+						<a
+							href='https://celestia-testnet-api.itrocket.net'
+							target='_blank'
+							rel='noopener referrer'
+						>
+							https://celestia-testnet-api.itrocket.net
+						</a>
+					</p>
+					<p>
+						<span>Public gRPc: </span>
+						<a
+							href='http://65.109.92.79:11090'
+							target='_blank'
+							rel='noopener referrer'
+						>
+							http://65.109.92.79:11090
+						</a>
+					</p>
+					<h3>peers:</h3>
+					<CodeSnippet
+						theme={theme}
+						code={`1afcd97b0bf289700378e18b45dc1f927917bba0@65.109.92.79:11656`}
+					/>
+					<h3>addrbook:</h3>
+					<CodeSnippet
+						theme={theme}
+						code={`wget -O $HOME/.celestia-app/config/addrbook.json https://raw.githubusercontent.com/itrocket-team/testnet_guides/main/celestia/addrbook.json`}
+					/>
+					<h2 id='snap'>Snapshot</h2>
+					<CodeSnippet
+						theme={theme}
+						code={`cd $HOME
+rm -rf ~/.celestia-app/data
+mkdir -p ~/.celestia-app/data
+SNAP_NAME=$(curl -s https://snaps.qubelabs.io/celestia/ | \
+egrep -o ">mamaki.*tar" | tr -d ">")
+wget -O - https://snaps.qubelabs.io/celestia/\${SNAP_NAME} | tar xf - \
+-C ~/.celestia-app/data/`}
+					/>
+					<h2 id='sync'>State Sync</h2>
+					<p>Sorry, not supported yet ¯\_(ツ)_/¯</p> */}
 				</main>
 			</div>
 		</>

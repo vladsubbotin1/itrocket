@@ -1,5 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
-import Head from 'next/head'
+import React, { useContext, useEffect } from 'react'
 import styles from '@styles/Support.module.scss'
 import Header from '@components/Header'
 import SideMenu from '@components/SideMenu'
@@ -9,10 +8,10 @@ import rehypeHighlight from 'rehype-highlight'
 import rehypeRaw from 'rehype-raw'
 import remarkGfm from 'remark-gfm'
 import 'highlight.js/styles/github.css'
+import HeadSupport from '@components/HeadSupport.jsx'
 
 const axelar = () => {
 	const { theme, toggleTheme } = useContext(ThemeContext)
-	const [current, setCurrent] = useState('1')
 
 	useEffect(() => {
 		let typo = document.getElementsByClassName('ant-typography')
@@ -79,13 +78,7 @@ Sorry, not supported yet
 
 	return (
 		<>
-			<Head>
-				<title>ITRocket - Support Provider </title>
-				<meta
-					name='description'
-					content='ITRocket 🚀 | Crypto Multipurpose Project'
-				/>
-			</Head>
+			<HeadSupport />
 
 			<Header />
 

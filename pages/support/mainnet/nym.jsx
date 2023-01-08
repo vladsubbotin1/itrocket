@@ -24,11 +24,12 @@ const axelar = () => {
 	}, [theme])
 
 	const markdown = `<h2 id="about">NYM</h2>
-Building the next generation of privacy infrastructure  
+Building the next generation of privacy infrastructure
+<br/><br/>
 
 Explorer: https://explorer.nymtech.net/network-components/mixnodes
 
-<br/><br/>
+<br/>
 
 * Website: https://nymtech.net/ 
 * Github: https://github.com/nymtech
@@ -57,7 +58,7 @@ Sorry, not supported
 	return (
 		<>
 			<Head>
-				<title>ITRocket - Support Provider </title>
+				<title>ITRocket - Project Support </title>
 				<meta
 					name='description'
 					content='ITRocket 🚀 | Crypto Multipurpose Project'
