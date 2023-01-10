@@ -23,7 +23,7 @@ const about = () => {
 	return (
 		<>
 			<Head>
-				<title>ITRocket - Support Provider</title>
+				<title>Support - ITRocket</title>
 				<meta
 					name='description'
 					content='ITRocket 🚀 | Crypto Multipurpose Project'
@@ -79,18 +79,21 @@ const about = () => {
 									<Link href='/support/testnet/kira'>Kira</Link>
 								</li>
 								<li>
+									<Link href='/support/testnet/lava'>Lava</Link>
+								</li>
+								<li>
 									<Link href='/support/testnet/masa'>Masa</Link>
 								</li>
 								<li>
 									<Link href='/support/testnet/massa'>Massa</Link>
 								</li>
-								<li>
-									<Link href='/support/testnet/nois'>Nois</Link>
-								</li>
 							</ul>
 						</div>
 						<div className='flex-center'>
 							<ul>
+								<li>
+									<Link href='/support/testnet/nois'>Nois</Link>
+								</li>
 								<li>
 									<Link href='/support/testnet/nibiru'>Nibiru</Link>
 								</li>

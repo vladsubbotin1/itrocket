@@ -8,8 +8,6 @@ body {
 	font-family: 'Inter';
 	font-weight: 300;
 	color: rgba(0, 0, 0, 0.9);
-	transition: 0.3s ease;
-	z-index: 1;
 }
 
 li {
@@ -87,12 +85,28 @@ section {
 
 .ant-menu-submenu {
 	margin-right: 8px;
+	transition: 0s !important;
+
+	&::before,
+	&-open,
+	&-active,
+	&-title {
+		transition: 0s !important;
+	}
 }
 
 .ant-menu-item {
 	border: 1px solid rgba(131, 131, 131, 0.15);
 	font-size: 14px;
 	font-weight: 400;
+	margin-block-end: 10px !important;
+	display: flex !important;
+	align-items: center;
+	transition: 0s !important;
+
+	&:hover {
+		transition: 0s !important;
+	}
 
 	@media (max-width: 1024px) {
 		font-size: 13px;
@@ -107,18 +121,6 @@ section {
 .ant-alert-message {
 	@media (max-width: 768px) {
 		font-size: 12px;
-	}
-}
-.ant-menu-light {
-	.ant-menu-submenu-title[aria-expanded='true'] {
-		background-color: #dbeafe !important;
-		color: black;
-	}
-}
-.ant-menu-dark {
-	.ant-menu-submenu-title[aria-expanded='true'] {
-		background-color: #093666 !important;
-		color: white;
 	}
 }
 
@@ -299,6 +301,10 @@ a.ant-typography {
 
 .hljs-number {
 	color: rgb(242, 24, 60) !important;
+}
+
+.ant-menu-item-group-title {
+	font-size: 15px !important;
 }
 
 .ant-menu-dark .ant-menu-item-group-title {

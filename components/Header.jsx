@@ -1,4 +1,5 @@
 import styles from '@styles/Header.module.scss'
+import DropdownComp from '@components/DropdownComp'
 import { motion } from 'framer-motion'
 import { useContext, useEffect, useState } from 'react'
 import Link from 'next/link'
@@ -78,7 +79,10 @@ const Header = () => {
 		<Link href='/#testnet' scroll={false}>
 			Testnets
 		</Link>,
+		<a href='https://mainnet.itrocket.net/'>Explorer (Mainnet)</a>,
+		<a href='https://testnet.itrocket.net/'>Explorer (Testnet)</a>,
 		<Link href='/support'>Support</Link>,
+		<a href='https://snaps.itrocket.net/'>Files</a>,
 		<Link href='/#faq' scroll={false}>
 			FAQ
 		</Link>,
@@ -98,7 +102,7 @@ const Header = () => {
 						<Image
 							src='/logo.svg'
 							alt='logo'
-							width={195}
+							width={190}
 							height={55}
 							className={styles.logo}
 							style={{ display: theme === 'light' ? 'block' : 'none' }}
@@ -107,7 +111,7 @@ const Header = () => {
 						<Image
 							src='/darkLogo.svg'
 							alt='logo'
-							width={195}
+							width={190}
 							height={55}
 							className={styles.logo}
 							style={{ display: theme === 'dark' ? 'block' : 'none' }}
@@ -125,7 +129,13 @@ const Header = () => {
 								<Link href='/#testnet'>Testnets</Link>
 							</li>
 							<li>
+								<DropdownComp />
+							</li>
+							<li>
 								<Link href='/support'>Support</Link>
+							</li>
+							<li>
+								<a href='https://snaps.itrocket.net/'>Files</a>
 							</li>
 							<li>
 								<Link href='/#faq'>FAQ</Link>

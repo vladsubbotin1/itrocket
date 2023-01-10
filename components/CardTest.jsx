@@ -74,6 +74,11 @@ const Card = () => {
 			imgUrl: 'kira.svg',
 		},
 		{
+			name: 'Lava',
+			link: 'https://testnet.itrocket.net/lava/staking',
+			imgUrl: 'lava.svg',
+		},
+		{
 			name: 'Masa',
 			link: 'https://www.masa.finance/',
 			imgUrl: 'masa.svg',

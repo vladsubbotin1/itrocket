@@ -7,6 +7,7 @@ import styles from '@styles/DelegateGuide.module.scss'
 import 'highlight.js/styles/github.css'
 import { Typography } from 'antd'
 import Image from 'next/image'
+import HeadSupport from '@components/HeadSupport.jsx'
 const { Title, Paragraph, Text, Link } = Typography
 
 const about = () => {
@@ -24,11 +25,36 @@ const about = () => {
 	return (
 		<>
 			<Head>
-				<title>ITRocket - Staking Provider</title>
+				<title>Support - ITRocket </title>
 				<meta
 					name='description'
 					content='ITRocket 🚀 | Crypto Multipurpose Project'
 				/>
+				{/* <meta property='og:title' content='Projects Support - ITRocket' />
+				<meta
+					property='og:description'
+					content='ITRocket 🚀 | Crypto Multipurpose Project'
+				/>
+				<meta property='og:image' content='https://itrocket.net/logo.jpg' />
+				<meta property='og:type' content='article' />
+				<meta
+					property='og:url'
+					content='https://itrocket.net/support/mainnet/quicksilver/'
+				/>
+				<meta property='twitter:card' content='summary_large_image' />
+				<meta
+					property='twitter:url'
+					content='https://itrocket.net/support/mainnet/quicksilver/'
+				/>
+				<meta property='twitter:title' content='Projects Support - ITRocket' />
+				<meta
+					property='twitter:description'
+					content='ITRocket 🚀 | Crypto Multipurpose Project'
+				/>
+				<meta
+					property='twitter:image'
+					content='https://itrocket.net/logo.jpg'
+				/> */}
 			</Head>
 
 			<Header />

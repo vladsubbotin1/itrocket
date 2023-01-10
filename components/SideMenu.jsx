@@ -1,15 +1,9 @@
-import React, { useContext, useState } from 'react'
+import { useContext, useState } from 'react'
 import styles from '@styles/Support.module.scss'
 import { Menu } from 'antd'
-import {
-	InfoCircleOutlined,
-	BookOutlined,
-	SettingOutlined,
-	ReloadOutlined,
-	DatabaseOutlined,
-} from '@ant-design/icons'
 import Link from 'next/link.js'
 import { ThemeContext } from '../pages/_app.jsx'
+import Image from 'next/image.js'
 
 function getItem(label, key, icon, children, type) {
 	return {
@@ -21,26 +15,18 @@ function getItem(label, key, icon, children, type) {
 	}
 }
 
-const rootSubmenuKeys = []
-
 const SideMenu = () => {
-	const [collapsed, setCollapsed] = useState(true)
-
-	const toggleCollapsed = () => {
-		setCollapsed(!collapsed)
-	}
-
 	const { theme, toggleTheme } = useContext(ThemeContext)
 
-	const [openKeys, setOpenKeys] = useState(['sub1'])
-	const onOpenChange = keys => {
-		const latestOpenKey = keys.find(key => openKeys.indexOf(key) === -1)
-		if (rootSubmenuKeys.indexOf(latestOpenKey) === -1) {
-			setOpenKeys(keys)
-		} else {
-			setOpenKeys(latestOpenKey ? [latestOpenKey] : [])
-		}
-	}
+	// const [openKeys, setOpenKeys] = useState(['sub1'])
+	// const onOpenChange = keys => {
+	// 	const latestOpenKey = keys.find(key => openKeys.indexOf(key) === -1)
+	// 	if (rootSubmenuKeys.indexOf(latestOpenKey) === -1) {
+	// 		setOpenKeys(keys)
+	// 	} else {
+	// 		setOpenKeys(latestOpenKey ? [latestOpenKey] : [])
+	// 	}
+	// }
 
 	let mainnetData = [
 		{
@@ -128,6 +114,11 @@ const SideMenu = () => {
 			imgUrl: 'kira.svg',
 		},
 		{
+			name: 'Lava',
+			link: 'https://testnet.itrocket.net/lava/staking',
+			imgUrl: 'lava.svg',
+		},
+		{
 			name: 'Masa',
 			link: 'https://www.masa.finance/',
 			imgUrl: 'masa.svg',
@@ -208,41 +199,21 @@ const SideMenu = () => {
 		let id = 'mainnet' + item.name
 
 		items.push(
-			getItem(`${name}`, `sub${id}`, null, [
-				getItem(
-					<Link href={'/support/mainnet/' + name.toLowerCase()}>About</Link>,
-					`${name}/about`,
-					<InfoCircleOutlined />
-				),
-				getItem(
-					<Link href={'/support/mainnet/' + name.toLowerCase() + '#guide'}>
-						Guide
-					</Link>,
-					`${name}/guide`,
-					<BookOutlined />
-				),
-				getItem(
-					<Link href={'/support/mainnet/' + name.toLowerCase() + '#rpc'}>
-						RPC, API, gRPC
-					</Link>,
-					`${name}/rpc`,
-					<SettingOutlined />
-				),
-				getItem(
-					<Link href={'/support/mainnet/' + name.toLowerCase() + '#sync'}>
-						Snapshot
-					</Link>,
-					`${name}/state`,
-					<DatabaseOutlined />
-				),
-				getItem(
-					<Link href={'/support/mainnet/' + name.toLowerCase() + '#state'}>
-						State sync
-					</Link>,
-					`${name}/sync`,
-					<ReloadOutlined />
-				),
-			])
+			getItem(
+				<Link href={'/support/mainnet/' + name.toLowerCase()}>
+					{item.name}
+				</Link>,
+				`sub${id}`,
+				<Image
+					src={require('../public/mainnet/'.concat(item.imgUrl))}
+					alt='project logo'
+					width='20'
+					height='20'
+					loading='eager'
+					unoptimized={true}
+					layout='intrinsic'
+				/>
+			)
 		)
 	})
 
@@ -252,54 +223,34 @@ const SideMenu = () => {
 		let id = 'testnet' + item.name
 
 		items.push(
-			getItem(`${name}`, `sub${id}`, null, [
-				getItem(
-					<Link href={'/support/testnet/' + name.toLowerCase()}>About</Link>,
-					`${name}/#about`,
-					<InfoCircleOutlined />
-				),
-				getItem(
-					<Link href={'/support/testnet/' + name.toLowerCase() + '#guide'}>
-						Guide
-					</Link>,
-					`${name}/#guide`,
-					<BookOutlined />
-				),
-				getItem(
-					<Link href={'/support/testnet/' + name.toLowerCase() + '#rpc'}>
-						RPC, API, gRPC
-					</Link>,
-					`${name}/#rpc`,
-					<SettingOutlined />
-				),
-				getItem(
-					<Link href={'/support/testnet/' + name.toLowerCase() + '#snap'}>
-						Snapshot
-					</Link>,
-					`${name}/#state`,
-					<DatabaseOutlined />
-				),
-				getItem(
-					<Link href={'/support/testnet/' + name.toLowerCase() + '#sync'}>
-						State sync
-					</Link>,
-					`${name}/sync`,
-					<ReloadOutlined />
-				),
-			])
+			getItem(
+				<Link href={'/support/testnet/' + name.toLowerCase()}>
+					{item.name}
+				</Link>,
+				`sub${id}`,
+				<Image
+					src={require('/public/testnet/'.concat(item.imgUrl))}
+					alt='project logo'
+					width='20'
+					height='20'
+					loading='eager'
+					unoptimized={true}
+					layout='intrinsic'
+				/>
+			)
 		)
 	})
 
 	return (
 		<aside className={styles.SideColumn}>
 			<Menu
+				items={items}
 				style={{
-					width: 245,
-					borderInlineEnd: '1px solid rgba(130, 130, 130, 0.07)',
+					width: 205,
+					borderInlineEnd: '1px solid rgba(130, 130, 130, 0.1)',
 				}}
 				mode='vertical'
 				theme={theme}
-				items={items}
 			/>
 		</aside>
 	)
